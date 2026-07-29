@@ -1,63 +1,577 @@
 {
-    "usuarios": [
-        {
-            "id": "u1a2b3",
-            "nome": "Camila Rocha",
-            "email": "camila.rocha@email.com",
-            "senha": "senha123",
-            "role": "aluno",
-            "ativo": true
-        }
-    ],
-    "categorias": [
-        {
-            "id": "cat1x2",
-            "nome": "Programação",
-            "descricao": "Cursos sobre linguagens, frameworks e boas práticas de desenvolvimento."
-        }
-    ],
-    "cursos": [
-        {
-            "id": "cur1y3",
-            "titulo": "Introdução ao JavaScript",
-            "descricao": "Fundamentos da linguagem JavaScript para iniciantes.",
-            "categoriaId": "cat1x2",
-            "instrutorId": "u2c4d5",
-            "status": "publicado",
-            "cargaHoraria": 20
-        }
-    ],
-    
-    "aulas": [
-        {
-            "id": "aul1z4",
-            "cursoId": "cur1y3",
-            "titulo": "Variáveis e Tipos de Dados",
-            "conteudo": "https://video.exemplo.com/aula1",
-            "ordem": 1,
-            "duracaoMinutos": 15
-        }
-    ],
-
-    "matriculas": [
-        {
-            "id": "mat1w5",
-            "usuarioId": "u1a2b3",
-            "cursoId": "cur1y3",
-            "dataMatricula": "2026-07-10T13:00:00Z",
-            "progresso": 60,
-            "status": "em andamento"
-        }
-    ],
-
-    "avaliacoes": [
-        {
-            "id": "ava1v6",
-            "usuarioId": "u1a2b3",
-            "cursoId": "cur1y3",
-            "nota": 5,
-            "comentario": "Curso muito claro e direto ao ponto, recomendo!",
-            "data": "2026-07-20T18:45:00Z"
-        }
-    ]
+  "usuarios": [
+    {
+      "id": "u1a2b3",
+      "nome": "Camila Rocha",
+      "email": "camila.rocha@email.com",
+      "senha": "senha123",
+      "role": "aluno",
+      "ativo": true
+    },
+    {
+      "id": "u2c4d5",
+      "nome": "Rafael Mendes",
+      "email": "rafael.mendes@email.com",
+      "senha": "senha123",
+      "role": "editor",
+      "ativo": true
+    },
+    {
+      "id": "u3e6f7",
+      "nome": "Juliana Costa",
+      "email": "juliana.costa@email.com",
+      "senha": "senha123",
+      "role": "admin",
+      "ativo": true
+    },
+    {
+      "id": "u4g8h9",
+      "nome": "Lucas Oliveira",
+      "email": "lucas.oliveira@email.com",
+      "senha": "senha123",
+      "role": "aluno",
+      "ativo": true
+    },
+    {
+      "id": "u5i0j1",
+      "nome": "Mariana Santos",
+      "email": "mariana.santos@email.com",
+      "senha": "senha123",
+      "role": "aluno",
+      "ativo": true
+    },
+    {
+      "id": "u6k2l3",
+      "nome": "Pedro Almeida",
+      "email": "pedro.almeida@email.com",
+      "senha": "senha123",
+      "role": "editor",
+      "ativo": true
+    },
+    {
+      "id": "u7m4n5",
+      "nome": "Carla Souza",
+      "email": "carla.souza@email.com",
+      "senha": "senha123",
+      "role": "aluno",
+      "ativo": true
+    },
+    {
+      "id": "u8o6p7",
+      "nome": "Fernando Lima",
+      "email": "fernando.lima@email.com",
+      "senha": "senha123",
+      "role": "admin",
+      "ativo": true
+    },
+    {
+      "id": "u9q8r9",
+      "nome": "Beatriz Nunes",
+      "email": "beatriz.nunes@email.com",
+      "senha": "senha123",
+      "role": "aluno",
+      "ativo": true
+    },
+    {
+      "id": "u0s1t2",
+      "nome": "Gustavo Franco",
+      "email": "gustavo.franco@email.com",
+      "senha": "senha123",
+      "role": "aluno",
+      "ativo": true
+    },
+    {
+      "id": "u1u3v4",
+      "nome": "Amanda Ribeiro",
+      "email": "amanda.ribeiro@email.com",
+      "senha": "senha123",
+      "role": "editor",
+      "ativo": true
+    },
+    {
+      "id": "u2w5x6",
+      "nome": "Bruno Cardoso",
+      "email": "bruno.cardoso@email.com",
+      "senha": "senha123",
+      "role": "aluno",
+      "ativo": true
+    }
+  ],
+  "categorias": [
+    {
+      "id": "cat1x2",
+      "nome": "Programação",
+      "descricao": "Cursos sobre linguagens, frameworks e boas práticas de desenvolvimento."
+    },
+    {
+      "id": "cat3y4",
+      "nome": "Design",
+      "descricao": "Cursos sobre design gráfico, UI/UX, ferramentas de criação e conceitos visuais."
+    },
+    {
+      "id": "cat5z6",
+      "nome": "Marketing Digital",
+      "descricao": "Cursos sobre estratégias de marketing, SEO, mídias sociais e análise de dados."
+    },
+    {
+      "id": "cat7a8",
+      "nome": "Negócios e Empreendedorismo",
+      "descricao": "Cursos sobre gestão, finanças, empreendedorismo e liderança."
+    },
+    {
+      "id": "cat9b0",
+      "nome": "Inteligência Artificial",
+      "descricao": "Cursos sobre IA, machine learning, redes neurais e processamento de linguagem natural."
+    },
+    {
+      "id": "cat1c2",
+      "nome": "Segurança da Informação",
+      "descricao": "Cursos sobre cibersegurança, redes, criptografia e práticas de proteção."
+    },
+    {
+      "id": "cat3d4",
+      "nome": "Ciência de Dados",
+      "descricao": "Cursos sobre análise de dados, estatística, visualização e ferramentas como Python e R."
+    },
+    {
+      "id": "cat5e6",
+      "nome": "Desenvolvimento Mobile",
+      "descricao": "Cursos sobre desenvolvimento para iOS, Android e multiplataforma."
+    },
+    {
+      "id": "cat7f8",
+      "nome": "Cloud Computing",
+      "descricao": "Cursos sobre AWS, Azure, GCP, DevOps e infraestrutura como código."
+    },
+    {
+      "id": "cat9g0",
+      "nome": "Idiomas",
+      "descricao": "Cursos de inglês, espanhol, francês e outros idiomas para negócios e viagens."
+    },
+    {
+      "id": "cat1h2",
+      "nome": "Saúde e Bem-Estar",
+      "descricao": "Cursos sobre nutrição, exercícios, meditação e saúde mental."
+    }
+  ],
+  "cursos": [
+    {
+      "id": "cur1y3",
+      "titulo": "Introdução ao JavaScript",
+      "descricao": "Fundamentos da linguagem JavaScript para iniciantes.",
+      "categoriaId": "cat1x2",
+      "instrutorId": "u2c4d5",
+      "status": "publicado",
+      "cargaHoraria": 20
+    },
+    {
+      "id": "cur2z4",
+      "titulo": "React Avançado",
+      "descricao": "Aprofunde seus conhecimentos em React com hooks, context API e performance.",
+      "categoriaId": "cat1x2",
+      "instrutorId": "u2c4d5",
+      "status": "publicado",
+      "cargaHoraria": 40
+    },
+    {
+      "id": "cur3a5",
+      "titulo": "UI Design para Iniciantes",
+      "descricao": "Aprenda os princípios do design de interfaces e crie designs incríveis.",
+      "categoriaId": "cat3y4",
+      "instrutorId": "u6k2l3",
+      "status": "publicado",
+      "cargaHoraria": 25
+    },
+    {
+      "id": "cur4b6",
+      "titulo": "Figma do Básico ao Avançado",
+      "descricao": "Domine a ferramenta Figma para criar protótipos e designs de alta qualidade.",
+      "categoriaId": "cat3y4",
+      "instrutorId": "u6k2l3",
+      "status": "rascunho",
+      "cargaHoraria": 30
+    },
+    {
+      "id": "cur5c7",
+      "titulo": "SEO para Sites e Blogs",
+      "descricao": "Aprenda as melhores práticas de SEO para rankear seu site nos buscadores.",
+      "categoriaId": "cat5z6",
+      "instrutorId": "u1u3v4",
+      "status": "publicado",
+      "cargaHoraria": 15
+    },
+    {
+      "id": "cur6d8",
+      "titulo": "Marketing de Conteúdo",
+      "descricao": "Estratégias para criar conteúdo relevante e engajar sua audiência.",
+      "categoriaId": "cat5z6",
+      "instrutorId": "u1u3v4",
+      "status": "publicado",
+      "cargaHoraria": 20
+    },
+    {
+      "id": "cur7e9",
+      "titulo": "Fundamentos da IA",
+      "descricao": "Introdução aos conceitos de inteligência artificial e suas aplicações.",
+      "categoriaId": "cat9b0",
+      "instrutorId": "u2c4d5",
+      "status": "publicado",
+      "cargaHoraria": 35
+    },
+    {
+      "id": "cur8f0",
+      "titulo": "Machine Learning com Python",
+      "descricao": "Aprenda machine learning do zero com Python e bibliotecas como scikit-learn.",
+      "categoriaId": "cat9b0",
+      "instrutorId": "u2c4d5",
+      "status": "rascunho",
+      "cargaHoraria": 45
+    },
+    {
+      "id": "cur9g1",
+      "titulo": "Segurança em Redes",
+      "descricao": "Conceitos fundamentais de segurança de redes e práticas de proteção.",
+      "categoriaId": "cat1c2",
+      "instrutorId": "u6k2l3",
+      "status": "publicado",
+      "cargaHoraria": 30
+    },
+    {
+      "id": "cur0h2",
+      "titulo": "Desenvolvimento Android com Kotlin",
+      "descricao": "Crie aplicativos Android nativos usando a linguagem Kotlin.",
+      "categoriaId": "cat5e6",
+      "instrutorId": "u1u3v4",
+      "status": "publicado",
+      "cargaHoraria": 50
+    },
+    {
+      "id": "cur1i3",
+      "titulo": "AWS para Iniciantes",
+      "descricao": "Introdução aos serviços da Amazon Web Services e computação em nuvem.",
+      "categoriaId": "cat7f8",
+      "instrutorId": "u2c4d5",
+      "status": "publicado",
+      "cargaHoraria": 25
+    },
+    {
+      "id": "cur2j4",
+      "titulo": "Inglês para Desenvolvedores",
+      "descricao": "Aprenda inglês técnico para ler documentação e se comunicar em equipes globais.",
+      "categoriaId": "cat9g0",
+      "instrutorId": "u6k2l3",
+      "status": "rascunho",
+      "cargaHoraria": 10
+    }
+  ],
+  "aulas": [
+    {
+      "id": "aul1z4",
+      "cursoId": "cur1y3",
+      "titulo": "Variáveis e Tipos de Dados",
+      "conteudo": "https://video.exemplo.com/aula1",
+      "ordem": 1,
+      "duracaoMinutos": 15
+    },
+    {
+      "id": "aul2a5",
+      "cursoId": "cur1y3",
+      "titulo": "Estruturas de Controle",
+      "conteudo": "https://video.exemplo.com/aula2",
+      "ordem": 2,
+      "duracaoMinutos": 20
+    },
+    {
+      "id": "aul3b6",
+      "cursoId": "cur1y3",
+      "titulo": "Funções e Escopo",
+      "conteudo": "https://video.exemplo.com/aula3",
+      "ordem": 3,
+      "duracaoMinutos": 25
+    },
+    {
+      "id": "aul4c7",
+      "cursoId": "cur2z4",
+      "titulo": "Hooks Básicos",
+      "conteudo": "https://video.exemplo.com/aula4",
+      "ordem": 1,
+      "duracaoMinutos": 30
+    },
+    {
+      "id": "aul5d8",
+      "cursoId": "cur2z4",
+      "titulo": "Context API",
+      "conteudo": "https://video.exemplo.com/aula5",
+      "ordem": 2,
+      "duracaoMinutos": 35
+    },
+    {
+      "id": "aul6e9",
+      "cursoId": "cur3a5",
+      "titulo": "Princípios do Design UI",
+      "conteudo": "https://video.exemplo.com/aula6",
+      "ordem": 1,
+      "duracaoMinutos": 20
+    },
+    {
+      "id": "aul7f0",
+      "cursoId": "cur3a5",
+      "titulo": "Ferramentas de Prototipagem",
+      "conteudo": "https://video.exemplo.com/aula7",
+      "ordem": 2,
+      "duracaoMinutos": 25
+    },
+    {
+      "id": "aul8g1",
+      "cursoId": "cur5c7",
+      "titulo": "Introdução ao SEO",
+      "conteudo": "https://video.exemplo.com/aula8",
+      "ordem": 1,
+      "duracaoMinutos": 15
+    },
+    {
+      "id": "aul9h2",
+      "cursoId": "cur5c7",
+      "titulo": "Palavras-chave e Conteúdo",
+      "conteudo": "https://video.exemplo.com/aula9",
+      "ordem": 2,
+      "duracaoMinutos": 20
+    },
+    {
+      "id": "aul0i3",
+      "cursoId": "cur7e9",
+      "titulo": "O que é IA?",
+      "conteudo": "https://video.exemplo.com/aula10",
+      "ordem": 1,
+      "duracaoMinutos": 18
+    },
+    {
+      "id": "aul1j4",
+      "cursoId": "cur7e9",
+      "titulo": "Redes Neurais Básicas",
+      "conteudo": "https://video.exemplo.com/aula11",
+      "ordem": 2,
+      "duracaoMinutos": 25
+    },
+    {
+      "id": "aul2k5",
+      "cursoId": "cur9g1",
+      "titulo": "Conceitos de Redes",
+      "conteudo": "https://video.exemplo.com/aula12",
+      "ordem": 1,
+      "duracaoMinutos": 22
+    },
+    {
+      "id": "aul3l6",
+      "cursoId": "cur0h2",
+      "titulo": "Configurando o Ambiente Android",
+      "conteudo": "https://video.exemplo.com/aula13",
+      "ordem": 1,
+      "duracaoMinutos": 30
+    },
+    {
+      "id": "aul4m7",
+      "cursoId": "cur1i3",
+      "titulo": "Criando uma Conta AWS",
+      "conteudo": "https://video.exemplo.com/aula14",
+      "ordem": 1,
+      "duracaoMinutos": 10
+    }
+  ],
+  "matriculas": [
+    {
+      "id": "mat1w5",
+      "usuarioId": "u1a2b3",
+      "cursoId": "cur1y3",
+      "dataMatricula": "2026-07-10T13:00:00Z",
+      "progresso": 60,
+      "status": "em andamento"
+    },
+    {
+      "id": "mat2x6",
+      "usuarioId": "u4g8h9",
+      "cursoId": "cur1y3",
+      "dataMatricula": "2026-07-12T09:30:00Z",
+      "progresso": 100,
+      "status": "concluído"
+    },
+    {
+      "id": "mat3y7",
+      "usuarioId": "u5i0j1",
+      "cursoId": "cur2z4",
+      "dataMatricula": "2026-07-14T14:20:00Z",
+      "progresso": 40,
+      "status": "em andamento"
+    },
+    {
+      "id": "mat4z8",
+      "usuarioId": "u7m4n5",
+      "cursoId": "cur3a5",
+      "dataMatricula": "2026-07-15T10:00:00Z",
+      "progresso": 75,
+      "status": "em andamento"
+    },
+    {
+      "id": "mat5a9",
+      "usuarioId": "u9q8r9",
+      "cursoId": "cur5c7",
+      "dataMatricula": "2026-07-16T11:30:00Z",
+      "progresso": 50,
+      "status": "em andamento"
+    },
+    {
+      "id": "mat6b0",
+      "usuarioId": "u0s1t2",
+      "cursoId": "cur6d8",
+      "dataMatricula": "2026-07-17T15:45:00Z",
+      "progresso": 0,
+      "status": "em andamento"
+    },
+    {
+      "id": "mat7c1",
+      "usuarioId": "u2w5x6",
+      "cursoId": "cur7e9",
+      "dataMatricula": "2026-07-18T08:15:00Z",
+      "progresso": 10,
+      "status": "em andamento"
+    },
+    {
+      "id": "mat8d2",
+      "usuarioId": "u1a2b3",
+      "cursoId": "cur2z4",
+      "dataMatricula": "2026-07-19T13:45:00Z",
+      "progresso": 20,
+      "status": "em andamento"
+    },
+    {
+      "id": "mat9e3",
+      "usuarioId": "u4g8h9",
+      "cursoId": "cur9g1",
+      "dataMatricula": "2026-07-20T10:20:00Z",
+      "progresso": 100,
+      "status": "concluído"
+    },
+    {
+      "id": "mat0f4",
+      "usuarioId": "u5i0j1",
+      "cursoId": "cur0h2",
+      "dataMatricula": "2026-07-21T16:30:00Z",
+      "progresso": 0,
+      "status": "em andamento"
+    },
+    {
+      "id": "mat1g5",
+      "usuarioId": "u7m4n5",
+      "cursoId": "cur1i3",
+      "dataMatricula": "2026-07-22T09:00:00Z",
+      "progresso": 30,
+      "status": "em andamento"
+    },
+    {
+      "id": "mat2h6",
+      "usuarioId": "u0s1t2",
+      "cursoId": "cur7e9",
+      "dataMatricula": "2026-07-23T14:50:00Z",
+      "progresso": 100,
+      "status": "concluído"
+    }
+  ],
+  "avaliacoes": [
+    {
+      "id": "ava1v6",
+      "usuarioId": "u1a2b3",
+      "cursoId": "cur1y3",
+      "nota": 5,
+      "comentario": "Curso muito claro e direto ao ponto, recomendo!",
+      "data": "2026-07-20T18:45:00Z"
+    },
+    {
+      "id": "ava2w7",
+      "usuarioId": "u4g8h9",
+      "cursoId": "cur1y3",
+      "nota": 4,
+      "comentario": "Bom curso, mas poderia ter mais exemplos práticos.",
+      "data": "2026-07-21T10:30:00Z"
+    },
+    {
+      "id": "ava3x8",
+      "usuarioId": "u4g8h9",
+      "cursoId": "cur9g1",
+      "nota": 5,
+      "comentario": "Excelente conteúdo sobre segurança, muito didático!",
+      "data": "2026-07-22T15:20:00Z"
+    },
+    {
+      "id": "ava4y9",
+      "usuarioId": "u0s1t2",
+      "cursoId": "cur7e9",
+      "nota": 5,
+      "comentario": "Introdução perfeita à IA, entendi todos os conceitos.",
+      "data": "2026-07-23T19:10:00Z"
+    },
+    {
+      "id": "ava5z0",
+      "usuarioId": "u2w5x6",
+      "cursoId": "cur7e9",
+      "nota": 4,
+      "comentario": "Gostei bastante, o material é bem organizado.",
+      "data": "2026-07-24T12:00:00Z"
+    },
+    {
+      "id": "ava6a1",
+      "usuarioId": "u5i0j1",
+      "cursoId": "cur2z4",
+      "nota": 3,
+      "comentario": "Conteúdo avançado, recomendo ter base em React antes.",
+      "data": "2026-07-25T08:30:00Z"
+    },
+    {
+      "id": "ava7b2",
+      "usuarioId": "u7m4n5",
+      "cursoId": "cur3a5",
+      "nota": 5,
+      "comentario": "Aulas incríveis, meu design evoluiu muito!",
+      "data": "2026-07-26T17:45:00Z"
+    },
+    {
+      "id": "ava8c3",
+      "usuarioId": "u9q8r9",
+      "cursoId": "cur5c7",
+      "nota": 4,
+      "comentario": "Ótimas estratégias de SEO, já estou aplicando no meu site.",
+      "data": "2026-07-27T11:20:00Z"
+    },
+    {
+      "id": "ava9d4",
+      "usuarioId": "u1a2b3",
+      "cursoId": "cur2z4",
+      "nota": 4,
+      "comentario": "Curso bem completo, mas algumas aulas são muito longas.",
+      "data": "2026-07-28T14:15:00Z"
+    },
+    {
+      "id": "ava0e5",
+      "usuarioId": "u0s1t2",
+      "cursoId": "cur6d8",
+      "nota": 5,
+      "comentario": "Estratégias de marketing de conteúdo muito práticas!",
+      "data": "2026-07-29T09:40:00Z"
+    },
+    {
+      "id": "ava1f6",
+      "usuarioId": "u2w5x6",
+      "cursoId": "cur5c7",
+      "nota": 3,
+      "comentario": "Poderia ter mais exemplos de casos reais.",
+      "data": "2026-07-30T16:50:00Z"
+    },
+    {
+      "id": "ava2g7",
+      "usuarioId": "u4g8h9",
+      "cursoId": "cur0h2",
+      "nota": 5,
+      "comentario": "Muito bom para iniciantes em Android com Kotlin!",
+      "data": "2026-07-31T13:25:00Z"
+    }
+  ]
 }
