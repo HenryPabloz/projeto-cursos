@@ -45,45 +45,55 @@
       <p class="login-marca-rodape">© 2026 Plataforma de Cursos Online</p>
     </section>
 
-    <!-- Painel de acesso: seleção de usuário para login simulado -->
+    <!-- Painel de acesso: usuário/email + senha para login simulado -->
     <section class="login-acesso">
       <div class="login-card anima-escala-in">
         <h2 class="login-card-titulo">Entrar na plataforma</h2>
-        <p class="login-card-subtitulo">Selecione um usuário cadastrado para acessar o sistema.</p>
+        <p class="login-card-subtitulo">Informe seu usuário (ou email) e sua senha para acessar o sistema.</p>
 
-        <form class="login-select-usuario" id="formLogin" novalidate>
+        <form class="login-form" id="formLogin" novalidate>
           <div class="form-group" style="margin-bottom: 0;">
-            <label class="form-label obrigatorio" for="seletorUsuario">Usuário</label>
-            <select class="form-select" id="seletorUsuario" name="usuario" required>
-              <option value="" selected disabled>Selecione um usuário...</option>
-              <option value="u1a2b3">Camila Rocha — camila.rocha@email.com (aluno)</option>
-              <option value="u2c4d5">Rafael Mendes — rafael.mendes@email.com (editor)</option>
-              <option value="u3e6f7">Juliana Costa — juliana.costa@email.com (admin)</option>
-              <option value="u4g8h9">Lucas Oliveira — lucas.oliveira@email.com (aluno)</option>
-              <option value="u5i0j1">Mariana Santos — mariana.santos@email.com (aluno)</option>
-              <option value="u6k2l3">Pedro Almeida — pedro.almeida@email.com (editor)</option>
-              <option value="u7m4n5">Carla Souza — carla.souza@email.com (aluno)</option>
-              <option value="u8o6p7">Fernando Lima — fernando.lima@email.com (admin)</option>
-            </select>
+            <label class="form-label obrigatorio" for="usuarioLogin">Usuário ou email</label>
+            <input
+              type="text"
+              class="form-input"
+              id="usuarioLogin"
+              name="usuario"
+              placeholder="nome.usuario ou nome@email.com"
+              autocomplete="username"
+              required
+            >
+            <span class="form-erro">Informe seu usuário ou email.</span>
           </div>
 
-          <button type="submit" class="btn btn-primario btn-bloco mt-md" id="btnEntrar">
+          <div class="form-group" style="margin-bottom: 0;">
+            <label class="form-label obrigatorio" for="senhaLogin">Senha</label>
+            <input
+              type="password"
+              class="form-input"
+              id="senhaLogin"
+              name="senha"
+              placeholder="Digite sua senha"
+              autocomplete="current-password"
+              minlength="6"
+              required
+            >
+            <span class="form-erro">Senha obrigatória, mínimo de 6 caracteres.</span>
+          </div>
+
+          <button type="submit" class="btn btn-primario btn-bloco" id="btnEntrar">
             Entrar
           </button>
         </form>
 
         <div class="login-aviso">
-          <span aria-hidden="true">ℹ️</span>
-          <span>Nota: Este é um login simulado usando localStorage. Nenhuma senha real é validada nesta etapa.</span>
-        </div>
-
-        <div class="login-credenciais">
-          <p class="login-credenciais-titulo">Credenciais de teste</p>
-          <div class="login-credenciais-lista">
-            <span>Aluno · camila.rocha@email.com</span>
-            <span>Editor · rafael.mendes@email.com</span>
-            <span>Admin · juliana.costa@email.com</span>
-          </div>
+          <button type="button" class="login-aviso-icone" aria-describedby="notaLoginSimulado">
+            <span aria-hidden="true">ℹ️</span>
+            <span class="somente-leitor">Mostrar informação sobre o login simulado</span>
+          </button>
+          <span class="login-aviso-texto" id="notaLoginSimulado" role="tooltip">
+            Nota: Este é um login simulado usando localStorage. Nenhuma senha real é validada nesta etapa.
+          </span>
         </div>
       </div>
     </section>

@@ -131,47 +131,63 @@
   margin-bottom: var(--espaco-xl);
 }
 
-.login-select-usuario {
+.login-form {
   display: flex;
   flex-direction: column;
-  gap: var(--espaco-xs);
+  gap: var(--espaco-lg);
 }
 
 .login-aviso {
+  position: relative;
   display: flex;
-  align-items: flex-start;
-  gap: var(--espaco-sm);
+  justify-content: center;
   margin-top: var(--espaco-lg);
-  padding: var(--espaco-md);
+}
+
+.login-aviso-icone {
+  display: grid;
+  place-items: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  min-height: 0;
+  border-radius: var(--raio-full);
+  background-color: rgba(59, 130, 246, 0.12);
+  color: var(--cor-info);
+  font-size: 0.9375rem;
+  transition: background-color var(--transicao-rapida), transform var(--transicao-rapida);
+}
+
+.login-aviso-icone:hover,
+.login-aviso-icone:focus-visible {
+  background-color: rgba(59, 130, 246, 0.2);
+  transform: scale(1.06);
+}
+
+.login-aviso-texto {
+  position: absolute;
+  bottom: calc(100% + var(--espaco-sm));
+  left: 50%;
+  transform: translate(-50%, 6px);
+  width: 15rem;
+  padding: var(--espaco-sm) var(--espaco-md);
   border-radius: var(--raio-md);
   background-color: rgba(59, 130, 246, 0.08);
   color: var(--cor-info);
   font-size: 0.8125rem;
   line-height: 1.5;
+  text-align: center;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity var(--transicao-normal), transform var(--transicao-normal), visibility var(--transicao-normal);
+  z-index: var(--z-tooltip);
 }
 
-.login-credenciais {
-  margin-top: var(--espaco-xl);
-  padding-top: var(--espaco-lg);
-  border-top: 1px solid var(--cor-borda);
-}
-
-.login-credenciais-titulo {
-  font-family: var(--fonte-mono);
-  font-size: 0.6875rem;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-  color: var(--cor-texto-suave);
-  margin-bottom: var(--espaco-sm);
-}
-
-.login-credenciais-lista {
-  display: flex;
-  flex-direction: column;
-  gap: var(--espaco-xs);
-  font-family: var(--fonte-mono);
-  font-size: 0.75rem;
-  color: var(--cor-texto-suave);
+.login-aviso-icone:hover ~ .login-aviso-texto,
+.login-aviso-icone:focus-visible ~ .login-aviso-texto {
+  opacity: 1;
+  visibility: visible;
+  transform: translate(-50%, 0);
 }
 
 @media (max-width: 1023px) {
