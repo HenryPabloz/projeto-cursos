@@ -1,0 +1,195 @@
+/* ===================================================================
+   PÁGINA: LOGIN
+   Layout dividido: painel de marca (esquerda) + card de acesso (direita).
+=================================================================== */
+
+.login-tela {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+}
+
+.login-marca {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: var(--espaco-2xl);
+  background:
+    radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.12), transparent 45%),
+    linear-gradient(155deg, var(--cor-primaria-escura), #312E81 65%, #1E1B4B);
+  color: #FFFFFF;
+  overflow: hidden;
+}
+
+.login-marca-logo {
+  display: flex;
+  align-items: center;
+  gap: var(--espaco-sm);
+  font-family: var(--fonte-display);
+  font-size: 1.25rem;
+  font-weight: var(--peso-extra-bold);
+  z-index: 1;
+}
+
+.login-marca-logo-icone {
+  display: grid;
+  place-items: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: var(--raio-md);
+  background-color: rgba(255, 255, 255, 0.14);
+}
+
+.login-marca-conteudo {
+  z-index: 1;
+  max-width: 30rem;
+}
+
+.login-marca-conteudo h1 {
+  font-size: clamp(2rem, 1.6rem + 1.6vw, 2.75rem);
+  margin-bottom: var(--espaco-md);
+}
+
+.login-marca-conteudo p {
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 1.0625rem;
+  line-height: 1.6;
+}
+
+.login-marca-stats {
+  display: flex;
+  gap: var(--espaco-2xl);
+  margin-top: var(--espaco-2xl);
+  z-index: 1;
+}
+
+.login-marca-stat-numero {
+  font-family: var(--fonte-display);
+  font-size: 1.75rem;
+  font-weight: var(--peso-extra-bold);
+}
+
+.login-marca-stat-rotulo {
+  font-family: var(--fonte-mono);
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.6);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.login-marca-rodape {
+  z-index: 1;
+  font-size: 0.8125rem;
+  color: rgba(255, 255, 255, 0.55);
+}
+
+.login-marca-anel {
+  position: absolute;
+  width: 26rem;
+  height: 26rem;
+  border-radius: var(--raio-full);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  bottom: -10rem;
+  right: -8rem;
+}
+
+.login-marca-anel::before {
+  content: '';
+  position: absolute;
+  inset: 3rem;
+  border-radius: var(--raio-full);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.login-acesso {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--espaco-2xl);
+  background-color: var(--cor-fundo);
+}
+
+.login-card {
+  width: 100%;
+  max-width: 26rem;
+  background-color: var(--cor-superficie);
+  border: 1px solid var(--cor-borda);
+  border-radius: var(--raio-xl);
+  box-shadow: var(--sombra-lg);
+  padding: var(--espaco-2xl);
+}
+
+.login-card-titulo {
+  font-size: 1.5rem;
+  margin-bottom: var(--espaco-xs);
+}
+
+.login-card-subtitulo {
+  color: var(--cor-texto-suave);
+  font-size: 0.9375rem;
+  margin-bottom: var(--espaco-xl);
+}
+
+.login-select-usuario {
+  display: flex;
+  flex-direction: column;
+  gap: var(--espaco-xs);
+}
+
+.login-aviso {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--espaco-sm);
+  margin-top: var(--espaco-lg);
+  padding: var(--espaco-md);
+  border-radius: var(--raio-md);
+  background-color: rgba(59, 130, 246, 0.08);
+  color: var(--cor-info);
+  font-size: 0.8125rem;
+  line-height: 1.5;
+}
+
+.login-credenciais {
+  margin-top: var(--espaco-xl);
+  padding-top: var(--espaco-lg);
+  border-top: 1px solid var(--cor-borda);
+}
+
+.login-credenciais-titulo {
+  font-family: var(--fonte-mono);
+  font-size: 0.6875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--cor-texto-suave);
+  margin-bottom: var(--espaco-sm);
+}
+
+.login-credenciais-lista {
+  display: flex;
+  flex-direction: column;
+  gap: var(--espaco-xs);
+  font-family: var(--fonte-mono);
+  font-size: 0.75rem;
+  color: var(--cor-texto-suave);
+}
+
+@media (max-width: 1023px) {
+  .login-tela {
+    grid-template-columns: 1fr;
+  }
+
+  .login-marca {
+    padding: var(--espaco-xl);
+    min-height: 20rem;
+  }
+
+  .login-marca-stats {
+    margin-top: var(--espaco-lg);
+    gap: var(--espaco-xl);
+  }
+
+  .login-acesso {
+    padding: var(--espaco-xl);
+  }
+}

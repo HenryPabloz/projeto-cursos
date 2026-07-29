@@ -1,11 +1,109 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login — Plataforma de Cursos Online</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../CSS/style.css">
 </head>
 <body>
-    
+
+  <main class="login-tela">
+
+    <!-- Painel de marca: contexto visual e prova social da plataforma -->
+    <section class="login-marca" aria-hidden="true">
+      <div class="login-marca-anel"></div>
+
+      <div class="login-marca-logo">
+        <span class="login-marca-logo-icone">🎓</span>
+        Plataforma de Cursos
+      </div>
+
+      <div class="login-marca-conteudo">
+        <h1>Sua trilha de aprendizado começa aqui.</h1>
+        <p>Cursos, aulas e avaliações organizados em um só lugar — evolua no seu ritmo e acompanhe cada etapa da sua jornada.</p>
+
+        <div class="login-marca-stats">
+          <div>
+            <div class="login-marca-stat-numero">12</div>
+            <div class="login-marca-stat-rotulo">Cursos publicados</div>
+          </div>
+          <div>
+            <div class="login-marca-stat-numero">11</div>
+            <div class="login-marca-stat-rotulo">Categorias</div>
+          </div>
+          <div>
+            <div class="login-marca-stat-numero">12</div>
+            <div class="login-marca-stat-rotulo">Alunos ativos</div>
+          </div>
+        </div>
+      </div>
+
+      <p class="login-marca-rodape">© 2026 Plataforma de Cursos Online</p>
+    </section>
+
+    <!-- Painel de acesso: seleção de usuário para login simulado -->
+    <section class="login-acesso">
+      <div class="login-card anima-escala-in">
+        <h2 class="login-card-titulo">Entrar na plataforma</h2>
+        <p class="login-card-subtitulo">Selecione um usuário cadastrado para acessar o sistema.</p>
+
+        <form class="login-select-usuario" id="formLogin" novalidate>
+          <div class="form-group" style="margin-bottom: 0;">
+            <label class="form-label obrigatorio" for="seletorUsuario">Usuário</label>
+            <select class="form-select" id="seletorUsuario" name="usuario" required>
+              <option value="" selected disabled>Selecione um usuário...</option>
+              <option value="u1a2b3">Camila Rocha — camila.rocha@email.com (aluno)</option>
+              <option value="u2c4d5">Rafael Mendes — rafael.mendes@email.com (editor)</option>
+              <option value="u3e6f7">Juliana Costa — juliana.costa@email.com (admin)</option>
+              <option value="u4g8h9">Lucas Oliveira — lucas.oliveira@email.com (aluno)</option>
+              <option value="u5i0j1">Mariana Santos — mariana.santos@email.com (aluno)</option>
+              <option value="u6k2l3">Pedro Almeida — pedro.almeida@email.com (editor)</option>
+              <option value="u7m4n5">Carla Souza — carla.souza@email.com (aluno)</option>
+              <option value="u8o6p7">Fernando Lima — fernando.lima@email.com (admin)</option>
+            </select>
+          </div>
+
+          <button type="submit" class="btn btn-primario btn-bloco mt-md" id="btnEntrar">
+            Entrar
+          </button>
+        </form>
+
+        <div class="login-aviso">
+          <span aria-hidden="true">ℹ️</span>
+          <span>Nota: Este é um login simulado usando localStorage. Nenhuma senha real é validada nesta etapa.</span>
+        </div>
+
+        <div class="login-credenciais">
+          <p class="login-credenciais-titulo">Credenciais de teste</p>
+          <div class="login-credenciais-lista">
+            <span>Aluno · camila.rocha@email.com</span>
+            <span>Editor · rafael.mendes@email.com</span>
+            <span>Admin · juliana.costa@email.com</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <div class="toast-container" id="toastContainer" aria-live="polite"></div>
+
+  <!-- GSAP (Core) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <!-- GSAP ScrollTrigger -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <!-- Lenis (Smooth Scroll) -->
+  <script src="https://cdn.jsdelivr.net/gh/darkroomengineering/lenis@latest/bundled/lenis.js"></script>
+  <!-- Animações do site -->
+  <script src="../JS/animacoes.js"></script>
+  <script>
+    animacoes.inicializarLenis();
+    animacoes.animarEntradaPagina();
+  </script>
+
 </body>
 </html>

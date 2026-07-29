@@ -1,0 +1,94 @@
+/* ===================================================================
+   BOTÕES
+=================================================================== */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--espaco-sm);
+  padding: var(--espaco-sm) var(--espaco-lg);
+  border-radius: var(--raio-md);
+  font-weight: var(--peso-bold);
+  font-size: 0.9375rem;
+  border: 1px solid transparent;
+  transition: transform var(--transicao-rapida), box-shadow var(--transicao-rapida),
+    background-color var(--transicao-rapida), border-color var(--transicao-rapida);
+  white-space: nowrap;
+}
+
+.btn:active {
+  transform: scale(0.97);
+}
+
+.btn-primario {
+  background-color: var(--cor-primaria);
+  color: #FFFFFF;
+  box-shadow: var(--sombra-colorida);
+}
+
+.btn-primario:hover {
+  background-color: var(--cor-primaria-escura);
+  box-shadow: 0 14px 28px rgba(99, 102, 241, 0.32);
+  transform: translateY(-1px);
+}
+
+.btn-secundario {
+  background-color: transparent;
+  color: var(--cor-primaria);
+  border-color: var(--cor-primaria);
+}
+
+.btn-secundario:hover {
+  background-color: rgba(99, 102, 241, 0.08);
+}
+
+.btn-perigo {
+  background-color: var(--cor-erro);
+  color: #FFFFFF;
+}
+
+.btn-perigo:hover {
+  background-color: #DC2626;
+  transform: translateY(-1px);
+}
+
+.btn-fantasma {
+  background-color: transparent;
+  color: var(--cor-texto-suave);
+}
+
+.btn-fantasma:hover {
+  background-color: var(--cor-fundo-alt);
+  color: var(--cor-texto);
+}
+
+.btn-icone {
+  padding: var(--espaco-sm);
+  border-radius: var(--raio-full);
+  background-color: transparent;
+  color: var(--cor-texto-suave);
+}
+
+.btn-icone:hover {
+  background-color: var(--cor-fundo-alt);
+  color: var(--cor-texto);
+}
+
+.btn-bloco {
+  width: 100%;
+}
+
+.btn-pequeno {
+  padding: var(--espaco-xs) var(--espaco-md);
+  font-size: 0.8125rem;
+}
+
+.btn:disabled {
+  background-color: var(--cor-borda);
+  color: var(--cor-texto-suave);
+  border-color: var(--cor-borda);
+  box-shadow: none;
+  cursor: not-allowed;
+  transform: none;
+}

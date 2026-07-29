@@ -1,0 +1,39 @@
+/* ===================================================================
+   STYLE.CSS — ARQUIVO PRINCIPAL
+   Importa todas as camadas na ordem correta da cascata. Não escrever
+   estilos soltos aqui: cada regra pertence a uma das camadas abaixo.
+=================================================================== */
+
+/* 1. BASE - Reset e variáveis globais */
+@import url('./base/reset.css');
+@import url('./base/variaveis.css');
+@import url('./base/tipografia.css');
+
+/* 2. LAYOUT E UTILITÁRIOS */
+@import url('./utilitarios/layout.css');
+@import url('./utilitarios/espaco.css');
+@import url('./utilitarios/responsividade.css');
+@import url('./utilitarios/animacoes.css');
+@import url('./utilitarios/acessibilidade.css');
+
+/* 3. COMPONENTES REUTILIZÁVEIS */
+@import url('./componentes/navbar.css');
+@import url('./componentes/sidebar.css');
+@import url('./componentes/botoes.css');
+@import url('./componentes/cards.css');
+@import url('./componentes/modais.css');
+@import url('./componentes/formularios.css');
+@import url('./componentes/tabelas.css');
+@import url('./componentes/badges.css');
+@import url('./componentes/toasts.css');
+@import url('./componentes/barras-progresso.css');
+@import url('./componentes/breadcrumb.css');
+@import url('./componentes/paginacao.css');
+
+/* 4. ESTILOS ESPECÍFICOS POR PÁGINA */
+@import url('./paginas/login.css');
+@import url('./paginas/catalogo-cursos.css');
+@import url('./paginas/curso-detalhes.css');
+@import url('./paginas/painel-editor.css');
+@import url('./paginas/painel-admin.css');
+@import url('./paginas/meu-perfil.css');

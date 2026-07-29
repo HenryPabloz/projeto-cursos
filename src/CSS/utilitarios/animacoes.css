@@ -1,0 +1,80 @@
+/* ===================================================================
+   ANIMAÇÕES
+   Keyframes e classes reutilizáveis. O GSAP (fase JS) usa estas mesmas
+   ideias, mas aqui garantimos que a página já nasça "viva" com CSS puro.
+=================================================================== */
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slide-up {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slide-down {
+  from { opacity: 0; transform: translateY(-16px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slide-left {
+  from { opacity: 0; transform: translateX(20px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes escala-in {
+  from { opacity: 0; transform: scale(0.94); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes girar {
+  to { transform: rotate(360deg); }
+}
+
+@keyframes pulsar {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+.anima-fade-in {
+  animation: fade-in 0.4s ease-out both;
+}
+
+.anima-slide-up {
+  animation: slide-up 0.5s ease-out both;
+}
+
+.anima-slide-down {
+  animation: slide-down 0.5s ease-out both;
+}
+
+.anima-escala-in {
+  animation: escala-in 0.3s ease-out both;
+}
+
+.anima-girar {
+  animation: girar 0.8s linear infinite;
+}
+
+.anima-pulsar {
+  animation: pulsar 1.4s ease-in-out infinite;
+}
+
+/* Delay incremental para orquestrar entradas em sequência sem JS */
+.anima-atraso-1 { animation-delay: 0.1s; }
+.anima-atraso-2 { animation-delay: 0.2s; }
+.anima-atraso-3 { animation-delay: 0.3s; }
+.anima-atraso-4 { animation-delay: 0.4s; }
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}

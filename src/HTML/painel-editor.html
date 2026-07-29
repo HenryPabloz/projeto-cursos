@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Painel do Editor — Plataforma de Cursos Online</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../CSS/style.css">
+</head>
+<body>
+
+  <a href="#conteudo-principal" class="pular-conteudo">Pular para o conteúdo</a>
+
+  <div class="app-shell">
+
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebarPainel">
+      <div class="sidebar-logo">
+        <span class="navbar-logo-marca">🎓</span>
+        Plataforma de Cursos
+      </div>
+
+      <nav class="sidebar-nav" aria-label="Navegação do painel">
+        <span class="sidebar-nav-titulo">Geral</span>
+        <a href="./catalogo-cursos.html" class="sidebar-nav-item">📚 Catálogo</a>
+        <a href="./meu-perfil.html" class="sidebar-nav-item">👤 Meu Perfil</a>
+
+        <span class="sidebar-nav-titulo">Gestão de Conteúdo</span>
+        <a href="./painel-editor.html" class="sidebar-nav-item ativo">🛠️ Painel do Editor</a>
+      </nav>
+
+      <div class="sidebar-rodape">
+        <div class="navbar-user">
+          <span class="navbar-user-avatar">RM</span>
+          <div class="navbar-user-info">
+            <span class="navbar-user-nome">Rafael Mendes</span>
+            <span class="navbar-badge-role badge badge-role-editor">Editor</span>
+          </div>
+        </div>
+        <button class="btn btn-fantasma btn-bloco mt-md" id="btnLogoutEditor">Sair</button>
+      </div>
+    </aside>
+
+    <div>
+      <header class="navbar" style="padding-inline: var(--espaco-2xl);">
+        <button class="btn-icone somente-mobile" aria-label="Abrir menu lateral" id="btnAbrirSidebar">☰</button>
+        <nav class="breadcrumb" style="margin-bottom: 0;">
+          <span>Painel do Editor</span>
+          <span class="breadcrumb-separador">/</span>
+          <span class="breadcrumb-atual">Cursos</span>
+        </nav>
+        <div></div>
+      </header>
+
+      <main id="conteudo-principal" class="painel-editor-conteudo">
+
+        <div class="painel-editor-topo">
+          <div>
+            <h1>Painel do Editor</h1>
+            <p class="texto-suave">Gerencie categorias, cursos e aulas da plataforma.</p>
+          </div>
+        </div>
+
+        <nav class="painel-editor-abas" role="tablist">
+          <button class="painel-editor-aba" role="tab" data-alvo="secaoCategorias">Categorias</button>
+          <button class="painel-editor-aba ativa" role="tab" data-alvo="secaoCursos">Cursos</button>
+          <button class="painel-editor-aba" role="tab" data-alvo="secaoAulas">Aulas</button>
+        </nav>
+
+        <!-- ============ SEÇÃO: CATEGORIAS ============ -->
+        <section class="painel-editor-secao" id="secaoCategorias">
+          <div class="flex-entre mb-md">
+            <h3>Categorias cadastradas</h3>
+            <button class="btn btn-primario" id="btnNovaCategoria">+ Nova Categoria</button>
+          </div>
+
+          <div class="tabela-wrapper">
+            <table class="tabela painel-editor-tabela">
+              <thead>
+                <tr>
+                  <th>Nome</th>
+                  <th>Descrição</th>
+                  <th>Ações</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td data-label="Nome">Programação</td>
+                  <td data-label="Descrição">Cursos sobre linguagens, frameworks e boas práticas de desenvolvimento.</td>
+                  <td data-label="Ações">
+                    <div class="tabela-acoes">
+                      <button class="btn btn-icone" aria-label="Editar categoria">✏️</button>
+                      <button class="btn btn-icone" aria-label="Excluir categoria">🗑️</button>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td data-label="Nome">Design</td>
+                  <td data-label="Descrição">Cursos sobre design gráfico, UI/UX e conceitos visuais.</td>
+                  <td data-label="Ações">
+                    <div class="tabela-acoes">
+                      <button class="btn btn-icone" aria-label="Editar categoria">✏️</button>
+                      <button class="btn btn-icone" aria-label="Excluir categoria">🗑️</button>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td data-label="Nome">Marketing Digital</td>
+                  <td data-label="Descrição">Cursos sobre SEO, mídias sociais e análise de dados.</td>
+                  <td data-label="Ações">
+                    <div class="tabela-acoes">
+                      <button class="btn btn-icone" aria-label="Editar categoria">✏️</button>
+                      <button class="btn btn-icone" aria-label="Excluir categoria">🗑️</button>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- ============ SEÇÃO: CURSOS ============ -->
+        <section class="painel-editor-secao ativa" id="secaoCursos">
+          <div class="flex-entre mb-md">
+            <h3>Cursos cadastrados</h3>
+            <button class="btn btn-primario" id="btnNovoCurso">+ Novo Curso</button>
+          </div>
+
+          <div class="tabela-wrapper">
+            <table class="tabela painel-editor-tabela">
+              <thead>
+                <tr>
+                  <th>Título</th>
+                  <th>Categoria</th>
+                  <th>Status</th>
+                  <th>Ações</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td data-label="Título">Introdução ao JavaScript</td>
+                  <td data-label="Categoria">Programação</td>
+                  <td data-label="Status"><span class="badge badge-publicado"><span class="badge-ponto"></span>Publicado</span></td>
+                  <td data-label="Ações">
+                    <div class="tabela-acoes">
+                      <button class="btn btn-icone" aria-label="Editar curso">✏️</button>
+                      <button class="btn btn-icone" aria-label="Excluir curso">🗑️</button>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td data-label="Título">React Avançado</td>
+                  <td data-label="Categoria">Programação</td>
+                  <td data-label="Status"><span class="badge badge-publicado"><span class="badge-ponto"></span>Publicado</span></td>
+                  <td data-label="Ações">
+                    <div class="tabela-acoes">
+                      <button class="btn btn-icone" aria-label="Editar curso">✏️</button>
+                      <button class="btn btn-icone" aria-label="Excluir curso">🗑️</button>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td data-label="Título">Figma do Básico ao Avançado</td>
+                  <td data-label="Categoria">Design</td>
+                  <td data-label="Status"><span class="badge badge-rascunho"><span class="badge-ponto"></span>Rascunho</span></td>
+                  <td data-label="Ações">
+                    <div class="tabela-acoes">
+                      <button class="btn btn-icone" aria-label="Editar curso">✏️</button>
+                      <button class="btn btn-icone" aria-label="Excluir curso">🗑️</button>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- ============ SEÇÃO: AULAS ============ -->
+        <section class="painel-editor-secao" id="secaoAulas">
+          <div class="flex-entre mb-md">
+            <h3>Aulas</h3>
+            <button class="btn btn-primario" id="btnNovaAula">+ Nova Aula</button>
+          </div>
+
+          <div class="painel-editor-select-curso">
+            <label class="form-label" for="filtroAulaCurso">Curso</label>
+            <select class="form-select" id="filtroAulaCurso">
+              <option>Introdução ao JavaScript</option>
+              <option>React Avançado</option>
+            </select>
+          </div>
+
+          <div class="tabela-wrapper">
+            <table class="tabela painel-editor-tabela">
+              <thead>
+                <tr>
+                  <th>Ordem</th>
+                  <th>Título</th>
+                  <th>Duração</th>
+                  <th>Ações</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td data-label="Ordem">1</td>
+                  <td data-label="Título">Variáveis e Tipos de Dados</td>
+                  <td data-label="Duração">15 min</td>
+                  <td data-label="Ações">
+                    <div class="tabela-acoes">
+                      <button class="btn btn-icone" aria-label="Editar aula">✏️</button>
+                      <button class="btn btn-icone" aria-label="Excluir aula">🗑️</button>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td data-label="Ordem">2</td>
+                  <td data-label="Título">Estruturas de Controle</td>
+                  <td data-label="Duração">20 min</td>
+                  <td data-label="Ações">
+                    <div class="tabela-acoes">
+                      <button class="btn btn-icone" aria-label="Editar aula">✏️</button>
+                      <button class="btn btn-icone" aria-label="Excluir aula">🗑️</button>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+      </main>
+    </div>
+  </div>
+
+  <!-- Modal: Novo Curso (exemplo de formulário do painel) -->
+  <div class="modal-overlay" id="modalCurso">
+    <div class="modal">
+      <button class="modal-fechar btn-icone" aria-label="Fechar modal">✕</button>
+      <div class="modal-header">
+        <h3 class="modal-titulo">Novo Curso</h3>
+      </div>
+
+      <form class="modal-corpo" novalidate>
+        <div class="form-group" style="margin-bottom: 0;">
+          <label class="form-label obrigatorio" for="tituloCurso">Título</label>
+          <input type="text" class="form-input" id="tituloCurso" placeholder="Ex: Introdução ao CSS" minlength="5">
+          <span class="form-dica">Mínimo 5 caracteres.</span>
+        </div>
+
+        <div class="form-group" style="margin-bottom: 0;">
+          <label class="form-label" for="descricaoCurso">Descrição</label>
+          <textarea class="form-textarea" id="descricaoCurso" placeholder="Sobre o que é este curso?"></textarea>
+        </div>
+
+        <div class="form-linha">
+          <div class="form-group" style="margin-bottom: 0;">
+            <label class="form-label obrigatorio" for="categoriaCurso">Categoria</label>
+            <select class="form-select" id="categoriaCurso">
+              <option value="">Selecione...</option>
+              <option>Programação</option>
+              <option>Design</option>
+            </select>
+          </div>
+
+          <div class="form-group" style="margin-bottom: 0;">
+            <label class="form-label obrigatorio" for="cargaHorariaCurso">Carga horária (h)</label>
+            <input type="number" class="form-input" id="cargaHorariaCurso" min="1" placeholder="20">
+          </div>
+        </div>
+
+        <div class="form-group" style="margin-bottom: 0;">
+          <label class="form-label obrigatorio">Status</label>
+          <div class="form-radio-grupo">
+            <label class="form-radio">
+              <input type="radio" name="statusCurso" value="rascunho" checked> Rascunho
+            </label>
+            <label class="form-radio">
+              <input type="radio" name="statusCurso" value="publicado"> Publicado
+            </label>
+          </div>
+        </div>
+      </form>
+
+      <div class="modal-rodape">
+        <button class="btn btn-fantasma">Cancelar</button>
+        <button class="btn btn-primario">Salvar</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal: confirmação de exclusão -->
+  <div class="modal-overlay" id="modalConfirmarExclusao">
+    <div class="modal modal-confirmacao">
+      <div class="modal-confirmacao-icone">⚠️</div>
+      <h3 class="modal-titulo">Excluir curso?</h3>
+      <p class="modal-subtitulo">Tem certeza que deseja deletar "React Avançado"? Esta ação não pode ser desfeita.</p>
+      <div class="modal-rodape">
+        <button class="btn btn-fantasma">Cancelar</button>
+        <button class="btn btn-perigo">Confirmar exclusão</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="toast-container" id="toastContainer" aria-live="polite"></div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/darkroomengineering/lenis@latest/bundled/lenis.js"></script>
+  <script src="../JS/animacoes.js"></script>
+  <script>
+    animacoes.inicializarLenis();
+    animacoes.animarEntradaPagina();
+  </script>
+
+</body>
+</html>

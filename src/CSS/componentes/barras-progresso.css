@@ -1,0 +1,45 @@
+/* ===================================================================
+   BARRA DE PROGRESSO
+=================================================================== */
+
+.barra-progresso {
+  display: flex;
+  flex-direction: column;
+  gap: var(--espaco-xs);
+}
+
+.barra-progresso-topo {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.8125rem;
+}
+
+.barra-progresso-rotulo {
+  color: var(--cor-texto-suave);
+}
+
+.barra-progresso-percentual {
+  font-family: var(--fonte-mono);
+  font-weight: var(--peso-bold);
+  color: var(--cor-primaria);
+}
+
+.barra-progresso-trilho {
+  width: 100%;
+  height: 10px;
+  border-radius: var(--raio-full);
+  background-color: var(--cor-fundo-alt);
+  overflow: hidden;
+}
+
+.barra-progresso-preenchimento {
+  height: 100%;
+  width: 0%;
+  border-radius: var(--raio-full);
+  background: linear-gradient(90deg, var(--cor-primaria), var(--cor-primaria-clara));
+  transition: width var(--transicao-lenta);
+}
+
+.barra-progresso-preenchimento.concluido {
+  background: linear-gradient(90deg, var(--cor-sucesso-escuro), var(--cor-sucesso));
+}

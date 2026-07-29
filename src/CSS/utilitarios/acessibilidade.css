@@ -1,0 +1,52 @@
+/* ===================================================================
+   ACESSIBILIDADE
+   Foco visível, contraste e apoio à navegação por teclado/leitor de tela.
+=================================================================== */
+
+.pular-conteudo {
+  position: absolute;
+  top: -100px;
+  left: var(--espaco-md);
+  z-index: var(--z-tooltip);
+  padding: var(--espaco-sm) var(--espaco-md);
+  background-color: var(--cor-primaria);
+  color: #FFFFFF;
+  border-radius: var(--raio-md);
+  font-weight: var(--peso-bold);
+  transition: top var(--transicao-rapida);
+}
+
+.pular-conteudo:focus {
+  top: var(--espaco-md);
+}
+
+/* Garante contraste mínimo AA em textos sobre fundos coloridos */
+.contraste-alto {
+  color: #FFFFFF;
+}
+
+/* Nunca usar apenas cor para indicar estado: reforça com ícone/texto */
+.indicador-status {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--espaco-xs);
+}
+
+[aria-hidden="true"] {
+  pointer-events: none;
+}
+
+/* Área de toque mínima recomendada (44x44px) para elementos interativos */
+button,
+a,
+input,
+select,
+textarea {
+  min-height: 2.75rem;
+}
+
+.btn-icone,
+.tabela-acao-icone {
+  min-width: 2.75rem;
+  min-height: 2.75rem;
+}

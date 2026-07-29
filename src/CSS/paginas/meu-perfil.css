@@ -1,0 +1,72 @@
+/* ===================================================================
+   PÁGINA: MEU PERFIL
+=================================================================== */
+
+.perfil-container {
+  padding-block: var(--espaco-2xl);
+}
+
+.perfil-topo {
+  display: flex;
+  align-items: center;
+  gap: var(--espaco-lg);
+  margin-bottom: var(--espaco-xl);
+}
+
+.perfil-avatar-grande {
+  display: grid;
+  place-items: center;
+  width: 4.5rem;
+  height: 4.5rem;
+  min-height: 0;
+  border-radius: var(--raio-full);
+  background: linear-gradient(135deg, var(--cor-primaria), var(--cor-primaria-escura));
+  color: #FFFFFF;
+  font-family: var(--fonte-display);
+  font-size: 1.5rem;
+  font-weight: var(--peso-extra-bold);
+}
+
+.perfil-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: var(--espaco-xl);
+  align-items: start;
+}
+
+.perfil-info-leitura {
+  display: flex;
+  flex-direction: column;
+  gap: var(--espaco-md);
+}
+
+.perfil-info-item {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding-bottom: var(--espaco-md);
+  border-bottom: 1px solid var(--cor-borda);
+}
+
+.perfil-info-item:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.perfil-info-rotulo {
+  font-family: var(--fonte-mono);
+  font-size: 0.6875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--cor-texto-suave);
+}
+
+.perfil-info-valor {
+  font-weight: var(--peso-medio);
+}
+
+@media (max-width: 1023px) {
+  .perfil-grid {
+    grid-template-columns: 1fr;
+  }
+}

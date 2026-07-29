@@ -1,0 +1,30 @@
+/* ===================================================================
+   BREADCRUMB
+=================================================================== */
+
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--espaco-xs);
+  font-size: 0.8125rem;
+  color: var(--cor-texto-suave);
+  margin-bottom: var(--espaco-lg);
+}
+
+.breadcrumb-item {
+  transition: color var(--transicao-rapida);
+}
+
+.breadcrumb-item:hover {
+  color: var(--cor-primaria);
+}
+
+.breadcrumb-separador {
+  color: var(--cor-borda);
+}
+
+.breadcrumb-atual {
+  color: var(--cor-texto);
+  font-weight: var(--peso-medio);
+}

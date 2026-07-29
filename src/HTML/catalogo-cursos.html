@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Catálogo de Cursos — Plataforma de Cursos Online</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../CSS/style.css">
+</head>
+<body>
+
+  <a href="#conteudo-principal" class="pular-conteudo">Pular para o conteúdo</a>
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <a href="./catalogo-cursos.html" class="navbar-logo">
+      <span class="navbar-logo-marca">🎓</span>
+      Plataforma de Cursos
+    </a>
+
+    <nav class="navbar-menu" aria-label="Navegação principal">
+      <a href="./catalogo-cursos.html" class="navbar-menu-item ativo">Catálogo</a>
+      <a href="./painel-editor.html" class="navbar-menu-item" data-restrito-a="editor,admin">Painel do Editor</a>
+      <a href="./painel-admin.html" class="navbar-menu-item" data-restrito-a="admin">Painel Admin</a>
+    </nav>
+
+    <div class="navbar-acoes">
+      <button class="navbar-hamburguer btn-icone" aria-label="Abrir menu" aria-expanded="false">☰</button>
+      <div class="navbar-user" id="menuUsuario" tabindex="0" aria-haspopup="true" aria-expanded="false">
+        <span class="navbar-user-avatar">CR</span>
+        <div class="navbar-user-info somente-desktop">
+          <span class="navbar-user-nome">Camila Rocha</span>
+          <span class="navbar-badge-role badge badge-role-aluno">Aluno</span>
+        </div>
+
+        <div class="navbar-dropdown oculto" id="dropdownUsuario">
+          <a href="./meu-perfil.html" class="navbar-dropdown-item">👤 Meu Perfil</a>
+          <button class="navbar-dropdown-item perigo" id="btnLogout">🚪 Logout</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main id="conteudo-principal">
+
+    <!-- Hero com busca -->
+    <section class="catalogo-hero">
+      <div class="container">
+        <span class="eyebrow" style="color: rgba(255,255,255,0.75);">Catálogo</span>
+        <h1 class="catalogo-hero-titulo">Encontre o próximo curso da sua trilha.</h1>
+        <p class="catalogo-hero-subtitulo">Explore cursos publicados, filtre por categoria e continue de onde parou.</p>
+
+        <form class="catalogo-busca" role="search">
+          <label for="buscaCurso" class="somente-leitor">Buscar curso por título</label>
+          <input type="search" id="buscaCurso" class="form-input" placeholder="Buscar por título do curso...">
+          <button type="submit" class="btn btn-primario">Buscar</button>
+        </form>
+      </div>
+    </section>
+
+    <div class="container">
+
+      <!-- Filtros -->
+      <div class="catalogo-filtros-barra">
+        <div class="catalogo-filtro">
+          <label for="filtroCategoria">Categoria</label>
+          <select class="form-select" id="filtroCategoria">
+            <option value="">Todas as categorias</option>
+            <option value="cat1x2">Programação</option>
+            <option value="cat3y4">Design</option>
+            <option value="cat5z6">Marketing Digital</option>
+            <option value="cat7a8">Negócios e Empreendedorismo</option>
+            <option value="cat9b0">Inteligência Artificial</option>
+            <option value="cat1c2">Segurança da Informação</option>
+            <option value="cat5e6">Desenvolvimento Mobile</option>
+            <option value="cat7f8">Cloud Computing</option>
+          </select>
+        </div>
+
+        <div class="catalogo-filtro">
+          <label for="ordenacaoCurso">Ordenar por</label>
+          <select class="form-select" id="ordenacaoCurso">
+            <option value="nome-az">Nome A-Z</option>
+            <option value="recentes">Mais recentes</option>
+            <option value="avaliacao">Melhor avaliado</option>
+          </select>
+        </div>
+
+        <span class="catalogo-resultado-contagem">9 cursos publicados</span>
+      </div>
+
+      <!-- Grid de cursos -->
+      <section class="grid-cursos mb-2xl" aria-label="Lista de cursos publicados">
+
+        <article class="card catalogo-card-curso anima-slide-up">
+          <div class="card-header">
+            <div>
+              <span class="catalogo-card-categoria">Programação</span>
+              <h3 class="card-titulo">Introdução ao JavaScript</h3>
+            </div>
+            <span class="badge badge-publicado"><span class="badge-ponto"></span>Publicado</span>
+          </div>
+          <p class="catalogo-card-descricao">Fundamentos da linguagem JavaScript para iniciantes.</p>
+          <div class="catalogo-card-instrutor">
+            <span class="catalogo-card-avatar">RM</span>
+            Rafael Mendes · 20h
+          </div>
+          <div class="catalogo-card-status-matricula">
+            <div class="anel-progresso pequeno" style="--progresso: 60;">
+              <span class="anel-progresso-valor">60%</span>
+            </div>
+            <div class="catalogo-card-status-texto">
+              <strong>Matriculado</strong>
+              Em andamento
+            </div>
+          </div>
+          <div class="card-footer">
+            <a href="./curso-detalhes.html?id=cur1y3" class="btn btn-secundario btn-bloco">Ver curso</a>
+          </div>
+        </article>
+
+        <article class="card catalogo-card-curso anima-slide-up anima-atraso-1">
+          <div class="card-header">
+            <div>
+              <span class="catalogo-card-categoria">Programação</span>
+              <h3 class="card-titulo">React Avançado</h3>
+            </div>
+            <span class="badge badge-publicado"><span class="badge-ponto"></span>Publicado</span>
+          </div>
+          <p class="catalogo-card-descricao">Aprofunde seus conhecimentos em React com hooks, context API e performance.</p>
+          <div class="catalogo-card-instrutor">
+            <span class="catalogo-card-avatar">RM</span>
+            Rafael Mendes · 40h
+          </div>
+          <div class="card-footer" style="margin-top: auto;">
+            <button class="btn btn-primario btn-bloco">Matricular</button>
+          </div>
+        </article>
+
+        <article class="card catalogo-card-curso anima-slide-up anima-atraso-2">
+          <div class="card-header">
+            <div>
+              <span class="catalogo-card-categoria">Design</span>
+              <h3 class="card-titulo">UI Design para Iniciantes</h3>
+            </div>
+            <span class="badge badge-publicado"><span class="badge-ponto"></span>Publicado</span>
+          </div>
+          <p class="catalogo-card-descricao">Aprenda os princípios do design de interfaces e crie designs incríveis.</p>
+          <div class="catalogo-card-instrutor">
+            <span class="catalogo-card-avatar">PA</span>
+            Pedro Almeida · 25h
+          </div>
+          <div class="card-footer" style="margin-top: auto;">
+            <button class="btn btn-primario btn-bloco">Matricular</button>
+          </div>
+        </article>
+
+        <article class="card catalogo-card-curso anima-slide-up anima-atraso-3">
+          <div class="card-header">
+            <div>
+              <span class="catalogo-card-categoria">Marketing Digital</span>
+              <h3 class="card-titulo">SEO para Sites e Blogs</h3>
+            </div>
+            <span class="badge badge-publicado"><span class="badge-ponto"></span>Publicado</span>
+          </div>
+          <p class="catalogo-card-descricao">Aprenda as melhores práticas de SEO para rankear seu site nos buscadores.</p>
+          <div class="catalogo-card-instrutor">
+            <span class="catalogo-card-avatar">AR</span>
+            Amanda Ribeiro · 15h
+          </div>
+          <div class="card-footer" style="margin-top: auto;">
+            <button class="btn btn-primario btn-bloco">Matricular</button>
+          </div>
+        </article>
+
+        <article class="card catalogo-card-curso anima-slide-up anima-atraso-4">
+          <div class="card-header">
+            <div>
+              <span class="catalogo-card-categoria">Marketing Digital</span>
+              <h3 class="card-titulo">Marketing de Conteúdo</h3>
+            </div>
+            <span class="badge badge-publicado"><span class="badge-ponto"></span>Publicado</span>
+          </div>
+          <p class="catalogo-card-descricao">Estratégias para criar conteúdo relevante e engajar sua audiência.</p>
+          <div class="catalogo-card-instrutor">
+            <span class="catalogo-card-avatar">AR</span>
+            Amanda Ribeiro · 20h
+          </div>
+          <div class="card-footer" style="margin-top: auto;">
+            <button class="btn btn-primario btn-bloco">Matricular</button>
+          </div>
+        </article>
+
+        <article class="card catalogo-card-curso anima-slide-up">
+          <div class="card-header">
+            <div>
+              <span class="catalogo-card-categoria">Inteligência Artificial</span>
+              <h3 class="card-titulo">Fundamentos da IA</h3>
+            </div>
+            <span class="badge badge-publicado"><span class="badge-ponto"></span>Publicado</span>
+          </div>
+          <p class="catalogo-card-descricao">Introdução aos conceitos de inteligência artificial e suas aplicações.</p>
+          <div class="catalogo-card-instrutor">
+            <span class="catalogo-card-avatar">RM</span>
+            Rafael Mendes · 35h
+          </div>
+          <div class="card-footer" style="margin-top: auto;">
+            <button class="btn btn-primario btn-bloco">Matricular</button>
+          </div>
+        </article>
+
+        <article class="card catalogo-card-curso anima-slide-up anima-atraso-1">
+          <div class="card-header">
+            <div>
+              <span class="catalogo-card-categoria">Segurança da Informação</span>
+              <h3 class="card-titulo">Segurança em Redes</h3>
+            </div>
+            <span class="badge badge-publicado"><span class="badge-ponto"></span>Publicado</span>
+          </div>
+          <p class="catalogo-card-descricao">Conceitos fundamentais de segurança de redes e práticas de proteção.</p>
+          <div class="catalogo-card-instrutor">
+            <span class="catalogo-card-avatar">PA</span>
+            Pedro Almeida · 30h
+          </div>
+          <div class="card-footer" style="margin-top: auto;">
+            <button class="btn btn-primario btn-bloco">Matricular</button>
+          </div>
+        </article>
+
+        <article class="card catalogo-card-curso anima-slide-up anima-atraso-2">
+          <div class="card-header">
+            <div>
+              <span class="catalogo-card-categoria">Desenvolvimento Mobile</span>
+              <h3 class="card-titulo">Desenvolvimento Android com Kotlin</h3>
+            </div>
+            <span class="badge badge-publicado"><span class="badge-ponto"></span>Publicado</span>
+          </div>
+          <p class="catalogo-card-descricao">Crie aplicativos Android nativos usando a linguagem Kotlin.</p>
+          <div class="catalogo-card-instrutor">
+            <span class="catalogo-card-avatar">AR</span>
+            Amanda Ribeiro · 50h
+          </div>
+          <div class="card-footer" style="margin-top: auto;">
+            <button class="btn btn-primario btn-bloco">Matricular</button>
+          </div>
+        </article>
+
+        <article class="card catalogo-card-curso anima-slide-up anima-atraso-3">
+          <div class="card-header">
+            <div>
+              <span class="catalogo-card-categoria">Cloud Computing</span>
+              <h3 class="card-titulo">AWS para Iniciantes</h3>
+            </div>
+            <span class="badge badge-publicado"><span class="badge-ponto"></span>Publicado</span>
+          </div>
+          <p class="catalogo-card-descricao">Introdução aos serviços da Amazon Web Services e computação em nuvem.</p>
+          <div class="catalogo-card-instrutor">
+            <span class="catalogo-card-avatar">RM</span>
+            Rafael Mendes · 25h
+          </div>
+          <div class="card-footer" style="margin-top: auto;">
+            <button class="btn btn-primario btn-bloco">Matricular</button>
+          </div>
+        </article>
+
+      </section>
+
+      <!-- Paginação -->
+      <nav class="paginacao" aria-label="Paginação do catálogo">
+        <button class="paginacao-item" disabled aria-label="Página anterior">‹</button>
+        <button class="paginacao-item ativo" aria-current="page">1</button>
+        <button class="paginacao-item">2</button>
+        <button class="paginacao-item" aria-label="Próxima página">›</button>
+      </nav>
+
+    </div>
+  </main>
+
+  <div class="toast-container" id="toastContainer" aria-live="polite"></div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/darkroomengineering/lenis@latest/bundled/lenis.js"></script>
+  <script src="../JS/animacoes.js"></script>
+  <script>
+    animacoes.inicializarLenis();
+    animacoes.animarEntradaPagina();
+    animacoes.animarHoverCard();
+  </script>
+
+</body>
+</html>

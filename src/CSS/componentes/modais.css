@@ -1,0 +1,88 @@
+/* ===================================================================
+   MODAIS / DIALOGS
+=================================================================== */
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: var(--z-modal-overlay);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: var(--espaco-lg);
+  background-color: rgba(17, 24, 39, 0.5);
+  backdrop-filter: blur(4px);
+}
+
+.modal-overlay.aberto {
+  display: flex;
+}
+
+.modal {
+  position: relative;
+  z-index: var(--z-modal);
+  width: 100%;
+  max-width: 480px;
+  max-height: 90vh;
+  overflow-y: auto;
+  background-color: var(--cor-superficie);
+  border-radius: var(--raio-xl);
+  box-shadow: var(--sombra-xl);
+  padding: var(--espaco-xl);
+}
+
+.modal-fechar {
+  position: absolute;
+  top: var(--espaco-md);
+  right: var(--espaco-md);
+}
+
+.modal-header {
+  margin-bottom: var(--espaco-lg);
+  padding-right: var(--espaco-xl);
+}
+
+.modal-titulo {
+  font-size: 1.25rem;
+}
+
+.modal-subtitulo {
+  color: var(--cor-texto-suave);
+  font-size: 0.875rem;
+  margin-top: var(--espaco-xs);
+}
+
+.modal-corpo {
+  display: flex;
+  flex-direction: column;
+  gap: var(--espaco-md);
+}
+
+.modal-rodape {
+  display: flex;
+  justify-content: flex-end;
+  gap: var(--espaco-sm);
+  margin-top: var(--espaco-xl);
+}
+
+.modal-confirmacao {
+  max-width: 400px;
+  text-align: center;
+}
+
+.modal-confirmacao-icone {
+  display: grid;
+  place-items: center;
+  width: 3.5rem;
+  height: 3.5rem;
+  margin-inline: auto;
+  margin-bottom: var(--espaco-md);
+  border-radius: var(--raio-full);
+  background-color: rgba(239, 68, 68, 0.1);
+  color: var(--cor-erro);
+  font-size: 1.5rem;
+}
+
+.modal-confirmacao .modal-rodape {
+  justify-content: center;
+}

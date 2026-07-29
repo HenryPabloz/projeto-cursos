@@ -1,0 +1,108 @@
+/* ===================================================================
+   CARDS
+   Inclui o "anel de progresso" — elemento de assinatura visual do
+   projeto, usado sempre que um número de progresso/nota precisa
+   comunicar uma jornada (não apenas um valor estático).
+=================================================================== */
+
+.card {
+  background-color: var(--cor-superficie);
+  border: 1px solid var(--cor-borda);
+  border-radius: var(--raio-lg);
+  box-shadow: var(--sombra-sm);
+  padding: var(--espaco-lg);
+  transition: transform var(--transicao-normal), box-shadow var(--transicao-normal);
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--sombra-xl);
+}
+
+.card-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--espaco-md);
+  margin-bottom: var(--espaco-md);
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  gap: var(--espaco-sm);
+}
+
+.card-footer {
+  margin-top: var(--espaco-lg);
+  padding-top: var(--espaco-md);
+  border-top: 1px solid var(--cor-borda);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--espaco-sm);
+}
+
+.card-titulo {
+  font-size: 1.0625rem;
+  font-weight: var(--peso-bold);
+}
+
+.card-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--espaco-sm);
+  font-size: 0.8125rem;
+  color: var(--cor-texto-suave);
+}
+
+.card-meta-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+/* ---------- Anel de progresso (elemento de assinatura) ---------- */
+.anel-progresso {
+  --progresso: 0;
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: var(--raio-full);
+  flex-shrink: 0;
+  background: conic-gradient(
+    var(--cor-primaria) calc(var(--progresso) * 1%),
+    var(--cor-fundo-alt) 0
+  );
+}
+
+.anel-progresso::before {
+  content: '';
+  position: absolute;
+  inset: 4px;
+  border-radius: var(--raio-full);
+  background-color: var(--cor-superficie);
+}
+
+.anel-progresso-valor {
+  position: relative;
+  font-family: var(--fonte-mono);
+  font-size: 0.75rem;
+  font-weight: var(--peso-bold);
+  color: var(--cor-texto);
+}
+
+.anel-progresso.pequeno {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+.anel-progresso.pequeno .anel-progresso-valor {
+  font-size: 0.625rem;
+}
+
+.anel-progresso.concluido {
+  background: conic-gradient(var(--cor-sucesso) 100%, var(--cor-sucesso) 0);
+}

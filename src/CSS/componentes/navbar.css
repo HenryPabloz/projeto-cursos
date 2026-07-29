@@ -1,0 +1,179 @@
+/* ===================================================================
+   NAVBAR
+   Header fixo com efeito de vidro (glassmorphism), usado em todas as
+   páginas exceto o login.
+=================================================================== */
+
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: var(--z-dropdown);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--espaco-lg);
+  padding: var(--espaco-md) var(--espaco-xl);
+  background-color: rgba(249, 250, 251, 0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--cor-borda);
+}
+
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  gap: var(--espaco-sm);
+  font-family: var(--fonte-display);
+  font-size: 1.25rem;
+  font-weight: var(--peso-extra-bold);
+  color: var(--cor-texto);
+}
+
+.navbar-logo-marca {
+  display: grid;
+  place-items: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: var(--raio-md);
+  background: linear-gradient(135deg, var(--cor-primaria), var(--cor-primaria-escura));
+  color: #FFFFFF;
+  font-family: var(--fonte-display);
+  font-weight: var(--peso-extra-bold);
+}
+
+.navbar-menu {
+  display: flex;
+  align-items: center;
+  gap: var(--espaco-xl);
+}
+
+.navbar-menu-item {
+  position: relative;
+  font-weight: var(--peso-medio);
+  color: var(--cor-texto-suave);
+  padding-block: var(--espaco-xs);
+  transition: color var(--transicao-rapida);
+}
+
+.navbar-menu-item::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0;
+  height: 2px;
+  background-color: var(--cor-primaria);
+  transition: width var(--transicao-normal);
+}
+
+.navbar-menu-item:hover,
+.navbar-menu-item.ativo {
+  color: var(--cor-texto);
+}
+
+.navbar-menu-item:hover::after,
+.navbar-menu-item.ativo::after {
+  width: 100%;
+}
+
+.navbar-acoes {
+  display: flex;
+  align-items: center;
+  gap: var(--espaco-md);
+}
+
+.navbar-user {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: var(--espaco-sm);
+  padding: var(--espaco-xs) var(--espaco-sm);
+  border-radius: var(--raio-full);
+  transition: background-color var(--transicao-rapida);
+}
+
+.navbar-user:hover {
+  background-color: var(--cor-fundo-alt);
+}
+
+.navbar-user-avatar {
+  display: grid;
+  place-items: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: var(--raio-full);
+  background-color: var(--cor-primaria-clara);
+  color: var(--cor-primaria-escura);
+  font-weight: var(--peso-bold);
+  font-family: var(--fonte-display);
+}
+
+.navbar-user-info {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
+}
+
+.navbar-user-nome {
+  font-size: 0.875rem;
+  font-weight: var(--peso-bold);
+}
+
+.navbar-badge-role {
+  font-size: 0.6875rem;
+  font-family: var(--fonte-mono);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.navbar-dropdown {
+  position: absolute;
+  top: calc(100% + var(--espaco-sm));
+  right: 0;
+  min-width: 200px;
+  background-color: var(--cor-superficie);
+  border: 1px solid var(--cor-borda);
+  border-radius: var(--raio-lg);
+  box-shadow: var(--sombra-lg);
+  padding: var(--espaco-sm);
+  z-index: var(--z-dropdown);
+}
+
+.navbar-dropdown-item {
+  display: flex;
+  align-items: center;
+  gap: var(--espaco-sm);
+  width: 100%;
+  padding: var(--espaco-sm) var(--espaco-md);
+  border-radius: var(--raio-md);
+  font-size: 0.875rem;
+  color: var(--cor-texto);
+  transition: background-color var(--transicao-rapida);
+}
+
+.navbar-dropdown-item:hover {
+  background-color: var(--cor-fundo-alt);
+}
+
+.navbar-dropdown-item.perigo {
+  color: var(--cor-erro);
+}
+
+.navbar-hamburguer {
+  display: none;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: var(--raio-md);
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 1023px) {
+  .navbar-menu {
+    display: none;
+  }
+
+  .navbar-hamburguer {
+    display: flex;
+  }
+}

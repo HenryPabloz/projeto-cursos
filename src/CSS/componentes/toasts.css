@@ -1,0 +1,94 @@
+/* ===================================================================
+   TOASTS
+   Notificações no canto superior direito. Ficam empilhadas em
+   .toast-container, que já reserva espaço/estrutura para o JS futuro.
+=================================================================== */
+
+.toast-container {
+  position: fixed;
+  top: var(--espaco-lg);
+  right: var(--espaco-lg);
+  z-index: var(--z-toast);
+  display: flex;
+  flex-direction: column;
+  gap: var(--espaco-sm);
+  max-width: 360px;
+  width: 100%;
+}
+
+.toast {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--espaco-sm);
+  padding: var(--espaco-md);
+  background-color: var(--cor-superficie);
+  border: 1px solid var(--cor-borda);
+  border-left: 4px solid var(--cor-info);
+  border-radius: var(--raio-md);
+  box-shadow: var(--sombra-lg);
+}
+
+.toast-icone {
+  display: grid;
+  place-items: center;
+  width: 1.5rem;
+  height: 1.5rem;
+  min-height: 0;
+  border-radius: var(--raio-full);
+  font-size: 0.8125rem;
+  font-weight: var(--peso-bold);
+  color: #FFFFFF;
+  flex-shrink: 0;
+}
+
+.toast-corpo {
+  flex: 1;
+}
+
+.toast-titulo {
+  font-size: 0.875rem;
+  font-weight: var(--peso-bold);
+}
+
+.toast-mensagem {
+  font-size: 0.8125rem;
+  color: var(--cor-texto-suave);
+}
+
+.toast-fechar {
+  padding: 2px;
+  min-height: 0;
+  color: var(--cor-texto-suave);
+}
+
+.toast-sucesso {
+  border-left-color: var(--cor-sucesso);
+}
+
+.toast-sucesso .toast-icone {
+  background-color: var(--cor-sucesso);
+}
+
+.toast-erro {
+  border-left-color: var(--cor-erro);
+}
+
+.toast-erro .toast-icone {
+  background-color: var(--cor-erro);
+}
+
+.toast-aviso {
+  border-left-color: var(--cor-aviso);
+}
+
+.toast-aviso .toast-icone {
+  background-color: var(--cor-aviso);
+}
+
+.toast-info {
+  border-left-color: var(--cor-info);
+}
+
+.toast-info .toast-icone {
+  background-color: var(--cor-info);
+}

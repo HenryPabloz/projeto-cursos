@@ -1,0 +1,69 @@
+/* ===================================================================
+   PÁGINA: PAINEL ADMINISTRATIVO DE USUÁRIOS
+=================================================================== */
+
+.painel-admin-conteudo {
+  padding: var(--espaco-xl) var(--espaco-2xl);
+}
+
+.painel-admin-topo {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--espaco-md);
+  margin-bottom: var(--espaco-lg);
+  flex-wrap: wrap;
+}
+
+.painel-admin-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--espaco-lg);
+  margin-bottom: var(--espaco-xl);
+}
+
+.painel-admin-stat-numero {
+  font-family: var(--fonte-display);
+  font-size: 1.75rem;
+  font-weight: var(--peso-extra-bold);
+}
+
+.painel-admin-stat-rotulo {
+  color: var(--cor-texto-suave);
+  font-size: 0.8125rem;
+}
+
+.painel-admin-filtros {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--espaco-md);
+  margin-bottom: var(--espaco-lg);
+}
+
+.painel-admin-busca {
+  flex: 1;
+  min-width: 14rem;
+}
+
+.painel-admin-tabela-usuario {
+  display: flex;
+  align-items: center;
+  gap: var(--espaco-sm);
+}
+
+.painel-admin-tabela-usuario-info {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+}
+
+.painel-admin-tabela-email {
+  color: var(--cor-texto-suave);
+  font-size: 0.8125rem;
+}
+
+@media (max-width: 767px) {
+  .painel-admin-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

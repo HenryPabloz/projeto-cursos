@@ -1,0 +1,65 @@
+/* ===================================================================
+   BADGES
+   Nunca dependem apenas da cor: sempre acompanhadas de um indicador
+   (ponto/ícone) para reforçar contraste e acessibilidade.
+=================================================================== */
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--espaco-xs);
+  padding: 4px var(--espaco-sm);
+  border-radius: var(--raio-full);
+  font-size: 0.75rem;
+  font-weight: var(--peso-bold);
+  white-space: nowrap;
+}
+
+.badge-ponto {
+  width: 6px;
+  height: 6px;
+  border-radius: var(--raio-full);
+  background-color: currentColor;
+}
+
+/* ---------- Status de curso/matrícula ---------- */
+.badge-publicado {
+  background-color: rgba(16, 185, 129, 0.12);
+  color: var(--cor-sucesso);
+}
+
+.badge-rascunho {
+  background-color: rgba(107, 114, 128, 0.14);
+  color: var(--cor-rascunho);
+}
+
+.badge-em-andamento {
+  background-color: rgba(59, 130, 246, 0.12);
+  color: var(--cor-info);
+}
+
+.badge-concluido {
+  background-color: rgba(6, 95, 70, 0.12);
+  color: var(--cor-sucesso-escuro);
+}
+
+.badge-cancelado {
+  background-color: rgba(239, 68, 68, 0.12);
+  color: var(--cor-erro);
+}
+
+/* ---------- Roles ---------- */
+.badge-role-aluno {
+  background-color: rgba(59, 130, 246, 0.12);
+  color: var(--cor-aluno);
+}
+
+.badge-role-editor {
+  background-color: rgba(245, 158, 11, 0.14);
+  color: var(--cor-editor);
+}
+
+.badge-role-admin {
+  background-color: rgba(220, 38, 38, 0.12);
+  color: var(--cor-admin);
+}

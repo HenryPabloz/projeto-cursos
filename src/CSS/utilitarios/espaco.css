@@ -1,0 +1,37 @@
+/* ===================================================================
+   ESPAÇO
+   Classes utilitárias de margin e padding.
+=================================================================== */
+
+.mt-xs { margin-top: var(--espaco-xs); }
+.mt-sm { margin-top: var(--espaco-sm); }
+.mt-md { margin-top: var(--espaco-md); }
+.mt-lg { margin-top: var(--espaco-lg); }
+.mt-xl { margin-top: var(--espaco-xl); }
+.mt-2xl { margin-top: var(--espaco-2xl); }
+
+.mb-xs { margin-bottom: var(--espaco-xs); }
+.mb-sm { margin-bottom: var(--espaco-sm); }
+.mb-md { margin-bottom: var(--espaco-md); }
+.mb-lg { margin-bottom: var(--espaco-lg); }
+.mb-xl { margin-bottom: var(--espaco-xl); }
+.mb-2xl { margin-bottom: var(--espaco-2xl); }
+
+.ml-sm { margin-left: var(--espaco-sm); }
+.ml-md { margin-left: var(--espaco-md); }
+.mr-sm { margin-right: var(--espaco-sm); }
+.mr-md { margin-right: var(--espaco-md); }
+
+.p-sm { padding: var(--espaco-sm); }
+.p-md { padding: var(--espaco-md); }
+.p-lg { padding: var(--espaco-lg); }
+.p-xl { padding: var(--espaco-xl); }
+
+.px-sm { padding-inline: var(--espaco-sm); }
+.px-md { padding-inline: var(--espaco-md); }
+.px-lg { padding-inline: var(--espaco-lg); }
+
+.py-sm { padding-block: var(--espaco-sm); }
+.py-md { padding-block: var(--espaco-md); }
+.py-lg { padding-block: var(--espaco-lg); }
+.py-2xl { padding-block: var(--espaco-2xl); }

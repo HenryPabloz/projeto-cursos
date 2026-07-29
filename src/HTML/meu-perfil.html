@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meu Perfil — Plataforma de Cursos Online</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../CSS/style.css">
+</head>
+<body>
+
+  <a href="#conteudo-principal" class="pular-conteudo">Pular para o conteúdo</a>
+
+  <header class="navbar">
+    <a href="./catalogo-cursos.html" class="navbar-logo">
+      <span class="navbar-logo-marca">🎓</span>
+      Plataforma de Cursos
+    </a>
+
+    <nav class="navbar-menu" aria-label="Navegação principal">
+      <a href="./catalogo-cursos.html" class="navbar-menu-item">Catálogo</a>
+      <a href="./painel-editor.html" class="navbar-menu-item" data-restrito-a="editor,admin">Painel do Editor</a>
+      <a href="./painel-admin.html" class="navbar-menu-item" data-restrito-a="admin">Painel Admin</a>
+    </nav>
+
+    <div class="navbar-acoes">
+      <button class="navbar-hamburguer btn-icone" aria-label="Abrir menu" aria-expanded="false">☰</button>
+      <div class="navbar-user" tabindex="0" aria-haspopup="true" aria-expanded="false">
+        <span class="navbar-user-avatar">CR</span>
+        <div class="navbar-user-info somente-desktop">
+          <span class="navbar-user-nome">Camila Rocha</span>
+          <span class="navbar-badge-role badge badge-role-aluno">Aluno</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main id="conteudo-principal" class="container container-estreito perfil-container">
+
+    <nav class="breadcrumb">
+      <a href="./catalogo-cursos.html" class="breadcrumb-item">Catálogo</a>
+      <span class="breadcrumb-separador">/</span>
+      <span class="breadcrumb-atual">Meu Perfil</span>
+    </nav>
+
+    <div class="perfil-topo">
+      <span class="perfil-avatar-grande">CR</span>
+      <div>
+        <h1>Camila Rocha</h1>
+        <span class="badge badge-role-aluno">Aluno</span>
+      </div>
+    </div>
+
+    <div class="perfil-grid">
+
+      <!-- Informações somente leitura -->
+      <section class="card perfil-info-leitura">
+        <h4 class="mb-sm">Informações da conta</h4>
+
+        <div class="perfil-info-item">
+          <span class="perfil-info-rotulo">Email</span>
+          <span class="perfil-info-valor">camila.rocha@email.com</span>
+        </div>
+        <div class="perfil-info-item">
+          <span class="perfil-info-rotulo">Role</span>
+          <span class="perfil-info-valor"><span class="badge badge-role-aluno">Aluno</span></span>
+        </div>
+        <div class="perfil-info-item">
+          <span class="perfil-info-rotulo">Data de cadastro</span>
+          <span class="perfil-info-valor">10/07/2026</span>
+        </div>
+      </section>
+
+      <!-- Formulário de edição -->
+      <section class="card">
+        <h4 class="mb-md">Editar perfil</h4>
+
+        <form novalidate>
+          <div class="form-group">
+            <label class="form-label obrigatorio" for="nomePerfil">Nome</label>
+            <input type="text" class="form-input" id="nomePerfil" value="Camila Rocha" minlength="3">
+          </div>
+
+          <div class="form-group">
+            <label class="form-label obrigatorio" for="senhaAtualPerfil">Senha atual</label>
+            <input type="password" class="form-input" id="senhaAtualPerfil" placeholder="Confirme sua senha atual">
+            <span class="form-dica">Necessária para confirmar sua identidade.</span>
+          </div>
+
+          <div class="form-linha">
+            <div class="form-group" style="margin-bottom: 0;">
+              <label class="form-label" for="novaSenhaPerfil">Nova senha</label>
+              <input type="password" class="form-input" id="novaSenhaPerfil" placeholder="Opcional · mín. 6 caracteres" minlength="6">
+            </div>
+            <div class="form-group" style="margin-bottom: 0;">
+              <label class="form-label" for="confirmarSenhaPerfil">Confirmar nova senha</label>
+              <input type="password" class="form-input" id="confirmarSenhaPerfil" placeholder="Repita a nova senha">
+            </div>
+          </div>
+
+          <div class="flex gap-sm mt-lg">
+            <button type="submit" class="btn btn-primario">Atualizar</button>
+            <button type="button" class="btn btn-fantasma">Cancelar</button>
+          </div>
+        </form>
+      </section>
+
+    </div>
+  </main>
+
+  <div class="toast-container" id="toastContainer" aria-live="polite"></div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/darkroomengineering/lenis@latest/bundled/lenis.js"></script>
+  <script src="../JS/animacoes.js"></script>
+  <script>
+    animacoes.inicializarLenis();
+    animacoes.animarEntradaPagina();
+  </script>
+
+</body>
+</html>

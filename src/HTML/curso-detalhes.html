@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Introdução ao JavaScript — Plataforma de Cursos Online</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../CSS/style.css">
+</head>
+<body>
+
+  <a href="#conteudo-principal" class="pular-conteudo">Pular para o conteúdo</a>
+
+  <header class="navbar">
+    <a href="./catalogo-cursos.html" class="navbar-logo">
+      <span class="navbar-logo-marca">🎓</span>
+      Plataforma de Cursos
+    </a>
+
+    <nav class="navbar-menu" aria-label="Navegação principal">
+      <a href="./catalogo-cursos.html" class="navbar-menu-item">Catálogo</a>
+      <a href="./painel-editor.html" class="navbar-menu-item" data-restrito-a="editor,admin">Painel do Editor</a>
+      <a href="./painel-admin.html" class="navbar-menu-item" data-restrito-a="admin">Painel Admin</a>
+    </nav>
+
+    <div class="navbar-acoes">
+      <button class="navbar-hamburguer btn-icone" aria-label="Abrir menu" aria-expanded="false">☰</button>
+      <div class="navbar-user" tabindex="0" aria-haspopup="true" aria-expanded="false">
+        <span class="navbar-user-avatar">CR</span>
+        <div class="navbar-user-info somente-desktop">
+          <span class="navbar-user-nome">Camila Rocha</span>
+          <span class="navbar-badge-role badge badge-role-aluno">Aluno</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main id="conteudo-principal">
+
+    <section class="curso-hero">
+      <div class="container">
+        <nav class="breadcrumb" aria-label="Trilha de navegação" style="color: rgba(255,255,255,0.7);">
+          <a href="./catalogo-cursos.html" class="breadcrumb-item" style="color: rgba(255,255,255,0.7);">Catálogo</a>
+          <span class="breadcrumb-separador" style="color: rgba(255,255,255,0.4);">/</span>
+          <span class="breadcrumb-atual" style="color: #fff;">Introdução ao JavaScript</span>
+        </nav>
+
+        <span class="eyebrow curso-hero-categoria">Programação</span>
+        <h1 class="curso-hero-titulo">Introdução ao JavaScript</h1>
+        <p class="curso-hero-descricao">Fundamentos da linguagem JavaScript para iniciantes: variáveis, estruturas de controle, funções e escopo.</p>
+
+        <div class="curso-hero-info">
+          <div class="curso-hero-info-item">
+            <span class="curso-hero-info-valor">Rafael Mendes</span>
+            <span class="curso-hero-info-rotulo">Instrutor</span>
+          </div>
+          <div class="curso-hero-info-item">
+            <span class="curso-hero-info-valor">20h</span>
+            <span class="curso-hero-info-rotulo">Carga horária</span>
+          </div>
+          <div class="curso-hero-info-item">
+            <span class="curso-hero-info-valor">3</span>
+            <span class="curso-hero-info-rotulo">Aulas</span>
+          </div>
+          <div class="curso-hero-info-item">
+            <span class="curso-hero-info-valor">128</span>
+            <span class="curso-hero-info-rotulo">Alunos</span>
+          </div>
+        </div>
+
+        <div class="curso-hero-acoes">
+          <button class="btn btn-primario" id="btnContinuarEstudando">Continuar estudando</button>
+          <button class="btn btn-secundario" style="border-color: rgba(255,255,255,0.5); color: #fff;" id="btnAtualizarProgresso">Atualizar progresso</button>
+        </div>
+      </div>
+    </section>
+
+    <div class="container curso-corpo">
+
+      <div>
+        <nav class="curso-abas" role="tablist" aria-label="Seções do curso">
+          <button class="curso-aba ativa" role="tab" aria-selected="true">Aulas</button>
+          <button class="curso-aba" role="tab" aria-selected="false">Avaliações</button>
+        </nav>
+
+        <!-- Aba: Aulas -->
+        <section class="curso-aulas" aria-label="Lista de aulas">
+          <div class="curso-aula-item concluida">
+            <span class="curso-aula-numero">01</span>
+            <div class="curso-aula-info">
+              <p class="curso-aula-titulo">Variáveis e Tipos de Dados</p>
+              <span class="curso-aula-duracao">15 min · concluída</span>
+            </div>
+            <button class="curso-aula-play" aria-label="Assistir aula: Variáveis e Tipos de Dados">▶</button>
+          </div>
+
+          <div class="curso-aula-item concluida">
+            <span class="curso-aula-numero">02</span>
+            <div class="curso-aula-info">
+              <p class="curso-aula-titulo">Estruturas de Controle</p>
+              <span class="curso-aula-duracao">20 min · concluída</span>
+            </div>
+            <button class="curso-aula-play" aria-label="Assistir aula: Estruturas de Controle">▶</button>
+          </div>
+
+          <div class="curso-aula-item">
+            <span class="curso-aula-numero">03</span>
+            <div class="curso-aula-info">
+              <p class="curso-aula-titulo">Funções e Escopo</p>
+              <span class="curso-aula-duracao">25 min</span>
+            </div>
+            <button class="curso-aula-play" aria-label="Assistir aula: Funções e Escopo">▶</button>
+          </div>
+        </section>
+
+        <!-- Aba: Avaliações -->
+        <section class="curso-avaliacoes oculto" aria-label="Avaliações do curso">
+          <div class="card curso-avaliacoes-resumo">
+            <span class="curso-avaliacoes-nota">4.5</span>
+            <div>
+              <div class="curso-avaliacoes-estrelas" aria-label="4,5 de 5 estrelas">★★★★☆</div>
+              <span class="texto-suave texto-pequeno">2 avaliações</span>
+            </div>
+          </div>
+
+          <article class="curso-avaliacao-item">
+            <div class="curso-avaliacao-header">
+              <span class="curso-avaliacao-autor">
+                <span class="catalogo-card-avatar">CR</span>
+                Camila Rocha
+              </span>
+              <span class="curso-avaliacao-data">20/07/2026</span>
+            </div>
+            <div class="curso-avaliacoes-estrelas" aria-label="5 de 5 estrelas">★★★★★</div>
+            <p class="curso-avaliacao-comentario">Curso muito claro e direto ao ponto, recomendo!</p>
+          </article>
+
+          <article class="curso-avaliacao-item">
+            <div class="curso-avaliacao-header">
+              <span class="curso-avaliacao-autor">
+                <span class="catalogo-card-avatar">LO</span>
+                Lucas Oliveira
+              </span>
+              <span class="curso-avaliacao-data">21/07/2026</span>
+            </div>
+            <div class="curso-avaliacoes-estrelas" aria-label="4 de 5 estrelas">★★★★☆</div>
+            <p class="curso-avaliacao-comentario">Bom curso, mas poderia ter mais exemplos práticos.</p>
+          </article>
+        </section>
+      </div>
+
+      <!-- Sidebar: progresso -->
+      <aside>
+        <div class="card curso-sidebar-card curso-progresso-card">
+          <h4 class="mb-md">Seu progresso</h4>
+          <div class="anel-progresso curso-progresso-anel" style="--progresso: 60;">
+            <span class="anel-progresso-valor">60%</span>
+          </div>
+          <p class="texto-suave texto-pequeno">2 de 3 aulas concluídas</p>
+          <button class="btn btn-primario btn-bloco mt-lg" id="btnDeixarAvaliacao">Deixar avaliação</button>
+        </div>
+
+        <div class="card curso-sidebar-card">
+          <h4 class="mb-sm">Sobre o instrutor</h4>
+          <div class="catalogo-card-instrutor" style="margin-top: var(--espaco-sm);">
+            <span class="catalogo-card-avatar">RM</span>
+            Rafael Mendes
+          </div>
+          <p class="texto-suave texto-pequeno mt-sm">Editor de conteúdo com foco em Programação e Inteligência Artificial.</p>
+        </div>
+      </aside>
+
+    </div>
+  </main>
+
+  <!-- Modal: Avaliação -->
+  <div class="modal-overlay" id="modalAvaliacao">
+    <div class="modal">
+      <button class="modal-fechar btn-icone" aria-label="Fechar modal" id="btnFecharModalAvaliacao">✕</button>
+      <div class="modal-header">
+        <h3 class="modal-titulo">Avaliar Curso: Introdução ao JavaScript</h3>
+        <p class="modal-subtitulo">Sua opinião ajuda outros alunos a escolherem o curso certo.</p>
+      </div>
+
+      <form class="modal-corpo" id="formAvaliacao" novalidate>
+        <div class="form-group" style="margin-bottom: 0;">
+          <label class="form-label obrigatorio">Nota</label>
+          <div class="form-estrelas" role="radiogroup" aria-label="Nota de 1 a 5 estrelas">
+            <span class="estrela" role="radio" aria-checked="false" tabindex="0">★</span>
+            <span class="estrela" role="radio" aria-checked="false" tabindex="0">★</span>
+            <span class="estrela" role="radio" aria-checked="false" tabindex="0">★</span>
+            <span class="estrela" role="radio" aria-checked="false" tabindex="0">★</span>
+            <span class="estrela" role="radio" aria-checked="false" tabindex="0">★</span>
+          </div>
+          <span class="form-erro">Selecione uma nota de 1 a 5.</span>
+        </div>
+
+        <div class="form-group" style="margin-bottom: 0;">
+          <label class="form-label" for="comentarioAvaliacao">Comentário</label>
+          <textarea class="form-textarea" id="comentarioAvaliacao" maxlength="500" placeholder="Conte como foi sua experiência com o curso..."></textarea>
+          <span class="form-contador">0/500</span>
+        </div>
+      </form>
+
+      <div class="modal-rodape">
+        <button class="btn btn-fantasma" id="btnCancelarAvaliacao">Cancelar</button>
+        <button class="btn btn-primario" id="btnEnviarAvaliacao">Enviar</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="toast-container" id="toastContainer" aria-live="polite"></div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/darkroomengineering/lenis@latest/bundled/lenis.js"></script>
+  <script src="../JS/animacoes.js"></script>
+  <script>
+    animacoes.inicializarLenis();
+    animacoes.animarEntradaPagina();
+    animacoes.animarAnelProgresso(document.querySelector('.curso-progresso-anel'), 60);
+  </script>
+
+</body>
+</html>

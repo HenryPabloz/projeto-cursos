@@ -1,0 +1,60 @@
+/* ===================================================================
+   RESPONSIVIDADE
+   Breakpoints: mobile-first (320px → 767px → 1023px → 1024px+)
+=================================================================== */
+
+/* ---------- Mobile (padrão, até 767px) ---------- */
+.grid-2,
+.grid-3,
+.grid-cursos {
+  grid-template-columns: 1fr;
+}
+
+.app-shell {
+  grid-template-columns: 1fr;
+}
+
+/* ---------- Tablet (768px+) ---------- */
+@media (min-width: 768px) {
+  .grid-2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .grid-cursos {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ---------- Desktop (1024px+) ---------- */
+@media (min-width: 1024px) {
+  .grid-3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .grid-cursos {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .app-shell {
+    grid-template-columns: 260px 1fr;
+  }
+}
+
+/* ---------- Utilitários de visibilidade responsiva ---------- */
+.somente-mobile {
+  display: block;
+}
+
+.somente-desktop {
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  .somente-mobile {
+    display: none;
+  }
+
+  .somente-desktop {
+    display: block;
+  }
+}

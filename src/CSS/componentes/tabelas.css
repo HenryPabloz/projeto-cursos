@@ -1,0 +1,90 @@
+/* ===================================================================
+   TABELAS
+   Responsivas: viram "cards empilhados" no mobile via data-label.
+=================================================================== */
+
+.tabela-wrapper {
+  overflow-x: auto;
+  background-color: var(--cor-superficie);
+  border: 1px solid var(--cor-borda);
+  border-radius: var(--raio-lg);
+}
+
+.tabela {
+  min-width: 100%;
+}
+
+.tabela thead th {
+  text-align: left;
+  font-family: var(--fonte-mono);
+  font-size: 0.6875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--cor-texto-suave);
+  padding: var(--espaco-md) var(--espaco-lg);
+  border-bottom: 1px solid var(--cor-borda);
+}
+
+.tabela tbody td {
+  padding: var(--espaco-md) var(--espaco-lg);
+  border-bottom: 1px solid var(--cor-borda);
+  font-size: 0.9375rem;
+}
+
+.tabela tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.tabela tbody tr {
+  transition: background-color var(--transicao-rapida);
+}
+
+.tabela tbody tr:hover {
+  background-color: var(--cor-fundo-alt);
+}
+
+.tabela-acoes {
+  display: flex;
+  gap: var(--espaco-xs);
+  justify-content: flex-end;
+}
+
+.tabela-vazia {
+  padding: var(--espaco-2xl);
+  text-align: center;
+  color: var(--cor-texto-suave);
+}
+
+@media (max-width: 767px) {
+  .tabela thead {
+    display: none;
+  }
+
+  .tabela,
+  .tabela tbody,
+  .tabela tr,
+  .tabela td {
+    display: block;
+    width: 100%;
+  }
+
+  .tabela tr {
+    padding: var(--espaco-md);
+    border-bottom: 1px solid var(--cor-borda);
+  }
+
+  .tabela td {
+    display: flex;
+    justify-content: space-between;
+    gap: var(--espaco-md);
+    padding: var(--espaco-xs) 0;
+    border-bottom: none;
+  }
+
+  .tabela td::before {
+    content: attr(data-label);
+    font-weight: var(--peso-bold);
+    color: var(--cor-texto-suave);
+    font-size: 0.8125rem;
+  }
+}

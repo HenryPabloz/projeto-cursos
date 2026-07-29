@@ -1,0 +1,77 @@
+/* ===================================================================
+   VARIÁVEIS GLOBAIS
+   Todas as cores, fontes, espaçamentos e sombras do projeto vivem aqui.
+   Nunca usar valores "soltos" (hardcoded) fora deste arquivo.
+=================================================================== */
+
+:root {
+  /* ---------- Cores Primárias ---------- */
+  --cor-primaria: #6366F1;
+  --cor-primaria-escura: #4F46E5;
+  --cor-primaria-clara: #A5B4FC;
+  --cor-secundaria: #F59E0B;
+  --cor-fundo: #F9FAFB;
+  --cor-fundo-alt: #F3F4F6;
+  --cor-superficie: #FFFFFF;
+  --cor-texto: #1F2937;
+  --cor-texto-suave: #6B7280;
+  --cor-borda: #E5E7EB;
+
+  /* ---------- Status ---------- */
+  --cor-sucesso: #10B981;
+  --cor-sucesso-escuro: #065F46;
+  --cor-erro: #EF4444;
+  --cor-aviso: #F59E0B;
+  --cor-info: #3B82F6;
+  --cor-rascunho: #6B7280;
+
+  /* ---------- Roles ---------- */
+  --cor-aluno: #3B82F6;
+  --cor-editor: #F59E0B;
+  --cor-admin: #DC2626;
+
+  /* ---------- Tipografia ---------- */
+  --fonte-principal: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  --fonte-display: 'Sora', 'Inter', 'Segoe UI', sans-serif;
+  --fonte-mono: 'JetBrains Mono', 'Courier New', monospace;
+  --tamanho-base: 16px;
+  --peso-normal: 400;
+  --peso-medio: 500;
+  --peso-bold: 600;
+  --peso-extra-bold: 700;
+
+  /* ---------- Espaçamentos ---------- */
+  --espaco-xs: 4px;
+  --espaco-sm: 8px;
+  --espaco-md: 16px;
+  --espaco-lg: 24px;
+  --espaco-xl: 32px;
+  --espaco-2xl: 48px;
+  --espaco-3xl: 64px;
+
+  /* ---------- Shadows ---------- */
+  --sombra-sm: 0 1px 2px rgba(17, 24, 39, 0.05);
+  --sombra-md: 0 4px 6px rgba(17, 24, 39, 0.08);
+  --sombra-lg: 0 10px 20px rgba(17, 24, 39, 0.10);
+  --sombra-xl: 0 20px 32px rgba(17, 24, 39, 0.14);
+  --sombra-colorida: 0 12px 24px rgba(99, 102, 241, 0.25);
+
+  /* ---------- Border Radius ---------- */
+  --raio-sm: 4px;
+  --raio-md: 8px;
+  --raio-lg: 12px;
+  --raio-xl: 20px;
+  --raio-full: 9999px;
+
+  /* ---------- Z-index ---------- */
+  --z-dropdown: 100;
+  --z-modal-overlay: 200;
+  --z-modal: 201;
+  --z-toast: 250;
+  --z-tooltip: 300;
+
+  /* ---------- Transições ---------- */
+  --transicao-rapida: 0.15s ease-out;
+  --transicao-normal: 0.25s ease-out;
+  --transicao-lenta: 0.4s ease-out;
+}
