@@ -1,0 +1,63 @@
+{
+    "usuarios": [
+        {
+            "id": "u1a2b3",
+            "nome": "Camila Rocha",
+            "email": "camila.rocha@email.com",
+            "senha": "senha123",
+            "role": "aluno",
+            "ativo": true
+        }
+    ],
+    "categorias": [
+        {
+            "id": "cat1x2",
+            "nome": "Programação",
+            "descricao": "Cursos sobre linguagens, frameworks e boas práticas de desenvolvimento."
+        }
+    ],
+    "cursos": [
+        {
+            "id": "cur1y3",
+            "titulo": "Introdução ao JavaScript",
+            "descricao": "Fundamentos da linguagem JavaScript para iniciantes.",
+            "categoriaId": "cat1x2",
+            "instrutorId": "u2c4d5",
+            "status": "publicado",
+            "cargaHoraria": 20
+        }
+    ],
+    
+    "aulas": [
+        {
+            "id": "aul1z4",
+            "cursoId": "cur1y3",
+            "titulo": "Variáveis e Tipos de Dados",
+            "conteudo": "https://video.exemplo.com/aula1",
+            "ordem": 1,
+            "duracaoMinutos": 15
+        }
+    ],
+
+    "matriculas": [
+        {
+            "id": "mat1w5",
+            "usuarioId": "u1a2b3",
+            "cursoId": "cur1y3",
+            "dataMatricula": "2026-07-10T13:00:00Z",
+            "progresso": 60,
+            "status": "em andamento"
+        }
+    ],
+
+    "avaliacoes": [
+        {
+            "id": "ava1v6",
+            "usuarioId": "u1a2b3",
+            "cursoId": "cur1y3",
+            "nota": 5,
+            "comentario": "Curso muito claro e direto ao ponto, recomendo!",
+            "data": "2026-07-20T18:45:00Z"
+        }
+    ]
+}
