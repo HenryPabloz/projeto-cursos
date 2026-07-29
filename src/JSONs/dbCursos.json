@@ -99,479 +99,1365 @@
   ],
   "categorias": [
     {
-      "id": "cat1x2",
+      "id": "cat-criacao-de-games-2d",
+      "nome": "Criação de Games 2D",
+      "descricao": "Cursos de games sobre criação de games 2d."
+    },
+    {
+      "id": "cat-programacao",
       "nome": "Programação",
-      "descricao": "Cursos sobre linguagens, frameworks e boas práticas de desenvolvimento."
+      "descricao": "Cursos de games sobre programação."
     },
     {
-      "id": "cat3y4",
-      "nome": "Design",
-      "descricao": "Cursos sobre design gráfico, UI/UX, ferramentas de criação e conceitos visuais."
+      "id": "cat-arte-e-pixel-art",
+      "nome": "Arte e Pixel Art",
+      "descricao": "Cursos de games sobre arte e pixel art."
     },
     {
-      "id": "cat5z6",
-      "nome": "Marketing Digital",
-      "descricao": "Cursos sobre estratégias de marketing, SEO, mídias sociais e análise de dados."
+      "id": "cat-narrativa-e-storytelling",
+      "nome": "Narrativa e Storytelling",
+      "descricao": "Cursos de games sobre narrativa e storytelling."
     },
     {
-      "id": "cat7a8",
-      "nome": "Negócios e Empreendedorismo",
-      "descricao": "Cursos sobre gestão, finanças, empreendedorismo e liderança."
+      "id": "cat-mecanicas-de-jogo",
+      "nome": "Mecânicas de Jogo",
+      "descricao": "Cursos de games sobre mecânicas de jogo."
     },
     {
-      "id": "cat9b0",
+      "id": "cat-motores-de-jogo",
+      "nome": "Motores de Jogo",
+      "descricao": "Cursos de games sobre motores de jogo."
+    },
+    {
+      "id": "cat-modelagem-3d",
+      "nome": "Modelagem 3D",
+      "descricao": "Cursos de games sobre modelagem 3d."
+    },
+    {
+      "id": "cat-level-design",
+      "nome": "Level Design",
+      "descricao": "Cursos de games sobre level design."
+    },
+    {
+      "id": "cat-devops-para-games",
+      "nome": "DevOps para Games",
+      "descricao": "Cursos de games sobre devops para games."
+    },
+    {
+      "id": "cat-audio-e-sound-design",
+      "nome": "Áudio e Sound Design",
+      "descricao": "Cursos de games sobre áudio e sound design."
+    },
+    {
+      "id": "cat-inteligencia-artificial",
       "nome": "Inteligência Artificial",
-      "descricao": "Cursos sobre IA, machine learning, redes neurais e processamento de linguagem natural."
+      "descricao": "Cursos de games sobre inteligência artificial."
     },
     {
-      "id": "cat1c2",
-      "nome": "Segurança da Informação",
-      "descricao": "Cursos sobre cibersegurança, redes, criptografia e práticas de proteção."
+      "id": "cat-fisica-de-jogos",
+      "nome": "Física de Jogos",
+      "descricao": "Cursos de games sobre física de jogos."
     },
     {
-      "id": "cat3d4",
-      "nome": "Ciência de Dados",
-      "descricao": "Cursos sobre análise de dados, estatística, visualização e ferramentas como Python e R."
+      "id": "cat-redes-e-multiplayer",
+      "nome": "Redes e Multiplayer",
+      "descricao": "Cursos de games sobre redes e multiplayer."
     },
     {
-      "id": "cat5e6",
+      "id": "cat-otimizacao-e-performance",
+      "nome": "Otimização e Performance",
+      "descricao": "Cursos de games sobre otimização e performance."
+    },
+    {
+      "id": "cat-animacao",
+      "nome": "Animação",
+      "descricao": "Cursos de games sobre animação."
+    },
+    {
+      "id": "cat-graficos-e-efeitos-visuais",
+      "nome": "Gráficos e Efeitos Visuais",
+      "descricao": "Cursos de games sobre gráficos e efeitos visuais."
+    },
+    {
+      "id": "cat-desenvolvimento-mobile",
       "nome": "Desenvolvimento Mobile",
-      "descricao": "Cursos sobre desenvolvimento para iOS, Android e multiplataforma."
+      "descricao": "Cursos de games sobre desenvolvimento mobile."
     },
     {
-      "id": "cat7f8",
-      "nome": "Cloud Computing",
-      "descricao": "Cursos sobre AWS, Azure, GCP, DevOps e infraestrutura como código."
+      "id": "cat-monetizacao-e-negocios",
+      "nome": "Monetização e Negócios",
+      "descricao": "Cursos de games sobre monetização e negócios."
     },
     {
-      "id": "cat9g0",
-      "nome": "Idiomas",
-      "descricao": "Cursos de inglês, espanhol, francês e outros idiomas para negócios e viagens."
+      "id": "cat-marketing",
+      "nome": "Marketing",
+      "descricao": "Cursos de games sobre marketing."
     },
     {
-      "id": "cat1h2",
-      "nome": "Saúde e Bem-Estar",
-      "descricao": "Cursos sobre nutrição, exercícios, meditação e saúde mental."
+      "id": "cat-realidade-virtual-e-aumentada",
+      "nome": "Realidade Virtual e Aumentada",
+      "descricao": "Cursos de games sobre realidade virtual e aumentada."
+    },
+    {
+      "id": "cat-infraestrutura-e-cloud",
+      "nome": "Infraestrutura e Cloud",
+      "descricao": "Cursos de games sobre infraestrutura e cloud."
+    },
+    {
+      "id": "cat-blockchain-e-web3",
+      "nome": "Blockchain e Web3",
+      "descricao": "Cursos de games sobre blockchain e web3."
+    },
+    {
+      "id": "cat-geracao-procedural",
+      "nome": "Geração Procedural",
+      "descricao": "Cursos de games sobre geração procedural."
+    },
+    {
+      "id": "cat-publicacao-de-jogos",
+      "nome": "Publicação de Jogos",
+      "descricao": "Cursos de games sobre publicação de jogos."
     }
   ],
   "cursos": [
     {
-      "id": "cur1y3",
-      "titulo": "Introdução ao JavaScript",
-      "descricao": "Fundamentos da linguagem JavaScript para iniciantes.",
-      "categoriaId": "cat1x2",
+      "id": "L1-001",
+      "titulo": "Game Design Basics",
+      "descricao": "Fundamentos de design e mecânicas de jogos 2D.",
+      "categoriaId": "cat-criacao-de-games-2d",
       "instrutorId": "u2c4d5",
       "status": "publicado",
-      "cargaHoraria": 20
+      "cargaHoraria": 15,
+      "nivel": "Iniciante",
+      "corNivel": "#10B981",
+      "pokemon": {
+        "id": 1,
+        "nome": "Bulbasaur",
+        "tipo": [
+          "grass",
+          "poison"
+        ],
+        "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png"
+      }
     },
     {
-      "id": "cur2z4",
-      "titulo": "React Avançado",
-      "descricao": "Aprofunde seus conhecimentos em React com hooks, context API e performance.",
-      "categoriaId": "cat1x2",
-      "instrutorId": "u2c4d5",
-      "status": "publicado",
-      "cargaHoraria": 40
-    },
-    {
-      "id": "cur3a5",
-      "titulo": "UI Design para Iniciantes",
-      "descricao": "Aprenda os princípios do design de interfaces e crie designs incríveis.",
-      "categoriaId": "cat3y4",
+      "id": "L1-002",
+      "titulo": "Python para Games",
+      "descricao": "Python e Pygame aplicados à criação de jogos para iniciantes.",
+      "categoriaId": "cat-programacao",
       "instrutorId": "u6k2l3",
       "status": "publicado",
-      "cargaHoraria": 25
+      "cargaHoraria": 20,
+      "nivel": "Iniciante",
+      "corNivel": "#10B981",
+      "pokemon": {
+        "id": 4,
+        "nome": "Charmander",
+        "tipo": [
+          "fire"
+        ],
+        "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/4.png"
+      }
     },
     {
-      "id": "cur4b6",
-      "titulo": "Figma do Básico ao Avançado",
-      "descricao": "Domine a ferramenta Figma para criar protótipos e designs de alta qualidade.",
-      "categoriaId": "cat3y4",
-      "instrutorId": "u6k2l3",
-      "status": "rascunho",
-      "cargaHoraria": 30
-    },
-    {
-      "id": "cur5c7",
-      "titulo": "SEO para Sites e Blogs",
-      "descricao": "Aprenda as melhores práticas de SEO para rankear seu site nos buscadores.",
-      "categoriaId": "cat5z6",
+      "id": "L1-003",
+      "titulo": "Pixel Art Fundamentos",
+      "descricao": "Criação de sprites em pixel art para jogos 2D.",
+      "categoriaId": "cat-arte-e-pixel-art",
       "instrutorId": "u1u3v4",
       "status": "publicado",
-      "cargaHoraria": 15
+      "cargaHoraria": 25,
+      "nivel": "Iniciante",
+      "corNivel": "#10B981",
+      "pokemon": {
+        "id": 7,
+        "nome": "Squirtle",
+        "tipo": [
+          "water"
+        ],
+        "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/7.png"
+      }
     },
     {
-      "id": "cur6d8",
-      "titulo": "Marketing de Conteúdo",
-      "descricao": "Estratégias para criar conteúdo relevante e engajar sua audiência.",
-      "categoriaId": "cat5z6",
-      "instrutorId": "u1u3v4",
-      "status": "publicado",
-      "cargaHoraria": 20
-    },
-    {
-      "id": "cur7e9",
-      "titulo": "Fundamentos da IA",
-      "descricao": "Introdução aos conceitos de inteligência artificial e suas aplicações.",
-      "categoriaId": "cat9b0",
+      "id": "L1-004",
+      "titulo": "Narrativa em Games",
+      "descricao": "Roteiro e narrativa aplicados ao desenvolvimento de jogos.",
+      "categoriaId": "cat-narrativa-e-storytelling",
       "instrutorId": "u2c4d5",
       "status": "publicado",
-      "cargaHoraria": 35
+      "cargaHoraria": 15,
+      "nivel": "Iniciante",
+      "corNivel": "#10B981",
+      "pokemon": {
+        "id": 18,
+        "nome": "Pidgeot",
+        "tipo": [
+          "normal",
+          "flying"
+        ],
+        "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/18.png"
+      }
     },
     {
-      "id": "cur8f0",
-      "titulo": "Machine Learning com Python",
-      "descricao": "Aprenda machine learning do zero com Python e bibliotecas como scikit-learn.",
-      "categoriaId": "cat9b0",
-      "instrutorId": "u2c4d5",
-      "status": "rascunho",
-      "cargaHoraria": 45
-    },
-    {
-      "id": "cur9g1",
-      "titulo": "Segurança em Redes",
-      "descricao": "Conceitos fundamentais de segurança de redes e práticas de proteção.",
-      "categoriaId": "cat1c2",
+      "id": "L1-005",
+      "titulo": "Mecânicas Clássicas",
+      "descricao": "Entenda as mecânicas de jogos retrô e como reaproveitá-las.",
+      "categoriaId": "cat-mecanicas-de-jogo",
       "instrutorId": "u6k2l3",
       "status": "publicado",
-      "cargaHoraria": 30
+      "cargaHoraria": 20,
+      "nivel": "Iniciante",
+      "corNivel": "#10B981",
+      "pokemon": {
+        "id": 39,
+        "nome": "Jigglypuff",
+        "tipo": [
+          "normal",
+          "fairy"
+        ],
+        "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/39.png"
+      }
     },
     {
-      "id": "cur0h2",
-      "titulo": "Desenvolvimento Android com Kotlin",
-      "descricao": "Crie aplicativos Android nativos usando a linguagem Kotlin.",
-      "categoriaId": "cat5e6",
+      "id": "L1-006",
+      "titulo": "Iniciação em Unity",
+      "descricao": "Primeiros passos com a engine Unity.",
+      "categoriaId": "cat-motores-de-jogo",
       "instrutorId": "u1u3v4",
       "status": "publicado",
-      "cargaHoraria": 50
+      "cargaHoraria": 25,
+      "nivel": "Iniciante",
+      "corNivel": "#10B981",
+      "pokemon": {
+        "id": 54,
+        "nome": "Psyduck",
+        "tipo": [
+          "water"
+        ],
+        "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/54.png"
+      }
     },
     {
-      "id": "cur1i3",
-      "titulo": "AWS para Iniciantes",
-      "descricao": "Introdução aos serviços da Amazon Web Services e computação em nuvem.",
-      "categoriaId": "cat7f8",
+      "id": "L1-007",
+      "titulo": "Blender Básico",
+      "descricao": "Modelagem 3D básica para assets de jogos.",
+      "categoriaId": "cat-modelagem-3d",
       "instrutorId": "u2c4d5",
       "status": "publicado",
-      "cargaHoraria": 25
+      "cargaHoraria": 15,
+      "nivel": "Iniciante",
+      "corNivel": "#10B981",
+      "pokemon": {
+        "id": 129,
+        "nome": "Magikarp",
+        "tipo": [
+          "water"
+        ],
+        "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/129.png"
+      }
     },
     {
-      "id": "cur2j4",
-      "titulo": "Inglês para Desenvolvedores",
-      "descricao": "Aprenda inglês técnico para ler documentação e se comunicar em equipes globais.",
-      "categoriaId": "cat9g0",
+      "id": "L1-008",
+      "titulo": "Level Design 101",
+      "descricao": "Como projetar fases interessantes e balanceadas.",
+      "categoriaId": "cat-level-design",
       "instrutorId": "u6k2l3",
+      "status": "publicado",
+      "cargaHoraria": 20,
+      "nivel": "Iniciante",
+      "corNivel": "#10B981",
+      "pokemon": {
+        "id": 19,
+        "nome": "Rattata",
+        "tipo": [
+          "normal"
+        ],
+        "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/19.png"
+      }
+    },
+    {
+      "id": "L1-009",
+      "titulo": "Versionamento Git",
+      "descricao": "Git aplicado a projetos de desenvolvimento de jogos.",
+      "categoriaId": "cat-devops-para-games",
+      "instrutorId": "u1u3v4",
+      "status": "publicado",
+      "cargaHoraria": 25,
+      "nivel": "Iniciante",
+      "corNivel": "#10B981",
+      "pokemon": {
+        "id": 56,
+        "nome": "Mankey",
+        "tipo": [
+          "fighting"
+        ],
+        "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/56.png"
+      }
+    },
+    {
+      "id": "L1-010",
+      "titulo": "Audio em Games",
+      "descricao": "Efeitos sonoros e trilha musical para jogos.",
+      "categoriaId": "cat-audio-e-sound-design",
+      "instrutorId": "u2c4d5",
+      "status": "publicado",
+      "cargaHoraria": 15,
+      "nivel": "Iniciante",
+      "corNivel": "#10B981",
+      "pokemon": {
+        "id": 58,
+        "nome": "Growlithe",
+        "tipo": [
+          "fire"
+        ],
+        "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/58.png"
+      }
+    },
+    {
+      "id": "L2-001",
+      "titulo": "Programação Avançada C#",
+      "descricao": "C# avançado aplicado a projetos Unity.",
+      "categoriaId": "cat-programacao",
+      "instrutorId": "u2c4d5",
+      "status": "publicado",
+      "cargaHoraria": 25,
+      "nivel": "Mediano",
+      "corNivel": "#F59E0B",
+      "pokemon": {
+        "id": 2,
+        "nome": "Ivysaur",
+        "tipo": [
+          "grass",
+          "poison"
+        ],
+        "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/2.png"
+      }
+    },
+    {
+      "id": "L2-002",
+      "titulo": "IA e Pathfinding",
+      "descricao": "Algoritmos de inteligência artificial e pathfinding em jogos.",
+      "categoriaId": "cat-inteligencia-artificial",
+      "instrutorId": "u6k2l3",
+      "status": "publicado",
+      "cargaHoraria": 30,
+      "nivel": "Mediano",
+      "corNivel": "#F59E0B",
+      "pokemon": {
+        "id": 5,
+        "nome": "Charmeleon",
+        "tipo": [
+          "fire"
+        ],
+        "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/5.png"
+      }
+    },
+    {
+      "id": "L2-003",
+      "titulo": "Física em Games",
+      "descricao": "Sistemas de física realista para jogos.",
+      "categoriaId": "cat-fisica-de-jogos",
+      "instrutorId": "u1u3v4",
+      "status": "publicado",
+      "cargaHoraria": 35,
+      "nivel": "Mediano",
+      "corNivel": "#F59E0B",
+      "pokemon": {
+        "id": 8,
+        "nome": "Wartortle",
+        "tipo": [
+          "water"
+        ],
+        "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/8.png"
+      }
+    },
+    {
+      "id": "L2-004",
+      "titulo": "Multiplayer Networking",
+      "descricao": "Fundamentos do desenvolvimento multiplayer.",
+      "categoriaId": "cat-redes-e-multiplayer",
+      "instrutorId": "u2c4d5",
+      "status": "publicado",
+      "cargaHoraria": 25,
+      "nivel": "Mediano",
+      "corNivel": "#F59E0B",
+      "pokemon": {
+        "id": 22,
+        "nome": "Fearow",
+        "tipo": [
+          "normal",
+          "flying"
+        ],
+        "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/22.png"
+      }
+    },
+    {
+      "id": "L2-005",
+      "titulo": "Performance Optimization",
+      "descricao": "Técnicas para otimizar código e assets de jogos.",
+      "categoriaId": "cat-otimizacao-e-performance",
+      "instrutorId": "u6k2l3",
+      "status": "publicado",
+      "cargaHoraria": 30,
+      "nivel": "Mediano",
+      "corNivel": "#F59E0B",
+      "pokemon": {
+        "id": 24,
+        "nome": "Arbok",
+        "tipo": [
+          "poison"
+        ],
+        "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/24.png"
+      }
+    },
+    {
+      "id": "L2-006",
+      "titulo": "Animação Avançada",
+      "descricao": "Rigging e animação 3D para personagens de jogos.",
+      "categoriaId": "cat-animacao",
+      "instrutorId": "u1u3v4",
       "status": "rascunho",
-      "cargaHoraria": 10
+      "cargaHoraria": 35,
+      "nivel": "Mediano",
+      "corNivel": "#F59E0B",
+      "pokemon": {
+        "id": 55,
+        "nome": "Golduck",
+        "tipo": [
+          "water"
+        ],
+        "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/55.png"
+      }
+    },
+    {
+      "id": "L2-007",
+      "titulo": "Shaders e Efeitos",
+      "descricao": "Criação de shaders e efeitos visuais.",
+      "categoriaId": "cat-graficos-e-efeitos-visuais",
+      "instrutorId": "u2c4d5",
+      "status": "publicado",
+      "cargaHoraria": 25,
+      "nivel": "Mediano",
+      "corNivel": "#F59E0B",
+      "pokemon": {
+        "id": 45,
+        "nome": "Vileplume",
+        "tipo": [
+          "grass",
+          "poison"
+        ],
+        "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/45.png"
+      }
+    },
+    {
+      "id": "L2-008",
+      "titulo": "Mobile Game Dev",
+      "descricao": "Desenvolvimento de jogos para dispositivos móveis.",
+      "categoriaId": "cat-desenvolvimento-mobile",
+      "instrutorId": "u6k2l3",
+      "status": "publicado",
+      "cargaHoraria": 30,
+      "nivel": "Mediano",
+      "corNivel": "#F59E0B",
+      "pokemon": {
+        "id": 57,
+        "nome": "Primeape",
+        "tipo": [
+          "fighting"
+        ],
+        "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/57.png"
+      }
+    },
+    {
+      "id": "L2-009",
+      "titulo": "Monetização em Games",
+      "descricao": "Estratégias de monetização para jogos.",
+      "categoriaId": "cat-monetizacao-e-negocios",
+      "instrutorId": "u1u3v4",
+      "status": "publicado",
+      "cargaHoraria": 35,
+      "nivel": "Mediano",
+      "corNivel": "#F59E0B",
+      "pokemon": {
+        "id": 59,
+        "nome": "Arcanine",
+        "tipo": [
+          "fire"
+        ],
+        "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/59.png"
+      }
+    },
+    {
+      "id": "L2-010",
+      "titulo": "Marketing para Indie Games",
+      "descricao": "Como promover um jogo indie.",
+      "categoriaId": "cat-marketing",
+      "instrutorId": "u2c4d5",
+      "status": "publicado",
+      "cargaHoraria": 25,
+      "nivel": "Mediano",
+      "corNivel": "#F59E0B",
+      "pokemon": {
+        "id": 131,
+        "nome": "Lapras",
+        "tipo": [
+          "water",
+          "ice"
+        ],
+        "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/131.png"
+      }
+    },
+    {
+      "id": "L3-001",
+      "titulo": "Mewtwo Engine Development",
+      "descricao": "Criação de uma engine de jogos do zero.",
+      "categoriaId": "cat-motores-de-jogo",
+      "instrutorId": "u2c4d5",
+      "status": "publicado",
+      "cargaHoraria": 40,
+      "nivel": "Avançado",
+      "corNivel": "#EF4444",
+      "pokemon": {
+        "id": 150,
+        "nome": "Mewtwo",
+        "tipo": [
+          "psychic"
+        ],
+        "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/150.png"
+      }
+    },
+    {
+      "id": "L3-002",
+      "titulo": "Real-time Ray Tracing",
+      "descricao": "Ray tracing em tempo real aplicado a jogos.",
+      "categoriaId": "cat-graficos-e-efeitos-visuais",
+      "instrutorId": "u6k2l3",
+      "status": "publicado",
+      "cargaHoraria": 45,
+      "nivel": "Avançado",
+      "corNivel": "#EF4444",
+      "pokemon": {
+        "id": 249,
+        "nome": "Lugia",
+        "tipo": [
+          "psychic",
+          "flying"
+        ],
+        "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/249.png"
+      }
+    },
+    {
+      "id": "L3-003",
+      "titulo": "VR/AR Game Development",
+      "descricao": "Desenvolvimento de jogos em realidade virtual e aumentada.",
+      "categoriaId": "cat-realidade-virtual-e-aumentada",
+      "instrutorId": "u1u3v4",
+      "status": "publicado",
+      "cargaHoraria": 50,
+      "nivel": "Avançado",
+      "corNivel": "#EF4444",
+      "pokemon": {
+        "id": 250,
+        "nome": "Ho-Oh",
+        "tipo": [
+          "fire",
+          "flying"
+        ],
+        "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/250.png"
+      }
+    },
+    {
+      "id": "L3-004",
+      "titulo": "Cloud Gaming Architecture",
+      "descricao": "Arquitetura de cloud gaming em larga escala.",
+      "categoriaId": "cat-infraestrutura-e-cloud",
+      "instrutorId": "u2c4d5",
+      "status": "publicado",
+      "cargaHoraria": 40,
+      "nivel": "Avançado",
+      "corNivel": "#EF4444",
+      "pokemon": {
+        "id": 384,
+        "nome": "Rayquaza",
+        "tipo": [
+          "dragon",
+          "flying"
+        ],
+        "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iii/ruby-sapphire/384.png"
+      }
+    },
+    {
+      "id": "L3-005",
+      "titulo": "Machine Learning em Games",
+      "descricao": "Machine learning aplicado ao comportamento de NPCs.",
+      "categoriaId": "cat-inteligencia-artificial",
+      "instrutorId": "u6k2l3",
+      "status": "publicado",
+      "cargaHoraria": 45,
+      "nivel": "Avançado",
+      "corNivel": "#EF4444",
+      "pokemon": {
+        "id": 382,
+        "nome": "Kyogre",
+        "tipo": [
+          "water"
+        ],
+        "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iii/ruby-sapphire/382.png"
+      }
+    },
+    {
+      "id": "L3-006",
+      "titulo": "Blockchain Gaming",
+      "descricao": "Jogos com blockchain e NFTs.",
+      "categoriaId": "cat-blockchain-e-web3",
+      "instrutorId": "u1u3v4",
+      "status": "publicado",
+      "cargaHoraria": 50,
+      "nivel": "Avançado",
+      "corNivel": "#EF4444",
+      "pokemon": {
+        "id": 383,
+        "nome": "Groudon",
+        "tipo": [
+          "ground"
+        ],
+        "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iii/ruby-sapphire/383.png"
+      }
+    },
+    {
+      "id": "L3-007",
+      "titulo": "Procedural Generation",
+      "descricao": "Geração procedural de mundos e conteúdo.",
+      "categoriaId": "cat-geracao-procedural",
+      "instrutorId": "u2c4d5",
+      "status": "rascunho",
+      "cargaHoraria": 40,
+      "nivel": "Avançado",
+      "corNivel": "#EF4444",
+      "pokemon": {
+        "id": 144,
+        "nome": "Articuno",
+        "tipo": [
+          "ice",
+          "flying"
+        ],
+        "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/144.png"
+      }
+    },
+    {
+      "id": "L3-008",
+      "titulo": "Advanced Networking Protocol",
+      "descricao": "Protocolos avançados de rede para jogos online.",
+      "categoriaId": "cat-redes-e-multiplayer",
+      "instrutorId": "u6k2l3",
+      "status": "publicado",
+      "cargaHoraria": 45,
+      "nivel": "Avançado",
+      "corNivel": "#EF4444",
+      "pokemon": {
+        "id": 145,
+        "nome": "Zapdos",
+        "tipo": [
+          "electric",
+          "flying"
+        ],
+        "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/145.png"
+      }
+    },
+    {
+      "id": "L3-009",
+      "titulo": "Engine Optimization Masters",
+      "descricao": "Otimização extrema de engines de jogos.",
+      "categoriaId": "cat-otimizacao-e-performance",
+      "instrutorId": "u1u3v4",
+      "status": "publicado",
+      "cargaHoraria": 50,
+      "nivel": "Avançado",
+      "corNivel": "#EF4444",
+      "pokemon": {
+        "id": 146,
+        "nome": "Moltres",
+        "tipo": [
+          "fire",
+          "flying"
+        ],
+        "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/146.png"
+      }
+    },
+    {
+      "id": "L3-010",
+      "titulo": "Game Publishing Pipeline",
+      "descricao": "Pipeline completo de publicação de um jogo.",
+      "categoriaId": "cat-publicacao-de-jogos",
+      "instrutorId": "u2c4d5",
+      "status": "publicado",
+      "cargaHoraria": 40,
+      "nivel": "Avançado",
+      "corNivel": "#EF4444",
+      "pokemon": {
+        "id": 149,
+        "nome": "Dragonite",
+        "tipo": [
+          "dragon",
+          "flying"
+        ],
+        "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/149.png"
+      }
     }
   ],
   "aulas": [
     {
-      "id": "aul1z4",
-      "cursoId": "cur1y3",
-      "titulo": "Variáveis e Tipos de Dados",
-      "conteudo": "https://video.exemplo.com/aula1",
-      "ordem": 1,
-      "duracaoMinutos": 15
-    },
-    {
-      "id": "aul2a5",
-      "cursoId": "cur1y3",
-      "titulo": "Estruturas de Controle",
-      "conteudo": "https://video.exemplo.com/aula2",
-      "ordem": 2,
-      "duracaoMinutos": 20
-    },
-    {
-      "id": "aul3b6",
-      "cursoId": "cur1y3",
-      "titulo": "Funções e Escopo",
-      "conteudo": "https://video.exemplo.com/aula3",
-      "ordem": 3,
-      "duracaoMinutos": 25
-    },
-    {
-      "id": "aul4c7",
-      "cursoId": "cur2z4",
-      "titulo": "Hooks Básicos",
-      "conteudo": "https://video.exemplo.com/aula4",
-      "ordem": 1,
-      "duracaoMinutos": 30
-    },
-    {
-      "id": "aul5d8",
-      "cursoId": "cur2z4",
-      "titulo": "Context API",
-      "conteudo": "https://video.exemplo.com/aula5",
-      "ordem": 2,
-      "duracaoMinutos": 35
-    },
-    {
-      "id": "aul6e9",
-      "cursoId": "cur3a5",
-      "titulo": "Princípios do Design UI",
-      "conteudo": "https://video.exemplo.com/aula6",
+      "id": "L1-001-aula1",
+      "cursoId": "L1-001",
+      "titulo": "Introdução: Game Design Basics",
+      "conteudo": "https://video.exemplo.com/L1-001-aula1",
       "ordem": 1,
       "duracaoMinutos": 20
     },
     {
-      "id": "aul7f0",
-      "cursoId": "cur3a5",
-      "titulo": "Ferramentas de Prototipagem",
-      "conteudo": "https://video.exemplo.com/aula7",
+      "id": "L1-001-aula2",
+      "cursoId": "L1-001",
+      "titulo": "Prática: Game Design Basics",
+      "conteudo": "https://video.exemplo.com/L1-001-aula2",
       "ordem": 2,
       "duracaoMinutos": 25
     },
     {
-      "id": "aul8g1",
-      "cursoId": "cur5c7",
-      "titulo": "Introdução ao SEO",
-      "conteudo": "https://video.exemplo.com/aula8",
+      "id": "L1-002-aula1",
+      "cursoId": "L1-002",
+      "titulo": "Introdução: Python para Games",
+      "conteudo": "https://video.exemplo.com/L1-002-aula1",
       "ordem": 1,
-      "duracaoMinutos": 15
-    },
-    {
-      "id": "aul9h2",
-      "cursoId": "cur5c7",
-      "titulo": "Palavras-chave e Conteúdo",
-      "conteudo": "https://video.exemplo.com/aula9",
-      "ordem": 2,
       "duracaoMinutos": 20
     },
     {
-      "id": "aul0i3",
-      "cursoId": "cur7e9",
-      "titulo": "O que é IA?",
-      "conteudo": "https://video.exemplo.com/aula10",
-      "ordem": 1,
-      "duracaoMinutos": 18
-    },
-    {
-      "id": "aul1j4",
-      "cursoId": "cur7e9",
-      "titulo": "Redes Neurais Básicas",
-      "conteudo": "https://video.exemplo.com/aula11",
+      "id": "L1-002-aula2",
+      "cursoId": "L1-002",
+      "titulo": "Prática: Python para Games",
+      "conteudo": "https://video.exemplo.com/L1-002-aula2",
       "ordem": 2,
       "duracaoMinutos": 25
     },
     {
-      "id": "aul2k5",
-      "cursoId": "cur9g1",
-      "titulo": "Conceitos de Redes",
-      "conteudo": "https://video.exemplo.com/aula12",
+      "id": "L1-003-aula1",
+      "cursoId": "L1-003",
+      "titulo": "Introdução: Pixel Art Fundamentos",
+      "conteudo": "https://video.exemplo.com/L1-003-aula1",
       "ordem": 1,
-      "duracaoMinutos": 22
+      "duracaoMinutos": 20
     },
     {
-      "id": "aul3l6",
-      "cursoId": "cur0h2",
-      "titulo": "Configurando o Ambiente Android",
-      "conteudo": "https://video.exemplo.com/aula13",
-      "ordem": 1,
-      "duracaoMinutos": 30
+      "id": "L1-003-aula2",
+      "cursoId": "L1-003",
+      "titulo": "Prática: Pixel Art Fundamentos",
+      "conteudo": "https://video.exemplo.com/L1-003-aula2",
+      "ordem": 2,
+      "duracaoMinutos": 25
     },
     {
-      "id": "aul4m7",
-      "cursoId": "cur1i3",
-      "titulo": "Criando uma Conta AWS",
-      "conteudo": "https://video.exemplo.com/aula14",
+      "id": "L1-004-aula1",
+      "cursoId": "L1-004",
+      "titulo": "Introdução: Narrativa em Games",
+      "conteudo": "https://video.exemplo.com/L1-004-aula1",
       "ordem": 1,
-      "duracaoMinutos": 10
+      "duracaoMinutos": 20
+    },
+    {
+      "id": "L1-004-aula2",
+      "cursoId": "L1-004",
+      "titulo": "Prática: Narrativa em Games",
+      "conteudo": "https://video.exemplo.com/L1-004-aula2",
+      "ordem": 2,
+      "duracaoMinutos": 25
+    },
+    {
+      "id": "L1-005-aula1",
+      "cursoId": "L1-005",
+      "titulo": "Introdução: Mecânicas Clássicas",
+      "conteudo": "https://video.exemplo.com/L1-005-aula1",
+      "ordem": 1,
+      "duracaoMinutos": 20
+    },
+    {
+      "id": "L1-005-aula2",
+      "cursoId": "L1-005",
+      "titulo": "Prática: Mecânicas Clássicas",
+      "conteudo": "https://video.exemplo.com/L1-005-aula2",
+      "ordem": 2,
+      "duracaoMinutos": 25
+    },
+    {
+      "id": "L1-006-aula1",
+      "cursoId": "L1-006",
+      "titulo": "Introdução: Iniciação em Unity",
+      "conteudo": "https://video.exemplo.com/L1-006-aula1",
+      "ordem": 1,
+      "duracaoMinutos": 20
+    },
+    {
+      "id": "L1-006-aula2",
+      "cursoId": "L1-006",
+      "titulo": "Prática: Iniciação em Unity",
+      "conteudo": "https://video.exemplo.com/L1-006-aula2",
+      "ordem": 2,
+      "duracaoMinutos": 25
+    },
+    {
+      "id": "L1-007-aula1",
+      "cursoId": "L1-007",
+      "titulo": "Introdução: Blender Básico",
+      "conteudo": "https://video.exemplo.com/L1-007-aula1",
+      "ordem": 1,
+      "duracaoMinutos": 20
+    },
+    {
+      "id": "L1-007-aula2",
+      "cursoId": "L1-007",
+      "titulo": "Prática: Blender Básico",
+      "conteudo": "https://video.exemplo.com/L1-007-aula2",
+      "ordem": 2,
+      "duracaoMinutos": 25
+    },
+    {
+      "id": "L1-008-aula1",
+      "cursoId": "L1-008",
+      "titulo": "Introdução: Level Design 101",
+      "conteudo": "https://video.exemplo.com/L1-008-aula1",
+      "ordem": 1,
+      "duracaoMinutos": 20
+    },
+    {
+      "id": "L1-008-aula2",
+      "cursoId": "L1-008",
+      "titulo": "Prática: Level Design 101",
+      "conteudo": "https://video.exemplo.com/L1-008-aula2",
+      "ordem": 2,
+      "duracaoMinutos": 25
+    },
+    {
+      "id": "L1-009-aula1",
+      "cursoId": "L1-009",
+      "titulo": "Introdução: Versionamento Git",
+      "conteudo": "https://video.exemplo.com/L1-009-aula1",
+      "ordem": 1,
+      "duracaoMinutos": 20
+    },
+    {
+      "id": "L1-009-aula2",
+      "cursoId": "L1-009",
+      "titulo": "Prática: Versionamento Git",
+      "conteudo": "https://video.exemplo.com/L1-009-aula2",
+      "ordem": 2,
+      "duracaoMinutos": 25
+    },
+    {
+      "id": "L1-010-aula1",
+      "cursoId": "L1-010",
+      "titulo": "Introdução: Audio em Games",
+      "conteudo": "https://video.exemplo.com/L1-010-aula1",
+      "ordem": 1,
+      "duracaoMinutos": 20
+    },
+    {
+      "id": "L1-010-aula2",
+      "cursoId": "L1-010",
+      "titulo": "Prática: Audio em Games",
+      "conteudo": "https://video.exemplo.com/L1-010-aula2",
+      "ordem": 2,
+      "duracaoMinutos": 25
+    },
+    {
+      "id": "L2-001-aula1",
+      "cursoId": "L2-001",
+      "titulo": "Introdução: Programação Avançada C#",
+      "conteudo": "https://video.exemplo.com/L2-001-aula1",
+      "ordem": 1,
+      "duracaoMinutos": 20
+    },
+    {
+      "id": "L2-001-aula2",
+      "cursoId": "L2-001",
+      "titulo": "Prática: Programação Avançada C#",
+      "conteudo": "https://video.exemplo.com/L2-001-aula2",
+      "ordem": 2,
+      "duracaoMinutos": 25
+    },
+    {
+      "id": "L2-002-aula1",
+      "cursoId": "L2-002",
+      "titulo": "Introdução: IA e Pathfinding",
+      "conteudo": "https://video.exemplo.com/L2-002-aula1",
+      "ordem": 1,
+      "duracaoMinutos": 20
+    },
+    {
+      "id": "L2-002-aula2",
+      "cursoId": "L2-002",
+      "titulo": "Prática: IA e Pathfinding",
+      "conteudo": "https://video.exemplo.com/L2-002-aula2",
+      "ordem": 2,
+      "duracaoMinutos": 25
+    },
+    {
+      "id": "L2-003-aula1",
+      "cursoId": "L2-003",
+      "titulo": "Introdução: Física em Games",
+      "conteudo": "https://video.exemplo.com/L2-003-aula1",
+      "ordem": 1,
+      "duracaoMinutos": 20
+    },
+    {
+      "id": "L2-003-aula2",
+      "cursoId": "L2-003",
+      "titulo": "Prática: Física em Games",
+      "conteudo": "https://video.exemplo.com/L2-003-aula2",
+      "ordem": 2,
+      "duracaoMinutos": 25
+    },
+    {
+      "id": "L2-004-aula1",
+      "cursoId": "L2-004",
+      "titulo": "Introdução: Multiplayer Networking",
+      "conteudo": "https://video.exemplo.com/L2-004-aula1",
+      "ordem": 1,
+      "duracaoMinutos": 20
+    },
+    {
+      "id": "L2-004-aula2",
+      "cursoId": "L2-004",
+      "titulo": "Prática: Multiplayer Networking",
+      "conteudo": "https://video.exemplo.com/L2-004-aula2",
+      "ordem": 2,
+      "duracaoMinutos": 25
+    },
+    {
+      "id": "L2-005-aula1",
+      "cursoId": "L2-005",
+      "titulo": "Introdução: Performance Optimization",
+      "conteudo": "https://video.exemplo.com/L2-005-aula1",
+      "ordem": 1,
+      "duracaoMinutos": 20
+    },
+    {
+      "id": "L2-005-aula2",
+      "cursoId": "L2-005",
+      "titulo": "Prática: Performance Optimization",
+      "conteudo": "https://video.exemplo.com/L2-005-aula2",
+      "ordem": 2,
+      "duracaoMinutos": 25
+    },
+    {
+      "id": "L2-006-aula1",
+      "cursoId": "L2-006",
+      "titulo": "Introdução: Animação Avançada",
+      "conteudo": "https://video.exemplo.com/L2-006-aula1",
+      "ordem": 1,
+      "duracaoMinutos": 20
+    },
+    {
+      "id": "L2-006-aula2",
+      "cursoId": "L2-006",
+      "titulo": "Prática: Animação Avançada",
+      "conteudo": "https://video.exemplo.com/L2-006-aula2",
+      "ordem": 2,
+      "duracaoMinutos": 25
+    },
+    {
+      "id": "L2-007-aula1",
+      "cursoId": "L2-007",
+      "titulo": "Introdução: Shaders e Efeitos",
+      "conteudo": "https://video.exemplo.com/L2-007-aula1",
+      "ordem": 1,
+      "duracaoMinutos": 20
+    },
+    {
+      "id": "L2-007-aula2",
+      "cursoId": "L2-007",
+      "titulo": "Prática: Shaders e Efeitos",
+      "conteudo": "https://video.exemplo.com/L2-007-aula2",
+      "ordem": 2,
+      "duracaoMinutos": 25
+    },
+    {
+      "id": "L2-008-aula1",
+      "cursoId": "L2-008",
+      "titulo": "Introdução: Mobile Game Dev",
+      "conteudo": "https://video.exemplo.com/L2-008-aula1",
+      "ordem": 1,
+      "duracaoMinutos": 20
+    },
+    {
+      "id": "L2-008-aula2",
+      "cursoId": "L2-008",
+      "titulo": "Prática: Mobile Game Dev",
+      "conteudo": "https://video.exemplo.com/L2-008-aula2",
+      "ordem": 2,
+      "duracaoMinutos": 25
+    },
+    {
+      "id": "L2-009-aula1",
+      "cursoId": "L2-009",
+      "titulo": "Introdução: Monetização em Games",
+      "conteudo": "https://video.exemplo.com/L2-009-aula1",
+      "ordem": 1,
+      "duracaoMinutos": 20
+    },
+    {
+      "id": "L2-009-aula2",
+      "cursoId": "L2-009",
+      "titulo": "Prática: Monetização em Games",
+      "conteudo": "https://video.exemplo.com/L2-009-aula2",
+      "ordem": 2,
+      "duracaoMinutos": 25
+    },
+    {
+      "id": "L2-010-aula1",
+      "cursoId": "L2-010",
+      "titulo": "Introdução: Marketing para Indie Games",
+      "conteudo": "https://video.exemplo.com/L2-010-aula1",
+      "ordem": 1,
+      "duracaoMinutos": 20
+    },
+    {
+      "id": "L2-010-aula2",
+      "cursoId": "L2-010",
+      "titulo": "Prática: Marketing para Indie Games",
+      "conteudo": "https://video.exemplo.com/L2-010-aula2",
+      "ordem": 2,
+      "duracaoMinutos": 25
+    },
+    {
+      "id": "L3-001-aula1",
+      "cursoId": "L3-001",
+      "titulo": "Introdução: Mewtwo Engine Development",
+      "conteudo": "https://video.exemplo.com/L3-001-aula1",
+      "ordem": 1,
+      "duracaoMinutos": 20
+    },
+    {
+      "id": "L3-001-aula2",
+      "cursoId": "L3-001",
+      "titulo": "Prática: Mewtwo Engine Development",
+      "conteudo": "https://video.exemplo.com/L3-001-aula2",
+      "ordem": 2,
+      "duracaoMinutos": 25
+    },
+    {
+      "id": "L3-002-aula1",
+      "cursoId": "L3-002",
+      "titulo": "Introdução: Real-time Ray Tracing",
+      "conteudo": "https://video.exemplo.com/L3-002-aula1",
+      "ordem": 1,
+      "duracaoMinutos": 20
+    },
+    {
+      "id": "L3-002-aula2",
+      "cursoId": "L3-002",
+      "titulo": "Prática: Real-time Ray Tracing",
+      "conteudo": "https://video.exemplo.com/L3-002-aula2",
+      "ordem": 2,
+      "duracaoMinutos": 25
+    },
+    {
+      "id": "L3-003-aula1",
+      "cursoId": "L3-003",
+      "titulo": "Introdução: VR/AR Game Development",
+      "conteudo": "https://video.exemplo.com/L3-003-aula1",
+      "ordem": 1,
+      "duracaoMinutos": 20
+    },
+    {
+      "id": "L3-003-aula2",
+      "cursoId": "L3-003",
+      "titulo": "Prática: VR/AR Game Development",
+      "conteudo": "https://video.exemplo.com/L3-003-aula2",
+      "ordem": 2,
+      "duracaoMinutos": 25
+    },
+    {
+      "id": "L3-004-aula1",
+      "cursoId": "L3-004",
+      "titulo": "Introdução: Cloud Gaming Architecture",
+      "conteudo": "https://video.exemplo.com/L3-004-aula1",
+      "ordem": 1,
+      "duracaoMinutos": 20
+    },
+    {
+      "id": "L3-004-aula2",
+      "cursoId": "L3-004",
+      "titulo": "Prática: Cloud Gaming Architecture",
+      "conteudo": "https://video.exemplo.com/L3-004-aula2",
+      "ordem": 2,
+      "duracaoMinutos": 25
+    },
+    {
+      "id": "L3-005-aula1",
+      "cursoId": "L3-005",
+      "titulo": "Introdução: Machine Learning em Games",
+      "conteudo": "https://video.exemplo.com/L3-005-aula1",
+      "ordem": 1,
+      "duracaoMinutos": 20
+    },
+    {
+      "id": "L3-005-aula2",
+      "cursoId": "L3-005",
+      "titulo": "Prática: Machine Learning em Games",
+      "conteudo": "https://video.exemplo.com/L3-005-aula2",
+      "ordem": 2,
+      "duracaoMinutos": 25
+    },
+    {
+      "id": "L3-006-aula1",
+      "cursoId": "L3-006",
+      "titulo": "Introdução: Blockchain Gaming",
+      "conteudo": "https://video.exemplo.com/L3-006-aula1",
+      "ordem": 1,
+      "duracaoMinutos": 20
+    },
+    {
+      "id": "L3-006-aula2",
+      "cursoId": "L3-006",
+      "titulo": "Prática: Blockchain Gaming",
+      "conteudo": "https://video.exemplo.com/L3-006-aula2",
+      "ordem": 2,
+      "duracaoMinutos": 25
+    },
+    {
+      "id": "L3-007-aula1",
+      "cursoId": "L3-007",
+      "titulo": "Introdução: Procedural Generation",
+      "conteudo": "https://video.exemplo.com/L3-007-aula1",
+      "ordem": 1,
+      "duracaoMinutos": 20
+    },
+    {
+      "id": "L3-007-aula2",
+      "cursoId": "L3-007",
+      "titulo": "Prática: Procedural Generation",
+      "conteudo": "https://video.exemplo.com/L3-007-aula2",
+      "ordem": 2,
+      "duracaoMinutos": 25
+    },
+    {
+      "id": "L3-008-aula1",
+      "cursoId": "L3-008",
+      "titulo": "Introdução: Advanced Networking Protocol",
+      "conteudo": "https://video.exemplo.com/L3-008-aula1",
+      "ordem": 1,
+      "duracaoMinutos": 20
+    },
+    {
+      "id": "L3-008-aula2",
+      "cursoId": "L3-008",
+      "titulo": "Prática: Advanced Networking Protocol",
+      "conteudo": "https://video.exemplo.com/L3-008-aula2",
+      "ordem": 2,
+      "duracaoMinutos": 25
+    },
+    {
+      "id": "L3-009-aula1",
+      "cursoId": "L3-009",
+      "titulo": "Introdução: Engine Optimization Masters",
+      "conteudo": "https://video.exemplo.com/L3-009-aula1",
+      "ordem": 1,
+      "duracaoMinutos": 20
+    },
+    {
+      "id": "L3-009-aula2",
+      "cursoId": "L3-009",
+      "titulo": "Prática: Engine Optimization Masters",
+      "conteudo": "https://video.exemplo.com/L3-009-aula2",
+      "ordem": 2,
+      "duracaoMinutos": 25
+    },
+    {
+      "id": "L3-010-aula1",
+      "cursoId": "L3-010",
+      "titulo": "Introdução: Game Publishing Pipeline",
+      "conteudo": "https://video.exemplo.com/L3-010-aula1",
+      "ordem": 1,
+      "duracaoMinutos": 20
+    },
+    {
+      "id": "L3-010-aula2",
+      "cursoId": "L3-010",
+      "titulo": "Prática: Game Publishing Pipeline",
+      "conteudo": "https://video.exemplo.com/L3-010-aula2",
+      "ordem": 2,
+      "duracaoMinutos": 25
     }
   ],
   "matriculas": [
     {
-      "id": "mat1w5",
+      "id": "mat-1",
       "usuarioId": "u1a2b3",
-      "cursoId": "cur1y3",
+      "cursoId": "L1-001",
       "dataMatricula": "2026-07-10T13:00:00Z",
-      "progresso": 60,
+      "progresso": 0,
       "status": "em andamento"
     },
     {
-      "id": "mat2x6",
-      "usuarioId": "u4g8h9",
-      "cursoId": "cur1y3",
-      "dataMatricula": "2026-07-12T09:30:00Z",
+      "id": "mat-2",
+      "usuarioId": "u5i0j1",
+      "cursoId": "L1-003",
+      "dataMatricula": "2026-07-12T13:00:00Z",
       "progresso": 100,
       "status": "concluído"
     },
     {
-      "id": "mat3y7",
-      "usuarioId": "u5i0j1",
-      "cursoId": "cur2z4",
-      "dataMatricula": "2026-07-14T14:20:00Z",
-      "progresso": 40,
-      "status": "em andamento"
-    },
-    {
-      "id": "mat4z8",
-      "usuarioId": "u7m4n5",
-      "cursoId": "cur3a5",
-      "dataMatricula": "2026-07-15T10:00:00Z",
-      "progresso": 75,
-      "status": "em andamento"
-    },
-    {
-      "id": "mat5a9",
+      "id": "mat-3",
       "usuarioId": "u9q8r9",
-      "cursoId": "cur5c7",
-      "dataMatricula": "2026-07-16T11:30:00Z",
+      "cursoId": "L1-005",
+      "dataMatricula": "2026-07-14T13:00:00Z",
       "progresso": 50,
       "status": "em andamento"
     },
     {
-      "id": "mat6b0",
-      "usuarioId": "u0s1t2",
-      "cursoId": "cur6d8",
-      "dataMatricula": "2026-07-17T15:45:00Z",
-      "progresso": 0,
-      "status": "em andamento"
-    },
-    {
-      "id": "mat7c1",
+      "id": "mat-4",
       "usuarioId": "u2w5x6",
-      "cursoId": "cur7e9",
-      "dataMatricula": "2026-07-18T08:15:00Z",
-      "progresso": 10,
-      "status": "em andamento"
-    },
-    {
-      "id": "mat8d2",
-      "usuarioId": "u1a2b3",
-      "cursoId": "cur2z4",
-      "dataMatricula": "2026-07-19T13:45:00Z",
-      "progresso": 20,
-      "status": "em andamento"
-    },
-    {
-      "id": "mat9e3",
-      "usuarioId": "u4g8h9",
-      "cursoId": "cur9g1",
-      "dataMatricula": "2026-07-20T10:20:00Z",
-      "progresso": 100,
-      "status": "concluído"
-    },
-    {
-      "id": "mat0f4",
-      "usuarioId": "u5i0j1",
-      "cursoId": "cur0h2",
-      "dataMatricula": "2026-07-21T16:30:00Z",
+      "cursoId": "L1-007",
+      "dataMatricula": "2026-07-16T13:00:00Z",
       "progresso": 0,
       "status": "em andamento"
     },
     {
-      "id": "mat1g5",
+      "id": "mat-5",
+      "usuarioId": "u4g8h9",
+      "cursoId": "L1-009",
+      "dataMatricula": "2026-07-18T13:00:00Z",
+      "progresso": 100,
+      "status": "concluído"
+    },
+    {
+      "id": "mat-6",
       "usuarioId": "u7m4n5",
-      "cursoId": "cur1i3",
-      "dataMatricula": "2026-07-22T09:00:00Z",
-      "progresso": 30,
+      "cursoId": "L2-001",
+      "dataMatricula": "2026-07-20T13:00:00Z",
+      "progresso": 50,
       "status": "em andamento"
     },
     {
-      "id": "mat2h6",
+      "id": "mat-7",
       "usuarioId": "u0s1t2",
-      "cursoId": "cur7e9",
-      "dataMatricula": "2026-07-23T14:50:00Z",
+      "cursoId": "L2-003",
+      "dataMatricula": "2026-07-22T13:00:00Z",
+      "progresso": 0,
+      "status": "em andamento"
+    },
+    {
+      "id": "mat-8",
+      "usuarioId": "u1a2b3",
+      "cursoId": "L2-005",
+      "dataMatricula": "2026-07-24T13:00:00Z",
       "progresso": 100,
       "status": "concluído"
+    },
+    {
+      "id": "mat-9",
+      "usuarioId": "u5i0j1",
+      "cursoId": "L2-008",
+      "dataMatricula": "2026-07-11T13:00:00Z",
+      "progresso": 50,
+      "status": "em andamento"
+    },
+    {
+      "id": "mat-10",
+      "usuarioId": "u9q8r9",
+      "cursoId": "L2-010",
+      "dataMatricula": "2026-07-13T13:00:00Z",
+      "progresso": 0,
+      "status": "em andamento"
+    },
+    {
+      "id": "mat-11",
+      "usuarioId": "u2w5x6",
+      "cursoId": "L3-002",
+      "dataMatricula": "2026-07-15T13:00:00Z",
+      "progresso": 100,
+      "status": "concluído"
+    },
+    {
+      "id": "mat-12",
+      "usuarioId": "u4g8h9",
+      "cursoId": "L3-004",
+      "dataMatricula": "2026-07-17T13:00:00Z",
+      "progresso": 50,
+      "status": "em andamento"
+    },
+    {
+      "id": "mat-13",
+      "usuarioId": "u7m4n5",
+      "cursoId": "L3-006",
+      "dataMatricula": "2026-07-19T13:00:00Z",
+      "progresso": 0,
+      "status": "em andamento"
+    },
+    {
+      "id": "mat-14",
+      "usuarioId": "u0s1t2",
+      "cursoId": "L3-009",
+      "dataMatricula": "2026-07-21T13:00:00Z",
+      "progresso": 100,
+      "status": "concluído"
+    },
+    {
+      "usuarioId": "u7m4n5",
+      "cursoId": "L3-002",
+      "dataMatricula": "2026-07-29T19:54:38.616Z",
+      "progresso": 0,
+      "status": "em andamento",
+      "id": "gcXIPu0JPBM"
+    },
+    {
+      "usuarioId": "u7m4n5",
+      "cursoId": "L3-003",
+      "dataMatricula": "2026-07-29T20:02:49.221Z",
+      "progresso": 0,
+      "status": "em andamento",
+      "id": "t-W6aUpVipI"
     }
   ],
   "avaliacoes": [
     {
-      "id": "ava1v6",
-      "usuarioId": "u1a2b3",
-      "cursoId": "cur1y3",
-      "nota": 5,
-      "comentario": "Curso muito claro e direto ao ponto, recomendo!",
-      "data": "2026-07-20T18:45:00Z"
-    },
-    {
-      "id": "ava2w7",
-      "usuarioId": "u4g8h9",
-      "cursoId": "cur1y3",
-      "nota": 4,
-      "comentario": "Bom curso, mas poderia ter mais exemplos práticos.",
-      "data": "2026-07-21T10:30:00Z"
-    },
-    {
-      "id": "ava3x8",
-      "usuarioId": "u4g8h9",
-      "cursoId": "cur9g1",
-      "nota": 5,
-      "comentario": "Excelente conteúdo sobre segurança, muito didático!",
-      "data": "2026-07-22T15:20:00Z"
-    },
-    {
-      "id": "ava4y9",
-      "usuarioId": "u0s1t2",
-      "cursoId": "cur7e9",
-      "nota": 5,
-      "comentario": "Introdução perfeita à IA, entendi todos os conceitos.",
-      "data": "2026-07-23T19:10:00Z"
-    },
-    {
-      "id": "ava5z0",
-      "usuarioId": "u2w5x6",
-      "cursoId": "cur7e9",
-      "nota": 4,
-      "comentario": "Gostei bastante, o material é bem organizado.",
-      "data": "2026-07-24T12:00:00Z"
-    },
-    {
-      "id": "ava6a1",
+      "id": "ava-1",
       "usuarioId": "u5i0j1",
-      "cursoId": "cur2z4",
-      "nota": 3,
-      "comentario": "Conteúdo avançado, recomendo ter base em React antes.",
-      "data": "2026-07-25T08:30:00Z"
-    },
-    {
-      "id": "ava7b2",
-      "usuarioId": "u7m4n5",
-      "cursoId": "cur3a5",
-      "nota": 5,
-      "comentario": "Aulas incríveis, meu design evoluiu muito!",
-      "data": "2026-07-26T17:45:00Z"
-    },
-    {
-      "id": "ava8c3",
-      "usuarioId": "u9q8r9",
-      "cursoId": "cur5c7",
+      "cursoId": "L1-003",
       "nota": 4,
-      "comentario": "Ótimas estratégias de SEO, já estou aplicando no meu site.",
-      "data": "2026-07-27T11:20:00Z"
+      "comentario": "Curso excelente, aprendi muito!",
+      "data": "2026-07-20T17:00:00Z"
     },
     {
-      "id": "ava9d4",
-      "usuarioId": "u1a2b3",
-      "cursoId": "cur2z4",
-      "nota": 4,
-      "comentario": "Curso bem completo, mas algumas aulas são muito longas.",
-      "data": "2026-07-28T14:15:00Z"
-    },
-    {
-      "id": "ava0e5",
-      "usuarioId": "u0s1t2",
-      "cursoId": "cur6d8",
-      "nota": 5,
-      "comentario": "Estratégias de marketing de conteúdo muito práticas!",
-      "data": "2026-07-29T09:40:00Z"
-    },
-    {
-      "id": "ava1f6",
-      "usuarioId": "u2w5x6",
-      "cursoId": "cur5c7",
-      "nota": 3,
-      "comentario": "Poderia ter mais exemplos de casos reais.",
-      "data": "2026-07-30T16:50:00Z"
-    },
-    {
-      "id": "ava2g7",
+      "id": "ava-2",
       "usuarioId": "u4g8h9",
-      "cursoId": "cur0h2",
+      "cursoId": "L1-009",
       "nota": 5,
-      "comentario": "Muito bom para iniciantes em Android com Kotlin!",
-      "data": "2026-07-31T13:25:00Z"
+      "comentario": "Conteúdo direto ao ponto e bem explicado.",
+      "data": "2026-07-21T17:00:00Z"
+    },
+    {
+      "id": "ava-3",
+      "usuarioId": "u1a2b3",
+      "cursoId": "L2-005",
+      "nota": 4,
+      "comentario": "Gostei bastante, recomendo para quem está começando.",
+      "data": "2026-07-22T17:00:00Z"
+    },
+    {
+      "id": "ava-4",
+      "usuarioId": "u2w5x6",
+      "cursoId": "L3-002",
+      "nota": 5,
+      "comentario": "Muito bom, mas poderia ter mais exemplos práticos.",
+      "data": "2026-07-23T17:00:00Z"
+    },
+    {
+      "id": "ava-5",
+      "usuarioId": "u0s1t2",
+      "cursoId": "L3-009",
+      "nota": 4,
+      "comentario": "Curso excelente, aprendi muito!",
+      "data": "2026-07-24T17:00:00Z"
     }
-  ]
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
 }

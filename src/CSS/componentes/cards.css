@@ -9,14 +9,14 @@
   background-color: var(--cor-superficie);
   border: 1px solid var(--cor-borda);
   border-radius: var(--raio-lg);
-  box-shadow: var(--sombra-sm);
+  box-shadow: var(--sombra-md);
   padding: var(--espaco-lg);
   transition: transform var(--transicao-normal), box-shadow var(--transicao-normal);
 }
 
 .card:hover {
-  transform: translateY(-6px);
-  box-shadow: var(--sombra-xl);
+  transform: translateY(-5px);
+  box-shadow: var(--sombra-lg);
 }
 
 .card-header {
@@ -44,8 +44,9 @@
 }
 
 .card-titulo {
-  font-size: 1.0625rem;
-  font-weight: var(--peso-bold);
+  font-size: 1.125rem;
+  font-weight: var(--peso-extra-bold);
+  color: #222222;
 }
 
 .card-meta {

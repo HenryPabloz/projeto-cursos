@@ -6,7 +6,7 @@
   <title>Meu Perfil — Plataforma de Cursos Online</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../CSS/style.css">
 </head>
 <body>
@@ -27,17 +27,23 @@
 
     <div class="navbar-acoes">
       <button class="navbar-hamburguer btn-icone" aria-label="Abrir menu" aria-expanded="false">☰</button>
-      <div class="navbar-user" tabindex="0" aria-haspopup="true" aria-expanded="false">
-        <span class="navbar-user-avatar">CR</span>
+      <div class="navbar-user" id="menuUsuario" tabindex="0" aria-haspopup="true" aria-expanded="false">
+        <span class="navbar-user-avatar">--</span>
         <div class="navbar-user-info somente-desktop">
-          <span class="navbar-user-nome">Camila Rocha</span>
+          <span class="navbar-user-nome">Carregando...</span>
           <span class="navbar-badge-role badge badge-role-aluno">Aluno</span>
         </div>
+
+        <div class="navbar-dropdown oculto" id="dropdownUsuario">
+          <a href="./meu-perfil.html" class="navbar-dropdown-item"><img src="../IMG/snorlax.png" class="navbar-dropdown-icone" alt=""> Meu Perfil</a>
+          <button class="navbar-dropdown-item perigo js-logout">🚪 Logout</button>
+        </div>
       </div>
+      <button type="button" class="btn btn-fantasma btn-pequeno js-logout somente-desktop">Sair</button>
     </div>
   </header>
 
-  <main id="conteudo-principal" class="container container-estreito perfil-container">
+  <main id="conteudo-principal" class="container perfil-container">
 
     <nav class="breadcrumb">
       <a href="./catalogo-cursos.html" class="breadcrumb-item">Catálogo</a>
@@ -46,10 +52,10 @@
     </nav>
 
     <div class="perfil-topo">
-      <span class="perfil-avatar-grande">CR</span>
+      <span class="perfil-avatar-grande" id="perfilAvatar">--</span>
       <div>
-        <h1>Camila Rocha</h1>
-        <span class="badge badge-role-aluno">Aluno</span>
+        <h1 id="perfilNome">Carregando...</h1>
+        <span class="badge" id="perfilBadgeRole">—</span>
       </div>
     </div>
 
@@ -61,15 +67,15 @@
 
         <div class="perfil-info-item">
           <span class="perfil-info-rotulo">Email</span>
-          <span class="perfil-info-valor">camila.rocha@email.com</span>
+          <span class="perfil-info-valor" id="perfilEmail">—</span>
         </div>
         <div class="perfil-info-item">
           <span class="perfil-info-rotulo">Role</span>
-          <span class="perfil-info-valor"><span class="badge badge-role-aluno">Aluno</span></span>
+          <span class="perfil-info-valor" id="perfilRoleTexto">—</span>
         </div>
         <div class="perfil-info-item">
-          <span class="perfil-info-rotulo">Data de cadastro</span>
-          <span class="perfil-info-valor">10/07/2026</span>
+          <span class="perfil-info-rotulo">Status da conta</span>
+          <span class="perfil-info-valor" id="perfilStatusConta">—</span>
         </div>
       </section>
 
@@ -77,37 +83,50 @@
       <section class="card">
         <h4 class="mb-md">Editar perfil</h4>
 
-        <form novalidate>
+        <form novalidate id="formPerfil">
           <div class="form-group">
             <label class="form-label obrigatorio" for="nomePerfil">Nome</label>
-            <input type="text" class="form-input" id="nomePerfil" value="Camila Rocha" minlength="3">
+            <input type="text" class="form-input" id="nomePerfil">
+            <span class="form-erro" id="erroNomePerfil">Mínimo 3 caracteres.</span>
           </div>
 
           <div class="form-group">
             <label class="form-label obrigatorio" for="senhaAtualPerfil">Senha atual</label>
             <input type="password" class="form-input" id="senhaAtualPerfil" placeholder="Confirme sua senha atual">
             <span class="form-dica">Necessária para confirmar sua identidade.</span>
+            <span class="form-erro" id="erroSenhaAtualPerfil">Senha atual incorreta.</span>
           </div>
 
           <div class="form-linha">
             <div class="form-group" style="margin-bottom: 0;">
               <label class="form-label" for="novaSenhaPerfil">Nova senha</label>
-              <input type="password" class="form-input" id="novaSenhaPerfil" placeholder="Opcional · mín. 6 caracteres" minlength="6">
+              <input type="password" class="form-input" id="novaSenhaPerfil" placeholder="Opcional · mín. 6 caracteres">
+              <span class="form-erro" id="erroNovaSenhaPerfil">Mínimo 6 caracteres.</span>
             </div>
             <div class="form-group" style="margin-bottom: 0;">
               <label class="form-label" for="confirmarSenhaPerfil">Confirmar nova senha</label>
               <input type="password" class="form-input" id="confirmarSenhaPerfil" placeholder="Repita a nova senha">
+              <span class="form-erro" id="erroConfirmarSenhaPerfil">As senhas não conferem.</span>
             </div>
           </div>
 
           <div class="flex gap-sm mt-lg">
-            <button type="submit" class="btn btn-primario">Atualizar</button>
-            <button type="button" class="btn btn-fantasma">Cancelar</button>
+            <button type="submit" class="btn btn-primario" id="btnAtualizarPerfil">Atualizar</button>
+            <button type="button" class="btn btn-fantasma" id="btnCancelarPerfil">Cancelar</button>
           </div>
         </form>
       </section>
 
     </div>
+
+    <!-- Cursos em que o aluno está matriculado -->
+    <section class="card perfil-meus-cursos mt-2xl">
+      <h4 class="mb-md">Meus cursos</h4>
+
+      <div id="listaMeusCursos"></div>
+      <p class="texto-suave texto-pequeno oculto" id="perfilSemCursos">Você ainda não está matriculado em nenhum curso.</p>
+    </section>
+
   </main>
 
   <div class="toast-container" id="toastContainer" aria-live="polite"></div>
@@ -118,8 +137,12 @@
   <script src="../JS/animacoes.js"></script>
   <script>
     animacoes.inicializarLenis();
-    animacoes.animarEntradaPagina();
   </script>
+
+  <script src="../JS/utils.js"></script>
+  <script src="../JS/api.js"></script>
+  <script src="../JS/auth.js"></script>
+  <script src="../JS/perfil.js"></script>
 
 </body>
 </html>

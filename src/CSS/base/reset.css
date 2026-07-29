@@ -12,7 +12,8 @@
 }
 
 html {
-  scroll-behavior: smooth;
+  /* Sem scroll-behavior aqui: quem suaviza o scroll é o Lenis (via JS).
+     Ter os dois ativos ao mesmo tempo é o que causava o atraso no scroll. */
   -webkit-text-size-adjust: 100%;
 }
 

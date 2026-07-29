@@ -29,6 +29,7 @@
 @import url('./componentes/barras-progresso.css');
 @import url('./componentes/breadcrumb.css');
 @import url('./componentes/paginacao.css');
+@import url('./componentes/tooltip.css');
 
 /* 4. ESTILOS ESPECÍFICOS POR PÁGINA */
 @import url('./paginas/login.css');

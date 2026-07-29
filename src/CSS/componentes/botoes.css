@@ -24,13 +24,15 @@
 .btn-primario {
   background-color: var(--cor-primaria);
   color: #FFFFFF;
+  font-weight: var(--peso-bold);
+  padding: 10px 18px;
   box-shadow: var(--sombra-colorida);
 }
 
 .btn-primario:hover {
   background-color: var(--cor-primaria-escura);
-  box-shadow: 0 14px 28px rgba(99, 102, 241, 0.32);
-  transform: translateY(-1px);
+  box-shadow: 0 10px 24px rgba(230, 0, 18, 0.32);
+  transform: scale(1.05);
 }
 
 .btn-secundario {
@@ -40,7 +42,7 @@
 }
 
 .btn-secundario:hover {
-  background-color: rgba(99, 102, 241, 0.08);
+  background-color: rgba(230, 0, 18, 0.08);
 }
 
 .btn-perigo {
@@ -73,6 +75,36 @@
 .btn-icone:hover {
   background-color: var(--cor-fundo-alt);
   color: var(--cor-texto);
+  transform: scale(1.15);
+}
+
+/* Ícones de editar (pena.png) e excluir (tnt.png) das tabelas dos painéis */
+.icone-acao {
+  width: 1.125rem;
+  height: 1.125rem;
+  object-fit: contain;
+  image-rendering: pixelated;
+  transition: filter var(--transicao-rapida);
+}
+
+[class*="js-editar-"]:hover {
+  background-color: rgba(234, 179, 8, 0.14);
+  transform: scale(1.15);
+}
+
+[class*="js-editar-"]:hover .icone-acao {
+  /* Recolore a pena para amarelo no hover */
+  filter: brightness(0) saturate(100%) invert(80%) sepia(69%) saturate(1105%) hue-rotate(2deg) brightness(103%) contrast(103%);
+}
+
+[class*="js-excluir-"]:hover {
+  background-color: rgba(239, 68, 68, 0.14);
+  transform: scale(1.15);
+}
+
+[class*="js-excluir-"]:hover .icone-acao {
+  /* Recolore o TNT para vermelho no hover */
+  filter: brightness(0) saturate(100%) invert(28%) sepia(89%) saturate(5834%) hue-rotate(355deg) brightness(97%) contrast(101%);
 }
 
 .btn-bloco {

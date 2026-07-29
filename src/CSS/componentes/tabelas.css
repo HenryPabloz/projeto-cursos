@@ -47,6 +47,22 @@
   display: flex;
   gap: var(--espaco-xs);
   justify-content: flex-end;
+  align-items: center;
+}
+
+/* Reserva uma largura FIXA (não mínima) para a 2ª ação (ícone, texto ou nada),
+   grande o bastante pro texto mais longo ("Desativar aluno"), assim o ícone
+   de editar nunca muda de posição de uma linha para outra. */
+.tabela-acao-secundaria {
+  display: flex;
+  justify-content: flex-end;
+  flex-shrink: 0;
+  width: 10rem;
+}
+
+.tabela-acao-secundaria .btn {
+  white-space: nowrap;
+  flex-shrink: 0;
 }
 
 .tabela-vazia {

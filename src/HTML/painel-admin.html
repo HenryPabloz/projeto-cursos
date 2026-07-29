@@ -6,14 +6,22 @@
   <title>Painel Admin — Plataforma de Cursos Online</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../CSS/style.css">
 </head>
 <body>
 
   <a href="#conteudo-principal" class="pular-conteudo">Pular para o conteúdo</a>
 
-  <div class="app-shell">
+  <!-- Acesso negado (mostrado só se o role não for admin) -->
+  <div class="painel-acesso-negado oculto" id="acessoNegadoAdmin">
+    <span class="painel-acesso-negado-icone">🚫</span>
+    <h2>Acesso negado</h2>
+    <p class="texto-suave">Esta área é exclusiva para administradores.</p>
+    <a href="./catalogo-cursos.html" class="btn btn-primario mt-md">Voltar para o catálogo</a>
+  </div>
+
+  <div class="app-shell oculto" id="conteudoPainelAdmin">
 
     <aside class="sidebar" id="sidebarPainel">
       <div class="sidebar-logo">
@@ -23,11 +31,11 @@
 
       <nav class="sidebar-nav" aria-label="Navegação do painel">
         <span class="sidebar-nav-titulo">Geral</span>
-        <a href="./catalogo-cursos.html" class="sidebar-nav-item">📚 Catálogo</a>
-        <a href="./meu-perfil.html" class="sidebar-nav-item">👤 Meu Perfil</a>
+        <a href="./catalogo-cursos.html" class="sidebar-nav-item"><img src="../IMG/encantamento.png" class="sidebar-nav-icone" alt=""> Catálogo</a>
+        <a href="./meu-perfil.html" class="sidebar-nav-item"><img src="../IMG/snorlax.png" class="sidebar-nav-icone" alt=""> Meu Perfil</a>
 
         <span class="sidebar-nav-titulo">Gestão de Conteúdo</span>
-        <a href="./painel-editor.html" class="sidebar-nav-item">🛠️ Painel do Editor</a>
+        <a href="./painel-editor.html" class="sidebar-nav-item"><img src="../IMG/Minecraft-Crafting-Table-PNG.png" class="sidebar-nav-icone sidebar-nav-icone-grande" alt=""> Painel do Editor</a>
 
         <span class="sidebar-nav-titulo">Administração</span>
         <a href="./painel-admin.html" class="sidebar-nav-item ativo">🛡️ Usuários</a>
@@ -35,19 +43,19 @@
 
       <div class="sidebar-rodape">
         <div class="navbar-user">
-          <span class="navbar-user-avatar">JC</span>
+          <span class="navbar-user-avatar">--</span>
           <div class="navbar-user-info">
-            <span class="navbar-user-nome">Juliana Costa</span>
+            <span class="navbar-user-nome">Carregando...</span>
             <span class="navbar-badge-role badge badge-role-admin">Admin</span>
           </div>
         </div>
-        <button class="btn btn-fantasma btn-bloco mt-md" id="btnLogoutAdmin">Sair</button>
+        <button class="btn btn-fantasma btn-bloco mt-md" id="btnLogout">Sair</button>
       </div>
     </aside>
 
     <div>
       <header class="navbar" style="padding-inline: var(--espaco-2xl);">
-        <button class="btn-icone somente-mobile" aria-label="Abrir menu lateral" id="btnAbrirSidebarAdmin">☰</button>
+        <button class="btn-icone somente-mobile" aria-label="Abrir menu lateral" id="btnAbrirSidebar">☰</button>
         <nav class="breadcrumb" style="margin-bottom: 0;">
           <span>Painel Admin</span>
           <span class="breadcrumb-separador">/</span>
@@ -68,19 +76,19 @@
 
         <section class="painel-admin-stats">
           <div class="card">
-            <span class="painel-admin-stat-numero">12</span>
+            <span class="painel-admin-stat-numero" id="statTotalUsuarios">—</span>
             <p class="painel-admin-stat-rotulo">Usuários cadastrados</p>
           </div>
           <div class="card">
-            <span class="painel-admin-stat-numero" style="color: var(--cor-aluno);">8</span>
+            <span class="painel-admin-stat-numero" style="color: var(--cor-aluno);" id="statTotalAlunos">—</span>
             <p class="painel-admin-stat-rotulo">Alunos</p>
           </div>
           <div class="card">
-            <span class="painel-admin-stat-numero" style="color: var(--cor-editor);">2</span>
+            <span class="painel-admin-stat-numero" style="color: var(--cor-editor);" id="statTotalEditores">—</span>
             <p class="painel-admin-stat-rotulo">Editores</p>
           </div>
           <div class="card">
-            <span class="painel-admin-stat-numero" style="color: var(--cor-admin);">2</span>
+            <span class="painel-admin-stat-numero" style="color: var(--cor-admin);" id="statTotalAdmins">—</span>
             <p class="painel-admin-stat-rotulo">Admins</p>
           </div>
         </section>
@@ -108,93 +116,11 @@
                 <th>Ações</th>
               </tr>
             </thead>
-            <tbody>
-              <tr>
-                <td data-label="Usuário">
-                  <div class="painel-admin-tabela-usuario">
-                    <span class="navbar-user-avatar">CR</span>
-                    <div class="painel-admin-tabela-usuario-info">
-                      <strong>Camila Rocha</strong>
-                      <span class="painel-admin-tabela-email">camila.rocha@email.com</span>
-                    </div>
-                  </div>
-                </td>
-                <td data-label="Role"><span class="badge badge-role-aluno">Aluno</span></td>
-                <td data-label="Status"><span class="badge badge-publicado"><span class="badge-ponto"></span>Ativo</span></td>
-                <td data-label="Ações">
-                  <div class="tabela-acoes">
-                    <button class="btn btn-icone" aria-label="Editar usuário">✏️</button>
-                    <button class="btn btn-icone" aria-label="Excluir usuário">🗑️</button>
-                  </div>
-                </td>
-              </tr>
-              <tr>
-                <td data-label="Usuário">
-                  <div class="painel-admin-tabela-usuario">
-                    <span class="navbar-user-avatar">RM</span>
-                    <div class="painel-admin-tabela-usuario-info">
-                      <strong>Rafael Mendes</strong>
-                      <span class="painel-admin-tabela-email">rafael.mendes@email.com</span>
-                    </div>
-                  </div>
-                </td>
-                <td data-label="Role"><span class="badge badge-role-editor">Editor</span></td>
-                <td data-label="Status"><span class="badge badge-publicado"><span class="badge-ponto"></span>Ativo</span></td>
-                <td data-label="Ações">
-                  <div class="tabela-acoes">
-                    <button class="btn btn-icone" aria-label="Editar usuário">✏️</button>
-                    <button class="btn btn-icone" aria-label="Excluir usuário">🗑️</button>
-                  </div>
-                </td>
-              </tr>
-              <tr>
-                <td data-label="Usuário">
-                  <div class="painel-admin-tabela-usuario">
-                    <span class="navbar-user-avatar">JC</span>
-                    <div class="painel-admin-tabela-usuario-info">
-                      <strong>Juliana Costa</strong>
-                      <span class="painel-admin-tabela-email">juliana.costa@email.com</span>
-                    </div>
-                  </div>
-                </td>
-                <td data-label="Role"><span class="badge badge-role-admin">Admin</span></td>
-                <td data-label="Status"><span class="badge badge-publicado"><span class="badge-ponto"></span>Ativo</span></td>
-                <td data-label="Ações">
-                  <div class="tabela-acoes">
-                    <button class="btn btn-icone" aria-label="Editar usuário">✏️</button>
-                    <button class="btn btn-icone" aria-label="Excluir usuário">🗑️</button>
-                  </div>
-                </td>
-              </tr>
-              <tr>
-                <td data-label="Usuário">
-                  <div class="painel-admin-tabela-usuario">
-                    <span class="navbar-user-avatar">LO</span>
-                    <div class="painel-admin-tabela-usuario-info">
-                      <strong>Lucas Oliveira</strong>
-                      <span class="painel-admin-tabela-email">lucas.oliveira@email.com</span>
-                    </div>
-                  </div>
-                </td>
-                <td data-label="Role"><span class="badge badge-role-aluno">Aluno</span></td>
-                <td data-label="Status"><span class="badge badge-rascunho"><span class="badge-ponto"></span>Inativo</span></td>
-                <td data-label="Ações">
-                  <div class="tabela-acoes">
-                    <button class="btn btn-icone" aria-label="Editar usuário">✏️</button>
-                    <button class="btn btn-icone" aria-label="Excluir usuário">🗑️</button>
-                  </div>
-                </td>
-              </tr>
-            </tbody>
+            <tbody id="corpoUsuarios"></tbody>
           </table>
         </div>
 
-        <nav class="paginacao" aria-label="Paginação de usuários">
-          <button class="paginacao-item" disabled aria-label="Página anterior">‹</button>
-          <button class="paginacao-item ativo" aria-current="page">1</button>
-          <button class="paginacao-item">2</button>
-          <button class="paginacao-item" aria-label="Próxima página">›</button>
-        </nav>
+        <nav class="paginacao" aria-label="Paginação de usuários" id="paginacaoUsuarios"></nav>
 
       </main>
     </div>
@@ -203,25 +129,29 @@
   <!-- Modal: Novo/Editar Usuário -->
   <div class="modal-overlay" id="modalUsuario">
     <div class="modal">
-      <button class="modal-fechar btn-icone" aria-label="Fechar modal">✕</button>
+      <button class="modal-fechar btn-icone" aria-label="Fechar modal" id="btnFecharModalUsuario" type="button">✕</button>
       <div class="modal-header">
-        <h3 class="modal-titulo">Novo Usuário</h3>
+        <h3 class="modal-titulo" id="tituloModalUsuario">Novo Usuário</h3>
       </div>
 
-      <form class="modal-corpo" novalidate>
+      <form class="modal-corpo" id="formUsuario" novalidate>
         <div class="form-group" style="margin-bottom: 0;">
           <label class="form-label obrigatorio" for="nomeUsuario">Nome</label>
-          <input type="text" class="form-input" id="nomeUsuario" placeholder="Nome completo" minlength="3">
+          <input type="text" class="form-input" id="nomeUsuario" placeholder="Nome completo">
+          <span class="form-erro" id="erroNomeUsuario">Mínimo 3 caracteres.</span>
         </div>
 
         <div class="form-group" style="margin-bottom: 0;">
           <label class="form-label obrigatorio" for="emailUsuario">Email</label>
           <input type="email" class="form-input" id="emailUsuario" placeholder="nome@email.com">
+          <span class="form-erro" id="erroEmailUsuario">Informe um email válido e ainda não cadastrado.</span>
         </div>
 
         <div class="form-group" style="margin-bottom: 0;">
-          <label class="form-label obrigatorio" for="senhaUsuario">Senha</label>
-          <input type="password" class="form-input" id="senhaUsuario" placeholder="Mínimo 6 caracteres" minlength="6">
+          <label class="form-label" for="senhaUsuario" id="labelSenhaUsuario">Senha</label>
+          <input type="password" class="form-input" id="senhaUsuario" placeholder="Mínimo 6 caracteres">
+          <span class="form-erro" id="erroSenhaUsuario">Mínimo 6 caracteres.</span>
+          <span class="form-dica" id="dicaSenhaUsuario">Deixe em branco para manter a senha atual.</span>
         </div>
 
         <div class="form-linha">
@@ -236,15 +166,17 @@
 
           <div class="form-group" style="margin-bottom: 0; justify-content: flex-end;">
             <label class="form-checkbox">
-              <input type="checkbox" checked> Ativo
+              <input type="checkbox" id="ativoUsuario" checked> Ativo
             </label>
           </div>
         </div>
+
+        <p class="form-dica oculto" id="dicaContaPropria">Você está editando a própria conta: role e status ficam bloqueados para você não se trancar para fora do painel.</p>
       </form>
 
       <div class="modal-rodape">
-        <button class="btn btn-fantasma">Cancelar</button>
-        <button class="btn btn-primario">Salvar</button>
+        <button class="btn btn-fantasma" id="btnCancelarUsuario" type="button">Cancelar</button>
+        <button class="btn btn-primario" id="btnSalvarUsuario" type="button">Salvar</button>
       </div>
     </div>
   </div>
@@ -253,10 +185,10 @@
     <div class="modal modal-confirmacao">
       <div class="modal-confirmacao-icone">⚠️</div>
       <h3 class="modal-titulo">Excluir usuário?</h3>
-      <p class="modal-subtitulo">Tem certeza que deseja deletar "Lucas Oliveira"? Todos os dados serão perdidos.</p>
+      <p class="modal-subtitulo" id="mensagemConfirmarExclusaoUsuario">Tem certeza que deseja excluir este usuário?</p>
       <div class="modal-rodape">
-        <button class="btn btn-fantasma">Cancelar</button>
-        <button class="btn btn-perigo">Confirmar exclusão</button>
+        <button class="btn btn-fantasma" id="btnCancelarExclusaoUsuario" type="button">Cancelar</button>
+        <button class="btn btn-perigo" id="btnConfirmarExclusaoUsuario" type="button">Confirmar exclusão</button>
       </div>
     </div>
   </div>
@@ -269,8 +201,12 @@
   <script src="../JS/animacoes.js"></script>
   <script>
     animacoes.inicializarLenis();
-    animacoes.animarEntradaPagina();
   </script>
+
+  <script src="../JS/utils.js"></script>
+  <script src="../JS/api.js"></script>
+  <script src="../JS/auth.js"></script>
+  <script src="../JS/painel-admin.js"></script>
 
 </body>
 </html>

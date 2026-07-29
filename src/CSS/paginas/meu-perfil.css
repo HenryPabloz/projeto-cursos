@@ -29,9 +29,13 @@
 
 .perfil-grid {
   display: grid;
-  grid-template-columns: 1fr 1.4fr;
+  grid-template-columns: minmax(280px, 1fr) minmax(420px, 1.6fr);
   gap: var(--espaco-xl);
   align-items: start;
+}
+
+.perfil-grid .card {
+  padding: var(--espaco-xl);
 }
 
 .perfil-info-leitura {
@@ -68,5 +72,73 @@
 @media (max-width: 1023px) {
   .perfil-grid {
     grid-template-columns: 1fr;
+  }
+}
+
+.perfil-meus-cursos {
+  padding: var(--espaco-xl);
+}
+
+.perfil-curso-item {
+  display: flex;
+  align-items: center;
+  gap: var(--espaco-md);
+  padding: var(--espaco-md) 0;
+  border-bottom: 1px solid var(--cor-borda);
+}
+
+.perfil-curso-item:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.perfil-curso-sprite {
+  width: 3rem;
+  height: 3rem;
+  object-fit: contain;
+  image-rendering: pixelated;
+  flex-shrink: 0;
+}
+
+.perfil-curso-info {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.perfil-curso-titulo {
+  font-weight: var(--peso-bold);
+}
+
+.perfil-curso-meta {
+  display: flex;
+  align-items: center;
+  gap: var(--espaco-xs);
+  font-size: 0.75rem;
+  color: var(--cor-texto-suave);
+}
+
+.perfil-curso-nivel {
+  font-family: var(--fonte-mono);
+  font-size: 0.625rem;
+  font-weight: var(--peso-extra-bold);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: #FFFFFF;
+  padding: 2px var(--espaco-xs);
+  border-radius: var(--raio-sm);
+}
+
+.perfil-curso-status {
+  font-size: 0.75rem;
+  color: var(--cor-texto-suave);
+  min-width: 6rem;
+}
+
+@media (max-width: 640px) {
+  .perfil-curso-item {
+    flex-wrap: wrap;
   }
 }

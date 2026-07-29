@@ -53,6 +53,30 @@
   margin-bottom: var(--espaco-lg);
 }
 
+.painel-editor-nivel-pokemon {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--espaco-xs);
+}
+
+.painel-editor-nivel-pokemon img {
+  width: 1.75rem;
+  height: 1.75rem;
+  object-fit: contain;
+  image-rendering: pixelated;
+}
+
+.painel-editor-nivel-selo {
+  font-size: 0.6875rem;
+  font-weight: var(--peso-extra-bold);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: #FFFFFF;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
+  padding: 2px var(--espaco-xs);
+  border-radius: var(--raio-sm);
+}
+
 .painel-acesso-negado {
   display: flex;
   flex-direction: column;

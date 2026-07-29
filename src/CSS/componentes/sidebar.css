@@ -39,6 +39,19 @@
   padding: var(--espaco-sm) var(--espaco-md) var(--espaco-xs);
 }
 
+.sidebar-nav-icone {
+  width: 1.5rem;
+  height: 1.5rem;
+  object-fit: contain;
+  image-rendering: pixelated;
+  flex-shrink: 0;
+}
+
+.sidebar-nav-icone-grande {
+  width: 1.875rem;
+  height: 1.875rem;
+}
+
 .sidebar-nav-item {
   display: flex;
   align-items: center;
@@ -57,14 +70,14 @@
 }
 
 .sidebar-nav-item.ativo {
-  background-color: rgba(99, 102, 241, 0.1);
+  background-color: rgba(230, 0, 18, 0.1);
   color: var(--cor-primaria);
   border-left-color: var(--cor-primaria);
   font-weight: var(--peso-bold);
 }
 
 .sidebar-rodape {
-  margin-top: auto;
+  margin-top: var(--espaco-xl);
   padding-top: var(--espaco-lg);
   border-top: 1px solid var(--cor-borda);
 }

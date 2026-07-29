@@ -143,5 +143,62 @@ const Utils = (() => {
         }
     };
 
-    return { Texto, Numero, Data };
+    // ===================================================================
+    // PAGINACAO
+    // Reaproveitada por qualquer tabela/lista da plataforma: recorta os
+    // itens da página atual e monta o HTML dos botões (usa as classes
+    // do componente .paginacao já existente no design system).
+    // ===================================================================
+    const Paginacao = {
+        ITENS_POR_PAGINA: 9,
+        PAGINAS_PARA_MOSTRAR_SETAS: 6,
+
+        /** Retorna apenas os itens que pertencem à página informada */
+        recortarPagina(lista, pagina, itensPorPagina = Paginacao.ITENS_POR_PAGINA) {
+            const indiceInicial = (pagina - 1) * itensPorPagina;
+            return lista.slice(indiceInicial, indiceInicial + itensPorPagina);
+        },
+
+        /** Calcula quantas páginas o total de itens ocupa (mínimo 1) */
+        calcularTotalPaginas(totalDeItens, itensPorPagina = Paginacao.ITENS_POR_PAGINA) {
+            return Math.max(1, Math.ceil(totalDeItens / itensPorPagina));
+        },
+
+        /** Monta o HTML dos botões de paginação (vazio quando cabe tudo em 1 página) */
+        montarHtml(totalDeItens, paginaAtual, itensPorPagina = Paginacao.ITENS_POR_PAGINA) {
+            const totalPaginas = Paginacao.calcularTotalPaginas(totalDeItens, itensPorPagina);
+            if (totalPaginas <= 1) return '';
+
+            const mostrarSetas = totalPaginas >= Paginacao.PAGINAS_PARA_MOSTRAR_SETAS;
+
+            let botoesNumeros = '';
+            for (let numeroPagina = 1; numeroPagina <= totalPaginas; numeroPagina++) {
+                const classeAtivo = numeroPagina === paginaAtual ? 'ativo' : '';
+                botoesNumeros += `<button type="button" class="paginacao-item ${classeAtivo}" data-pagina="${numeroPagina}">${numeroPagina}</button>`;
+            }
+
+            let botaoAnterior = '';
+            let botaoProximo = '';
+
+            if (mostrarSetas) {
+                const desabilitarAnterior = paginaAtual === 1 ? 'disabled' : '';
+                const desabilitarProximo = paginaAtual === totalPaginas ? 'disabled' : '';
+                botaoAnterior = `<button type="button" class="paginacao-item" data-pagina="anterior" ${desabilitarAnterior}>‹ Anterior</button>`;
+                botaoProximo = `<button type="button" class="paginacao-item" data-pagina="proximo" ${desabilitarProximo}>Próximo ›</button>`;
+            }
+
+            return `${botaoAnterior}${botoesNumeros}${botaoProximo}`;
+        },
+
+        /** A partir do data-pagina clicado, calcula qual deve ser a nova página atual */
+        calcularNovaPagina(paginaClicada, paginaAtual, totalDeItens, itensPorPagina = Paginacao.ITENS_POR_PAGINA) {
+            const totalPaginas = Paginacao.calcularTotalPaginas(totalDeItens, itensPorPagina);
+
+            if (paginaClicada === 'anterior') return Math.max(1, paginaAtual - 1);
+            if (paginaClicada === 'proximo') return Math.min(totalPaginas, paginaAtual + 1);
+            return Number(paginaClicada);
+        }
+    };
+
+    return { Texto, Numero, Data, Paginacao };
 })();

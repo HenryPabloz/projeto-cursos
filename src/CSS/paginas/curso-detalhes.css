@@ -16,6 +16,59 @@
   color: rgba(255, 255, 255, 0.75);
 }
 
+.curso-hero-pokemon {
+  position: absolute;
+  top: var(--espaco-xl);
+  right: var(--espaco-xl);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--espaco-xs);
+  z-index: 1;
+}
+
+.curso-hero-pokemon-sprite {
+  width: 6rem;
+  height: 6rem;
+  object-fit: contain;
+  image-rendering: pixelated;
+  filter: drop-shadow(0 6px 10px rgba(0, 0, 0, 0.35));
+  animation: flutuar-pokemon 2.4s ease-in-out infinite;
+}
+
+@keyframes flutuar-pokemon {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .curso-hero-pokemon-sprite {
+    animation: none;
+  }
+}
+
+.curso-hero-pokemon-nivel {
+  font-family: var(--fonte-mono);
+  font-size: 0.6875rem;
+  font-weight: var(--peso-extra-bold);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #FFFFFF;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
+  padding: 3px var(--espaco-sm);
+  border-radius: var(--raio-sm);
+}
+
+@media (max-width: 767px) {
+  .curso-hero-pokemon {
+    display: none;
+  }
+}
+
 .curso-hero-titulo {
   color: #FFFFFF;
   max-width: 40rem;
@@ -26,6 +79,60 @@
   color: rgba(255, 255, 255, 0.82);
   max-width: 36rem;
   margin-top: var(--espaco-sm);
+}
+
+.mario-runner-container {
+  position: relative;
+  width: 100%;
+  height: 90px;
+  margin-top: var(--espaco-lg);
+  overflow: hidden;
+}
+
+.mario-runner-container::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 2px;
+  background-color: rgba(255, 255, 255, 0.25);
+}
+
+.mario-sprite {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 90px;
+  height: 90px;
+  object-fit: contain;
+  image-rendering: pixelated;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: crisp-edges;
+  will-change: transform, opacity;
+}
+
+@media (max-width: 1023px) {
+  .mario-runner-container {
+    height: 76px;
+  }
+
+  .mario-sprite {
+    width: 76px;
+    height: 76px;
+  }
+}
+
+@media (max-width: 640px) {
+  .mario-runner-container {
+    height: 60px;
+    margin-top: var(--espaco-md);
+  }
+
+  .mario-sprite {
+    width: 60px;
+    height: 60px;
+  }
 }
 
 .curso-hero-info {

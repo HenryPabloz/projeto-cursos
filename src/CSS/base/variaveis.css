@@ -5,17 +5,17 @@
 =================================================================== */
 
 :root {
-  /* ---------- Cores Primárias ---------- */
-  --cor-primaria: #6366F1;
-  --cor-primaria-escura: #4F46E5;
-  --cor-primaria-clara: #A5B4FC;
+  /* ---------- Cores Primárias (Design System: Game UI) ---------- */
+  --cor-primaria: #E60012;
+  --cor-primaria-escura: #C4000F;
+  --cor-primaria-clara: #FFB3B8;
   --cor-secundaria: #F59E0B;
-  --cor-fundo: #F9FAFB;
-  --cor-fundo-alt: #F3F4F6;
+  --cor-fundo: #FFFFFF;
+  --cor-fundo-alt: #F5F5F5;
   --cor-superficie: #FFFFFF;
-  --cor-texto: #1F2937;
-  --cor-texto-suave: #6B7280;
-  --cor-borda: #E5E7EB;
+  --cor-texto: #1A1A1A;
+  --cor-texto-suave: #666666;
+  --cor-borda: #E0E0E0;
 
   /* ---------- Status ---------- */
   --cor-sucesso: #10B981;
@@ -23,16 +23,23 @@
   --cor-erro: #EF4444;
   --cor-aviso: #F59E0B;
   --cor-info: #3B82F6;
-  --cor-rascunho: #6B7280;
+  --cor-rascunho: #666666;
 
   /* ---------- Roles ---------- */
   --cor-aluno: #3B82F6;
   --cor-editor: #F59E0B;
-  --cor-admin: #DC2626;
+  --cor-admin: #C4000F;
+
+  /* ---------- Gradientes de destaque (estilo "coleção") ---------- */
+  --gradiente-1: linear-gradient(135deg, #F5C6CB, #F8A5B4);
+  --gradiente-2: linear-gradient(135deg, #FF9F43, #EE5A24);
+  --gradiente-3: linear-gradient(135deg, #EB3B5A, #B71540);
+  --gradiente-4: linear-gradient(135deg, #26DE81, #20BF6B);
+  --gradiente-5: linear-gradient(135deg, #F7D794, #F5CD79);
 
   /* ---------- Tipografia ---------- */
-  --fonte-principal: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  --fonte-display: 'Sora', 'Inter', 'Segoe UI', sans-serif;
+  --fonte-principal: 'Inter', 'Roboto', 'Montserrat', sans-serif;
+  --fonte-display: 'Inter', 'Roboto', 'Montserrat', sans-serif;
   --fonte-mono: 'JetBrains Mono', 'Courier New', monospace;
   --tamanho-base: 16px;
   --peso-normal: 400;
@@ -49,17 +56,17 @@
   --espaco-2xl: 48px;
   --espaco-3xl: 64px;
 
-  /* ---------- Shadows ---------- */
-  --sombra-sm: 0 1px 2px rgba(17, 24, 39, 0.05);
-  --sombra-md: 0 4px 6px rgba(17, 24, 39, 0.08);
-  --sombra-lg: 0 10px 20px rgba(17, 24, 39, 0.10);
-  --sombra-xl: 0 20px 32px rgba(17, 24, 39, 0.14);
-  --sombra-colorida: 0 12px 24px rgba(99, 102, 241, 0.25);
+  /* ---------- Shadows (Design System: Game UI) ---------- */
+  --sombra-sm: 0 4px 6px rgba(0, 0, 0, 0.05);
+  --sombra-md: 0 4px 20px rgba(0, 0, 0, 0.08);
+  --sombra-lg: 0 8px 30px rgba(0, 0, 0, 0.15);
+  --sombra-xl: 0 12px 24px rgba(0, 0, 0, 0.15);
+  --sombra-colorida: 0 8px 20px rgba(230, 0, 18, 0.25);
 
-  /* ---------- Border Radius ---------- */
+  /* ---------- Border Radius (Design System: Game UI) ---------- */
   --raio-sm: 4px;
   --raio-md: 8px;
-  --raio-lg: 12px;
+  --raio-lg: 16px;
   --raio-xl: 20px;
   --raio-full: 9999px;
 

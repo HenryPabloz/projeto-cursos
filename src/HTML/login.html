@@ -6,7 +6,7 @@
   <title>Login — Plataforma de Cursos Online</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../CSS/style.css">
 </head>
 <body>
@@ -16,6 +16,7 @@
     <!-- Painel de marca: contexto visual e prova social da plataforma -->
     <section class="login-marca" aria-hidden="true">
       <div class="login-marca-anel"></div>
+      <img src="../IMG/marioIntro.png" alt="" class="login-marca-imagem anima-slide-up anima-atraso-2">
 
       <div class="login-marca-logo">
         <span class="login-marca-logo-icone">🎓</span>
@@ -23,12 +24,12 @@
       </div>
 
       <div class="login-marca-conteudo">
-        <h1>Sua trilha de aprendizado começa aqui.</h1>
-        <p>Cursos, aulas e avaliações organizados em um só lugar — evolua no seu ritmo e acompanhe cada etapa da sua jornada.</p>
+        <h1>Aprenda a criar os jogos que você sempre quis jogar.</h1>
+        <p>Programação, game design, arte e publicação em um só lugar — evolua no seu ritmo e acompanhe cada etapa da sua jornada como criador de jogos.</p>
 
         <div class="login-marca-stats">
           <div>
-            <div class="login-marca-stat-numero">12</div>
+            <div class="login-marca-stat-numero">9</div>
             <div class="login-marca-stat-rotulo">Cursos publicados</div>
           </div>
           <div>
@@ -36,7 +37,7 @@
             <div class="login-marca-stat-rotulo">Categorias</div>
           </div>
           <div>
-            <div class="login-marca-stat-numero">12</div>
+            <div class="login-marca-stat-numero">7</div>
             <div class="login-marca-stat-rotulo">Alunos ativos</div>
           </div>
         </div>
@@ -49,21 +50,21 @@
     <section class="login-acesso">
       <div class="login-card anima-escala-in">
         <h2 class="login-card-titulo">Entrar na plataforma</h2>
-        <p class="login-card-subtitulo">Informe seu usuário (ou email) e sua senha para acessar o sistema.</p>
+        <p class="login-card-subtitulo">Informe seu email e sua senha para acessar o sistema.</p>
 
         <form class="login-form" id="formLogin" novalidate>
           <div class="form-group" style="margin-bottom: 0;">
-            <label class="form-label obrigatorio" for="usuarioLogin">Usuário ou email</label>
+            <label class="form-label obrigatorio" for="emailLogin">Email</label>
             <input
-              type="text"
+              type="email"
               class="form-input"
-              id="usuarioLogin"
-              name="usuario"
-              placeholder="nome.usuario ou nome@email.com"
+              id="emailLogin"
+              name="email"
+              placeholder="nome@email.com"
               autocomplete="username"
               required
             >
-            <span class="form-erro">Informe seu usuário ou email.</span>
+            <span class="form-erro" id="erroEmailLogin">Informe um email válido.</span>
           </div>
 
           <div class="form-group" style="margin-bottom: 0;">
@@ -78,7 +79,7 @@
               minlength="6"
               required
             >
-            <span class="form-erro">Senha obrigatória, mínimo de 6 caracteres.</span>
+            <span class="form-erro" id="erroSenhaLogin">Senha obrigatória, mínimo de 6 caracteres.</span>
           </div>
 
           <button type="submit" class="btn btn-primario btn-bloco" id="btnEntrar">
@@ -88,7 +89,7 @@
 
         <div class="login-aviso">
           <button type="button" class="login-aviso-icone" aria-describedby="notaLoginSimulado">
-            <span aria-hidden="true">ℹ️</span>
+            <img src="../IMG/diamante.png" alt="" class="login-aviso-icone-imagem">
             <span class="somente-leitor">Mostrar informação sobre o login simulado</span>
           </button>
           <span class="login-aviso-texto" id="notaLoginSimulado" role="tooltip">
@@ -114,6 +115,11 @@
     animacoes.inicializarLenis();
     animacoes.animarEntradaPagina();
   </script>
+
+  <!-- Utilitários e comunicação com a API (precisam vir antes do login.js) -->
+  <script src="../JS/utils.js"></script>
+  <script src="../JS/api.js"></script>
+  <script src="../JS/login.js"></script>
 
 </body>
 </html>
