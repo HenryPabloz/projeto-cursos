@@ -1,0 +1,63 @@
+/* ==============================
+   PERSONAGENS DE FUNDO
+============================== */
+
+body::before{
+
+    content:"";
+
+    position:fixed;
+
+    inset:0;
+
+    pointer-events:none;
+
+    z-index:-1;
+
+    opacity:.12;
+
+    background-image:
+        url("https://w7.pngwing.com/pngs/217/5/png-transparent-metal-slug-2-metal-slug-5-metal-slug-3-metal-slug-x-metal-slug-6-sprite-fictional-character-machine-gun-arcade-game.png"),
+        url("https://w7.pngwing.com/pngs/415/39/png-transparent-pixel-art-batman-batman-heroes-superhero-carnivoran.png"),
+        url("https://w7.pngwing.com/pngs/274/155/png-transparent-overwatch-pixel-art-bead-pixel-gun-fictional-character-widowmaker-stitch.png"),
+        url("https://w7.pngwing.com/pngs/523/1012/png-transparent-super-sonic-pixel-illustration-sonic-the-hedgehog-2-pixel-art-video-game-8-bit-game-sonic-the-hedgehog-video-game.png"),
+        url("https://w7.pngwing.com/pngs/705/88/png-transparent-mario-pixel-art-super-mario-world-super-mario-bros-super-mario-land-pixel-text-super-mario-bros-rectangle.png"),
+        url("https://w7.pngwing.com/pngs/821/691/png-transparent-goku-dragon-ball-z-ultimate-battle-22-gohan-pixel-art-pixel-art-fictional-character-cartoon-sprite.png");
+
+    background-repeat:no-repeat;
+
+    background-position:
+        left 40px bottom 40px,
+        right 40px bottom 60px,
+        left 15% top 140px,
+        right 18% top 180px,
+        center bottom,
+        center top;
+
+    background-size:
+        180px,
+        170px,
+        140px,
+        140px,
+        230px,
+        170px;
+
+    animation:fundoPersonagens 18s ease-in-out infinite;
+
+}
+
+@keyframes fundoPersonagens{
+
+    0%{
+        transform:translateY(0px);
+    }
+
+    50%{
+        transform:translateY(-10px);
+    }
+
+    100%{
+        transform:translateY(0px);
+    }
+
+}
