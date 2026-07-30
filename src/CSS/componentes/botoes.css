@@ -35,6 +35,19 @@
   transform: scale(1.05);
 }
 
+.btn-link {
+  background: none;
+  border: none;
+  padding: 0;
+  color: var(--cor-primaria);
+  font-weight: var(--peso-bold);
+  text-decoration: underline;
+}
+
+.btn-link:hover {
+  color: var(--cor-primaria-escura);
+}
+
 .btn-secundario {
   background-color: transparent;
   color: var(--cor-primaria);
@@ -97,12 +110,14 @@
   filter: brightness(0) saturate(100%) invert(80%) sepia(69%) saturate(1105%) hue-rotate(2deg) brightness(103%) contrast(103%);
 }
 
-[class*="js-excluir-"]:hover {
+[class*="js-excluir-"]:hover,
+[class*="js-alternar-status-"]:hover {
   background-color: rgba(239, 68, 68, 0.14);
   transform: scale(1.15);
 }
 
-[class*="js-excluir-"]:hover .icone-acao {
+[class*="js-excluir-"]:hover .icone-acao,
+[class*="js-alternar-status-"]:hover .icone-acao {
   /* Recolore o TNT para vermelho no hover */
   filter: brightness(0) saturate(100%) invert(28%) sepia(89%) saturate(5834%) hue-rotate(355deg) brightness(97%) contrast(101%);
 }

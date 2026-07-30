@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Login — Plataforma de Cursos Online</title>
+  <title>Login — Game Academy</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -19,8 +19,8 @@
       <img src="../IMG/marioIntro.png" alt="" class="login-marca-imagem anima-slide-up anima-atraso-2">
 
       <div class="login-marca-logo">
-        <span class="login-marca-logo-icone">🎓</span>
-        Plataforma de Cursos
+        <span class="login-marca-logo-icone">🕹️</span>
+        Game Academy
       </div>
 
       <div class="login-marca-conteudo">
@@ -29,21 +29,21 @@
 
         <div class="login-marca-stats">
           <div>
-            <div class="login-marca-stat-numero">9</div>
+            <div class="login-marca-stat-numero" id="statCursosPublicados">—</div>
             <div class="login-marca-stat-rotulo">Cursos publicados</div>
           </div>
           <div>
-            <div class="login-marca-stat-numero">11</div>
+            <div class="login-marca-stat-numero" id="statCategorias">—</div>
             <div class="login-marca-stat-rotulo">Categorias</div>
           </div>
           <div>
-            <div class="login-marca-stat-numero">7</div>
+            <div class="login-marca-stat-numero" id="statAlunosAtivos">—</div>
             <div class="login-marca-stat-rotulo">Alunos ativos</div>
           </div>
         </div>
       </div>
 
-      <p class="login-marca-rodape">© 2026 Plataforma de Cursos Online</p>
+      <p class="login-marca-rodape">© 2026 Game Academy</p>
     </section>
 
     <!-- Painel de acesso: usuário/email + senha para login simulado -->
@@ -69,16 +69,22 @@
 
           <div class="form-group" style="margin-bottom: 0;">
             <label class="form-label obrigatorio" for="senhaLogin">Senha</label>
-            <input
-              type="password"
-              class="form-input"
-              id="senhaLogin"
-              name="senha"
-              placeholder="Digite sua senha"
-              autocomplete="current-password"
-              minlength="6"
-              required
-            >
+            <div class="input-senha-wrapper">
+              <input
+                type="password"
+                class="form-input"
+                id="senhaLogin"
+                name="senha"
+                placeholder="Digite sua senha"
+                autocomplete="current-password"
+                minlength="6"
+                required
+              >
+              <button type="button" class="btn-alternar-senha" data-input="senhaLogin" aria-label="Mostrar senha">
+                <i data-lucide="eye" class="icone-senha icone-senha-ver oculto"></i>
+                <i data-lucide="eye-off" class="icone-senha icone-senha-ocultar"></i>
+              </button>
+            </div>
             <span class="form-erro" id="erroSenhaLogin">Senha obrigatória, mínimo de 6 caracteres.</span>
           </div>
 
@@ -86,6 +92,11 @@
             Entrar
           </button>
         </form>
+
+        <p class="login-cadastro-convite">
+          Não tem conta?
+          <button type="button" class="btn-link" id="btnAbrirCadastro">Cadastre-se aqui</button>
+        </p>
 
         <div class="login-aviso">
           <button type="button" class="login-aviso-icone" aria-describedby="notaLoginSimulado">
@@ -100,6 +111,69 @@
     </section>
 
   </main>
+
+  <!-- Modal: Criar conta (cadastro sempre entra como aluno, já ativo) -->
+  <div class="modal-overlay" id="modalCadastro">
+    <div class="modal">
+      <button class="modal-fechar btn-icone" aria-label="Fechar modal" id="btnFecharModalCadastro" type="button">✕</button>
+      <div class="modal-header">
+        <h3 class="modal-titulo">Criar conta</h3>
+        <p class="modal-subtitulo">Sua conta é criada como aluno e já pode ser usada para entrar.</p>
+      </div>
+
+      <form class="modal-corpo" id="formCadastro" novalidate>
+        <div class="form-group" style="margin-bottom: 0;">
+          <label class="form-label obrigatorio" for="nomeCadastro">Nome</label>
+          <input type="text" class="form-input" id="nomeCadastro" placeholder="Seu nome completo" autocomplete="name">
+          <span class="form-dica">Mínimo 3 caracteres.</span>
+          <span class="form-erro" id="erroNomeCadastro">Informe um nome (mínimo 3 caracteres).</span>
+        </div>
+
+        <div class="form-group" style="margin-bottom: 0;">
+          <label class="form-label obrigatorio" for="emailCadastro">Email</label>
+          <input type="email" class="form-input" id="emailCadastro" placeholder="nome@email.com" autocomplete="email">
+          <span class="form-erro" id="erroEmailCadastro">Informe um email válido.</span>
+        </div>
+
+        <div class="form-group" style="margin-bottom: 0;">
+          <label class="form-label obrigatorio" for="senhaCadastro">Senha</label>
+          <div class="input-senha-wrapper">
+            <input type="password" class="form-input" id="senhaCadastro" placeholder="Mínimo 6 caracteres" autocomplete="new-password">
+            <button type="button" class="btn-alternar-senha" data-input="senhaCadastro" aria-label="Mostrar senha">
+              <i data-lucide="eye" class="icone-senha icone-senha-ver oculto"></i>
+              <i data-lucide="eye-off" class="icone-senha icone-senha-ocultar"></i>
+            </button>
+          </div>
+          <div class="login-forca-senha" id="forcaSenhaCadastro"><span></span></div>
+          <span class="form-erro" id="erroSenhaCadastro">Mínimo 6 caracteres.</span>
+        </div>
+
+        <div class="form-group" style="margin-bottom: 0;">
+          <label class="form-label obrigatorio" for="confirmarSenhaCadastro">Confirmar senha</label>
+          <div class="input-senha-wrapper">
+            <input type="password" class="form-input" id="confirmarSenhaCadastro" placeholder="Repita a senha" autocomplete="new-password">
+            <button type="button" class="btn-alternar-senha" data-input="confirmarSenhaCadastro" aria-label="Mostrar senha">
+              <i data-lucide="eye" class="icone-senha icone-senha-ver oculto"></i>
+              <i data-lucide="eye-off" class="icone-senha icone-senha-ocultar"></i>
+            </button>
+          </div>
+          <span class="form-erro" id="erroConfirmarSenhaCadastro">As senhas não conferem.</span>
+        </div>
+
+        <div class="form-group" style="margin-bottom: 0;">
+          <label class="form-checkbox">
+            <input type="checkbox" id="termosCadastro"> Aceito os termos de uso da plataforma
+          </label>
+          <span class="form-erro" id="erroTermosCadastro">É preciso aceitar os termos de uso.</span>
+        </div>
+      </form>
+
+      <div class="modal-rodape">
+        <button class="btn btn-fantasma" id="btnCancelarCadastro" type="button">Cancelar</button>
+        <button class="btn btn-primario" id="btnCriarConta" type="button">Criar conta</button>
+      </div>
+    </div>
+  </div>
 
   <div class="toast-container" id="toastContainer" aria-live="polite"></div>
 
@@ -116,9 +190,23 @@
     animacoes.animarEntradaPagina();
   </script>
 
+  <!-- Lucide: ícones do botão de mostrar/ocultar senha -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>
+    lucide.createIcons();
+  </script>
+
   <!-- Utilitários e comunicação com a API (precisam vir antes do login.js) -->
   <script src="../JS/utils.js"></script>
   <script src="../JS/api.js"></script>
+
+  <!-- EmailJS: envia o email de confirmação de cadastro -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <script src="../JS/emailjs.config.js"></script>
+  <script>
+    emailjs.init(EMAILJS_CONFIG.PUBLIC_KEY);
+  </script>
+
   <script src="../JS/login.js"></script>
 
 </body>

@@ -95,6 +95,30 @@
       "senha": "senha123",
       "role": "aluno",
       "ativo": true
+    },
+    {
+      "nome": "Pablo Martins",
+      "email": "pablohenryfariasmartins@gmail.com",
+      "senha": "senha123",
+      "role": "aluno",
+      "ativo": true,
+      "id": "JYkuquQeCeE"
+    },
+    {
+      "nome": "João Vitor",
+      "email": "joao.martins@itlean.com.br",
+      "senha": "senha123",
+      "role": "aluno",
+      "ativo": true,
+      "id": "An829h58Rx8"
+    },
+    {
+      "nome": "Pablo Martins",
+      "email": "pablo.martins@itlean.com.br",
+      "senha": "senha123",
+      "role": "aluno",
+      "ativo": true,
+      "id": "OfiL92bnMuc"
     }
   ],
   "categorias": [

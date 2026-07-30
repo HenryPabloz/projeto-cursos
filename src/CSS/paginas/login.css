@@ -158,6 +158,43 @@
   gap: var(--espaco-lg);
 }
 
+.login-cadastro-convite {
+  text-align: center;
+  font-size: 0.875rem;
+  color: var(--cor-texto-suave);
+  margin-top: var(--espaco-lg);
+}
+
+.login-forca-senha {
+  height: 4px;
+  border-radius: var(--raio-full);
+  background-color: var(--cor-fundo-alt);
+  overflow: hidden;
+}
+
+.login-forca-senha span {
+  display: block;
+  height: 100%;
+  width: 0%;
+  border-radius: var(--raio-full);
+  transition: width var(--transicao-normal), background-color var(--transicao-normal);
+}
+
+.login-forca-senha.fraca span {
+  width: 33%;
+  background-color: var(--cor-erro);
+}
+
+.login-forca-senha.media span {
+  width: 66%;
+  background-color: var(--cor-aviso);
+}
+
+.login-forca-senha.forte span {
+  width: 100%;
+  background-color: var(--cor-sucesso);
+}
+
 .login-aviso {
   position: relative;
   display: flex;

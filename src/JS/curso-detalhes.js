@@ -69,7 +69,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     // ===================================================================
     // CABEÇALHO (HERO) — dados que não mudam depois de carregados
     // ===================================================================
-    document.title = `${curso.titulo} — Plataforma de Cursos Online`;
+    document.title = `${curso.titulo} — Game Academy`;
     document.querySelector('#breadcrumbCurso').textContent = curso.titulo;
     document.querySelector('#cursoCategoria').textContent = categoria ? categoria.nome : 'Categoria';
     document.querySelector('#cursoTitulo').textContent = curso.titulo;

@@ -46,6 +46,39 @@
   cursor: pointer;
 }
 
+.input-senha-wrapper {
+  position: relative;
+}
+
+.input-senha-wrapper .form-input {
+  padding-right: 2.75rem;
+}
+
+.btn-alternar-senha {
+  position: absolute;
+  top: 50%;
+  right: var(--espaco-xs);
+  transform: translateY(-50%);
+  display: grid;
+  place-items: center;
+  width: 2rem;
+  height: 2rem;
+  min-height: 0;
+  border-radius: var(--raio-md);
+  color: var(--cor-texto-suave);
+  transition: color var(--transicao-rapida), background-color var(--transicao-rapida);
+}
+
+.btn-alternar-senha:hover {
+  color: var(--cor-texto);
+  background-color: var(--cor-fundo-alt);
+}
+
+.icone-senha {
+  width: 1.125rem;
+  height: 1.125rem;
+}
+
 .form-input::placeholder,
 .form-textarea::placeholder {
   color: var(--cor-texto-suave);

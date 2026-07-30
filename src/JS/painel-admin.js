@@ -75,18 +75,13 @@ document.addEventListener('DOMContentLoaded', async () => {
                 ? `<span class="badge badge-publicado"><span class="badge-ponto"></span>Ativo</span>`
                 : `<span class="badge badge-rascunho"><span class="badge-ponto"></span>Inativo</span>`;
 
-            // Alunos não podem ser excluídos de verdade: só ativados/desativados (soft delete).
-            // Editores também não podem ser excluídos, para não perder o vínculo com os cursos que criaram.
-            let botaoAcaoDestrutiva = `<button class="btn btn-icone js-excluir-usuario" data-id="${usuario.id}" aria-label="Excluir usuário"><img src="../IMG/tnt.png" class="icone-acao" alt=""></button>`;
+            // Nenhum usuário (aluno, editor ou admin) pode ser excluído de verdade
+            // por aqui — só ativado/desativado (soft delete). Só cursos podem ser
+            // excluídos de verdade, lá no painel do editor.
+            const rotuloAcao = usuario.ativo ? 'Desativar usuário' : 'Ativar usuário';
+            let botaoAcaoDestrutiva = `<button class="btn btn-icone js-alternar-status-usuario" data-id="${usuario.id}" aria-label="${rotuloAcao}"><img src="../IMG/tnt.png" class="icone-acao" alt=""></button>`;
 
-            if (usuario.role === 'aluno') {
-                const rotuloAcao = usuario.ativo ? 'Desativar aluno' : 'Ativar aluno';
-                botaoAcaoDestrutiva = `<button type="button" class="btn btn-fantasma btn-pequeno js-alternar-status-aluno" data-id="${usuario.id}" aria-label="${rotuloAcao}">${rotuloAcao}</button>`;
-            } else if (usuario.role === 'editor') {
-                botaoAcaoDestrutiva = '';
-            }
-
-            // Ninguém pode excluir a própria conta por aqui — evita se trancar para fora do painel
+            // Ninguém pode desativar a própria conta por aqui — evita se trancar para fora do painel
             const ehVoceMesmo = usuario.id === usuarioLogado.id;
             if (ehVoceMesmo) {
                 botaoAcaoDestrutiva = '';
@@ -116,6 +111,10 @@ document.addEventListener('DOMContentLoaded', async () => {
         }).join('');
 
         paginacaoUsuarios.innerHTML = Utils.Paginacao.montarHtml(usuariosFiltrados.length, paginaUsuarios);
+
+        // Os ícones do botão de ativar/desativar são inseridos dinamicamente,
+        // então o Lucide precisa "desenhá-los" de novo a cada renderização
+        if (typeof lucide !== 'undefined') lucide.createIcons();
     }
 
     function reagirAFiltroUsuario() {
@@ -199,17 +198,11 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     corpoUsuarios.addEventListener('click', async (event) => {
         const botaoEditar = event.target.closest('.js-editar-usuario');
-        const botaoExcluir = event.target.closest('.js-excluir-usuario');
-        const botaoAlternarStatus = event.target.closest('.js-alternar-status-aluno');
+        const botaoAlternarStatus = event.target.closest('.js-alternar-status-usuario');
 
         if (botaoEditar) {
             const usuario = usuarios.find((item) => item.id === botaoEditar.dataset.id);
             abrirModalUsuario(usuario);
-        }
-
-        if (botaoExcluir) {
-            const usuario = usuarios.find((item) => item.id === botaoExcluir.dataset.id);
-            abrirConfirmacaoExclusao(usuario);
         }
 
         if (botaoAlternarStatus) {
@@ -223,7 +216,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                 return;
             }
 
-            const mensagem = novoStatusAtivo ? 'Aluno ativado com sucesso.' : 'Aluno desativado com sucesso.';
+            const mensagem = novoStatusAtivo ? 'Usuário ativado com sucesso.' : 'Usuário desativado com sucesso.';
             animacoes.mostrarToast('sucesso', 'Status atualizado', mensagem);
             await carregarDados();
         }
@@ -296,45 +289,6 @@ document.addEventListener('DOMContentLoaded', async () => {
 
         animacoes.mostrarToast('sucesso', 'Usuário salvo', `"${nome}" foi salvo com sucesso.`);
         fecharModalUsuario();
-        await carregarDados();
-    });
-
-    // ===================================================================
-    // CONFIRMAÇÃO DE EXCLUSÃO
-    // ===================================================================
-    const modalConfirmarExclusao = document.querySelector('#modalConfirmarExclusaoUsuario');
-    const mensagemConfirmarExclusao = document.querySelector('#mensagemConfirmarExclusaoUsuario');
-    let usuarioParaExcluirId = null;
-
-    function abrirConfirmacaoExclusao(usuario) {
-        usuarioParaExcluirId = usuario.id;
-        mensagemConfirmarExclusao.textContent = `Tem certeza que deseja excluir "${usuario.nome}"? Todos os dados serão perdidos.`;
-        modalConfirmarExclusao.classList.add('aberto');
-        animacoes.animarModalAbrir(modalConfirmarExclusao.querySelector('.modal'));
-    }
-
-    function fecharConfirmacaoExclusao() {
-        const resultado = animacoes.animarModalFechar(modalConfirmarExclusao.querySelector('.modal'));
-        Promise.resolve(resultado).then(() => modalConfirmarExclusao.classList.remove('aberto'));
-    }
-
-    document.querySelector('#btnCancelarExclusaoUsuario').addEventListener('click', fecharConfirmacaoExclusao);
-    modalConfirmarExclusao.addEventListener('click', (event) => {
-        if (event.target === modalConfirmarExclusao) fecharConfirmacaoExclusao();
-    });
-
-    document.querySelector('#btnConfirmarExclusaoUsuario').addEventListener('click', async () => {
-        if (!usuarioParaExcluirId) return;
-
-        const sucesso = await ApiUsuarios.excluir(usuarioParaExcluirId);
-
-        if (!sucesso) {
-            animacoes.mostrarToast('erro', 'Falha ao excluir', 'Tente novamente em instantes.');
-            return;
-        }
-
-        animacoes.mostrarToast('sucesso', 'Usuário excluído', 'A exclusão foi concluída com sucesso.');
-        fecharConfirmacaoExclusao();
         await carregarDados();
     });
 
